@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <POU Name="FB_BatchLog" Id="{9308144b-9860-48c1-a579-b79916f4c935}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_BatchLog
+VAR_INPUT
+	i_bUpdate			:BOOL;
+	i_stBatch			:ST_Batch;
+END_VAR
+VAR_IN_OUT
+	iq_stBatch			:ARRAY[0..9] OF ST_Batch;
+END_VAR
+VAR
+	i				:USINT;
+	j				:USINT;
+	bInsert			:BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_bUpdate THEN
+	bInsert:=FALSE;
+	FOR i:=0 TO 9 DO
+		IF iq_stBatch[i].sBatchNumber = '' THEN
+			iq_stBatch[i]:=i_stBatch;
+			bInsert:=TRUE;
+			EXIT;
+		END_IF
+	END_FOR
+	
+	IF NOT bInsert THEN
+		FOR j:=1 TO 9 DO
+			iq_stBatch[j-1]:=iq_stBatch[j];
+		END_FOR
+		iq_stBatch[9]:=i_stBatch;
+	END_IF
+END_IF
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

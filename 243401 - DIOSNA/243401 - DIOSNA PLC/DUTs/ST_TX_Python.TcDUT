@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_TX_Python" Id="{5a0841a1-baba-4654-8b4a-1a39f5c7e7d3}">
+    <Declaration><![CDATA[TYPE ST_TX_Python :
+STRUCT
+	sAuditExportQuery				:STRING[300];
+	sAuditFileName					:STRING[300];
+	sBatchName						:STRING[300];
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

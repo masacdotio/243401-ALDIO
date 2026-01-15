@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_SP" Id="{555ef069-8fe8-4f11-8c24-da1065fef310}">
+    <Declaration><![CDATA[TYPE ST_SP :
+STRUCT
+	iMachineStatus					:INT;
+	sProcessTime					:STRING;
+	sActiveProcessTime				:STRING;
+	bAuto_EN						:BOOL;
+	bService_EN						:BOOL;
+	bStart_EN						:BOOL;
+	bPause_EN						:BOOL;
+	bStop_EN						:BOOL;
+	bHeater_EN						:BOOL;
+	bMixer_EN						:BOOL;
+	bTime_EN						:BOOL;
+	bRecipe_EN						:BOOL;
+	bReportCreate_VIS				:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

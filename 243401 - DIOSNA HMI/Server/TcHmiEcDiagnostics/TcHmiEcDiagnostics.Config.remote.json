@@ -1,0 +1,9 @@
+{
+    "devices": {
+        "Device1": {
+            "enabled": true,
+            "masterNetId": "10.0.0.104.6.1",
+            "targetNetId": "10.0.0.104.1.1"
+        }
+    }
+}

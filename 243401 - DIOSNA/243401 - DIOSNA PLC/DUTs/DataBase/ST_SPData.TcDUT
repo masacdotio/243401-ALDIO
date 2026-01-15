@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_SPData" Id="{6cbf025c-54dd-4871-9c11-729ea6ea8b01}">
+    <Declaration><![CDATA[TYPE ST_SPData :
+STRUCT
+	Value1		: STRING(100);
+	Value2		: STRING(100);
+	Value3		: STRING(100);
+	DateTime	: DT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

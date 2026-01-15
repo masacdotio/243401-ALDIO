@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_ToolLift" Id="{6efbe20f-b4e4-450d-81e6-9cb6f7206718}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _ToolLift
+VAR_INPUT
+	i_bStart					:BOOL;
+END_VAR
+VAR
+	iStep						:INT;
+	bRunning					:BOOL;
+	tonCheckPos					:TON;
+	tonCheckStep				:TON;
+	tonTimeOut					:TON;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tonTimeOut(IN:=iStep=100,PT:=T#30S);
+
+tonCheckPos(IN:=IN.bMixerTool_InPos,PT:=T#3S);
+tonCHeckStep(IN:=iStep=50,PT:=T#5S);
+
+bRunning:=iStep<>0;
+
+
+CASE iStep OF
+	0:
+		IF i_bStart AND IN.bToolPos_Down1 AND IN.bToolPos_Down2 THEN
+			iStep:=50;
+		END_IF
+		
+	50:
+		IF tonCHeckStep.Q THEN
+			IF tonCHeckPos.Q THEN
+				iStep:=0;
+			ELSE
+				iStep:=100;
+			END_IF
+		END_IF
+		
+	100:
+		q_stCmd.rMixerSpeed:=5;
+		q_stCmd.bMixerStart:=TRUE;
+		IF IN.bMixerTool_InPos THEN
+			iStep:=50;
+		END_IF
+		
+		IF tonTimeOut.Q THEN
+			iStep:=0;
+		END_IF
+		
+		IF iStep <> 100 THEN
+			q_stCmd.rMixerSpeed:=0;
+			q_stCmd.bMixerStart:=FALSE;
+		END_IF
+		
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="_ToolLift">
+      <LineId Id="71" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="22" Count="3" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="36" Count="1" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="38" Count="6" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="80" Count="1" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="46" Count="2" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

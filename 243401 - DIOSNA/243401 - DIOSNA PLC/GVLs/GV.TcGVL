@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <GVL Name="GV" Id="{8d41ea3a-b4a4-4af0-b526-ed3a908bcbd9}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	stSeqControl					:ST_SeqControl;
+
+	bUPSdetect						:BOOL;	
+	bIPC_Overheated					:BOOL;
+
+	sEmptyString					:STRING:='';
+	
+	//General
+	stTime							:ST_Time;
+	stHMI							:ST_HMI;
+	stToHMI							:ST_ToHMI;
+	stReport						:ST_Report;
+	stProcessReport					:ST_Report;
+	stAlarm							:ST_Alarm;
+	stIPCDiag						:ST_Diagnostic;
+	stTrend							:ST_Trend;
+	
+
+	stTX_Python						:ST_TX_Python;
+	stRX_Python						:ST_RX_Python;
+	
+	stCleaningCmd					:ST_ProcessCmd;
+	stProductionCmd					:ST_ProcessCmd;
+	stAutoProcessCmd				:ST_ProcessCmd;
+	stManProcessCmd					:ST_ProcessCmd2;
+	stSPAutoProcessCmd				:ST_SP_ProcessCmd;
+	
+
+	
+	bSP_BatchOpen					:BOOL;
+	bSP_BatchClose					:BOOL;
+	bAlarmOK						:BOOL;
+	bSP_AlarmOK						:BOOL;
+	
+	iPP								:INT; //Current production process 
+	iCP								:INT; //Current cleaning process
+	iPrevPP							:INT; //Previous production process
+	iPrevCP							:INT; //Previous cleaning process
+	
+		
+	arrPhasesProd					:ARRAY[0..4] OF STRING:=['Feeding', 'Mixing', 'Granulation', 'Discharging'];
+	arrPhasesClean					:ARRAY[0..6] OF STRING:=['Pre-Cleaning', 'Main Cleaning', 'Rinsing', 'PW Cleaning',
+														 'Draining', 'Blowing-out', 'Control'];
+	arrPhaseEndpoint				:ARRAY[0..2] OF STRING:=['Auto', 'Manual', 'Mixer current'];
+	arrChopper						:ARRAY[0..2] OF STRING:=['Off', 'Slow', 'Fast'];
+	arrMedium						:ARRAY[0..1] OF STRING:=['Cold', 'Warm'];
+	arrDetergent					:ARRAY[0..1] OF STRING:=['Off', 'On'];
+	
+
+	//Process variables
+	rMixer_ActualSpeed				:REAL;
+	rMixer_ActualCurrent			:REAL;
+	rSieve_ActualSpeed				:REAL;
+	rChopper_ActualCurrent			:REAL;
+	
+	rSP_Mixer_ActualSpeed			:REAL;
+	rSP_ActualPressure				:REAL;
+	rSP_Water_ActualTemperature		:REAL;
+	rSP_Liquid_ActualTemperature	:REAL;
+END_VAR
+VAR_GLOBAL PERSISTENT
+	sUserLogged						:STRING;	
+	sGroupLogged					:STRING;
+	
+	bBatchOpen						:BOOL;
+	bBatchClose						:BOOL;
+	bBatchBusy						:BOOL;
+	iRecipeType						:INT;
+	stBatches						:ARRAY[0..9] OF ST_Batch;
+
+	stControl						:ST_Control;
+	stSP_Control					:ST_Control;
+	stSettings						:ST_Settings;
+
+	stBatch							:ST_Batch;
+	stSP_Batch						:ST_Batch;
+	stLastBatch						:ST_Batch;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

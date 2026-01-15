@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ProcessCmd2" Id="{86d349fd-8f60-43da-9858-f9e68916697f}">
+    <Declaration><![CDATA[TYPE ST_ProcessCmd2 :
+STRUCT
+	bLid_Open			:BOOL;
+	bLid_Close			:BOOL;
+	bOutlet_Open		:BOOL;
+	bOutlet_Close		:BOOL;
+	bSieveSeal_Off		:BOOL;
+	bSieveSeal_On		:BOOL;
+	bTool_Raise			:BOOL;
+	bTool_Lower			:BOOL;
+	bPurge_Max			:BOOL;
+	bPurge_Min			:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

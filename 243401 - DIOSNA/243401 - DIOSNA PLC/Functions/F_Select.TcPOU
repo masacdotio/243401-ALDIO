@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_Select" Id="{319899ee-9f06-467f-a11b-f818e22a2c3b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_Select : INT
+VAR_INPUT
+	i_In1			:BOOL;
+	i_In2			:BOOL;
+	i_In3			:BOOL;
+	i_In4			:BOOL;
+	i_In5			:BOOL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_In1 THEN
+	F_Select:=0;
+END_IF
+IF i_In2 THEN
+	F_Select:=1;
+END_IF
+IF i_In3 THEN
+	F_Select:=2;
+END_IF
+IF i_In4 THEN
+	F_Select:=3;
+END_IF
+IF i_In5 THEN
+	F_Select:=4;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="F_Select">
+      <LineId Id="7" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_RecipeSP" Id="{cc2b5495-bdb5-4db0-a93c-6ca6e1b0edfe}">
+    <Declaration><![CDATA[TYPE ST_RecipeSP :
+STRUCT
+	rMixingSpeed				:REAL;
+	rTemperature				:REAL;
+	stProcessTime				:ST_HMI_Time;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

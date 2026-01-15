@@ -1,0 +1,2401 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Array(0..3) OF String": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/String"
+      },
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "AnalogInput_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AnalogInput.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AnalogInput_0"
+    },
+    "Dev_GeneralCoil_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_GeneralCoil.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Dev_GeneralCoil_0"
+    },
+    "Dev_MotorFreq_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_MotorFreq.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Dev_MotorFreq_0"
+    },
+    "Dev_Valve_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_Valve.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Dev_Valve_0"
+    },
+    "Faceplate_AnalogInput_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_AnalogInput.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Faceplate_AnalogInput_0"
+    },
+    "Faceplate_GeneralCoil_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_GeneralCoil.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Faceplate_GeneralCoil_0"
+    },
+    "Faceplate_MotorFreq_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_MotorFreq.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Faceplate_MotorFreq_0"
+    },
+    "Faceplate_Valve_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_Valve.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Faceplate_Valve_0"
+    },
+    "PLC1.ARRAY_0..499_OF-REAL": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/REAL"
+      },
+      "type": "array",
+      "minItems": 500,
+      "maxItems": 500
+    },
+    "PLC1.FB_AnalogInput": {
+      "properties": {
+        "K": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 21
+            }
+          ]
+        },
+        "arrSignals": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_0..499_OF-REAL"
+            },
+            {
+              "propertyOrder": 27
+            }
+          ]
+        },
+        "i_AlarmDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "i_HighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "i_HighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "i_LowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "i_LowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "i_WarningDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "i_iFilter": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "comment": "0-5s",
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "i_rOffset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "i_rRaw": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "i_rRaw_High": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "i_rRaw_Low": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "i_rScaled_High": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "i_rScaled_Low": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "q_HighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "q_HighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "q_LowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 20
+            }
+          ]
+        },
+        "q_LowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "q_rReal": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "q_rRealNoFilter": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "q_rScaled": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "rRawInput": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 22
+            }
+          ]
+        },
+        "tonHighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 23
+            }
+          ]
+        },
+        "tonHighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 24
+            }
+          ]
+        },
+        "tonLowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 26
+            }
+          ]
+        },
+        "tonLowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 25
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PLC1.Tc2_Standard.TON": {
+      "properties": {
+        "ET": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "elapsed time",
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "IN": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "starts timer with rising edge, resets timer with falling edge",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "M": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "PT": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "time to pass, before Q is set",
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "Q": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "gets TRUE, delay time (PT) after a rising edge at IN",
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "StartTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "AnalogSignalTypeSelection": {
+      "type": "string",
+      "enum": [
+        "0-10V",
+        "0-20mA",
+        "4-20mA"
+      ],
+      "default": "Value",
+      "id": "tchmi:framework#/definitions/SizeModeWithContent"
+    },
+    "AnalogInput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AnalogInput.usercontrol.json",
+      "id": "tchmi:project#/definitions/AnalogInput",
+      "type": "object"
+    },
+    "PLC1.ARRAY_1..8_OF-BOOL": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/BOOL"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "startOffset": 1
+    },
+    "PLC1.ST_Interface_CoilCtrl": {
+      "properties": {
+        "arrAlarms": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "arrInterlocks": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "comment": "IN",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "bCmd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "bCmdOut": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "bFault": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "bInterlocksOK": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "OUT",
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "bMaintCall": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "bServiceMode": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "bWritePreset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "iMaintCycles": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "iMaintLimit": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "iPresetValue": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "iTotalCycles": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Dev_GeneralCoil": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_GeneralCoil.usercontrol.json",
+      "id": "tchmi:project#/definitions/Dev_GeneralCoil",
+      "type": "object"
+    },
+    "Array(0..7) OF String": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/String"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "Copy_of_SizeModeWithContent": {
+      "type": "string",
+      "enum": [
+        "One direction motor",
+        "Two directions motor",
+        ""
+      ],
+      "default": "Value",
+      "id": "tchmi:framework#/definitions/SizeModeWithContent"
+    },
+    "Dev_MotorFreq": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_MotorFreq.usercontrol.json",
+      "id": "tchmi:project#/definitions/Dev_MotorFreq",
+      "type": "object"
+    },
+    "MotorTypeSelectionDropdown": {
+      "type": "string",
+      "enum": [
+        "One direction motor",
+        "Two directions motor",
+        ""
+      ],
+      "default": "Value",
+      "id": "tchmi:framework#/definitions/SizeModeWithContent"
+    },
+    "PLC1.ARRAY_1..8_OF-BOOLS": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/BOOL"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "startOffset": 1
+    },
+    "MotorSetpointParams": {
+      "properties": {
+        "Max": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "Min": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "Name": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "Unit": {
+          "$ref": "tchmi:general#/definitions/String"
+        }
+      },
+      "type": "object"
+    },
+    "MotorFeedbacksGroup": {
+      "properties": {
+        "Feedback1": {
+          "$ref": "tchmi:general#/definitions/Object"
+        },
+        "Feedback2": {
+          "$ref": "tchmi:general#/definitions/Object"
+        }
+      },
+      "type": "object"
+    },
+    "Feedback": {
+      "properties": {
+        "Enable": {
+          "$ref": "tchmi:general#/definitions/BOOL"
+        },
+        "Name": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "Unit": {
+          "$ref": "tchmi:general#/definitions/String"
+        }
+      },
+      "type": "object"
+    },
+    "MotorFeedbackSelection": {
+      "properties": {
+        "Feedback1": {
+          "$ref": "tchmi:project#/definitions/Feedback"
+        },
+        "Feedback2": {
+          "$ref": "tchmi:project#/definitions/Feedback"
+        }
+      },
+      "type": "object"
+    },
+    "ValveTypeSelection": {
+      "type": "string",
+      "enum": [
+        "Signle commanded valve",
+        "Double commanded valve",
+        ""
+      ],
+      "default": "Value",
+      "id": "tchmi:framework#/definitions/SizeModeWithContent"
+    },
+    "PLC1.ARRAY_1..8_OF-BOOLSS": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/BOOL"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "startOffset": 1
+    },
+    "PLC1.ST_Interface_ValveCtrl": {
+      "properties": {
+        "arrAlarms": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "arrInterlocks": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "comment": "IN",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "bCmdHP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "bCmdOutHP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "bCmdOutWP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "bCmdWP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "bEnableHP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "bEnableWP": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "bFault": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "bInterlocksOK": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "OUT",
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "bMaintCall": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "bServiceMode": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "bWritePreset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "iMaintCycles": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "iMaintLimit": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "iPresetValue": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "iState": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "iTotalCycles": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/UDINT"
+            },
+            {
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "iTravelTimeout": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Dev_Valve": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_Valve.usercontrol.json",
+      "id": "tchmi:project#/definitions/Dev_Valve",
+      "type": "object"
+    },
+    "Faceplate_MotorFreq": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_MotorFreq.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_MotorFreq",
+      "type": "object"
+    },
+    "BtnControlsPositions": {
+      "properties": {
+        "Btn1_Pos": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "Btn1_Txt": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "Btn2_Pos": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "Btn2_Txt": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "Btn3_Pos": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "Btn3_Txt": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
+        "StatusTxt_Pos": {
+          "$ref": "tchmi:general#/definitions/INT"
+        }
+      },
+      "type": "object"
+    },
+    "PLC1.ARRAY_1..8_OF-BOOL2": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/BOOL"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "startOffset": 1
+    },
+    "PLC1.ST_Interface_MotorCtrl2": {
+      "properties": {
+        "arrAlarms": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "arrInterlocks": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "comment": "IN",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "bCmdBwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "bCmdFwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "bCmdOutBwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "bCmdOutFwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "bCmdStop": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "bEnableMonitor": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "bFault": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "bInterlocksOK": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "OUT",
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "bMaintCall": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 22
+            }
+          ]
+        },
+        "bServiceMode": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "bWritePreset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "iMaintHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 21
+            }
+          ]
+        },
+        "iMaintLimit": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "iMonitorTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "iMonitorTolerance": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "iPresetValue": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "iSetpoint": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "iState": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 23
+            }
+          ]
+        },
+        "iTotalHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 20
+            }
+          ]
+        },
+        "rFeedback1": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "rFeedback2": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Faceplate_MotorCoils": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_MotorCoils.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_MotorCoils",
+      "type": "object"
+    },
+    "Dev_MotorCoils": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_MotorCoils.usercontrol.json",
+      "id": "tchmi:project#/definitions/Dev_MotorCoils",
+      "type": "object"
+    },
+    "PLC1.ARRAY_1..8_OF-BOOL3": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/BOOL"
+      },
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "startOffset": 1
+    },
+    "PID_Control_Temperature": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\PID_Control_Temperature.usercontrol.json",
+      "id": "tchmi:project#/definitions/PID_Control_Temperature",
+      "type": "object"
+    },
+    "Faceplate_PID_Control": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_PID_Control.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_PID_Control",
+      "type": "object"
+    },
+    "ValveTypeSelectionDropDown": {
+      "type": "string",
+      "enum": [
+        "Signle command valve",
+        "Double command valve",
+        ""
+      ],
+      "default": "Value",
+      "id": "tchmi:framework#/definitions/SizeModeWithContent"
+    },
+    "PLC1.ST_Interface_MotorCtrl": {
+      "properties": {
+        "arrAlarms": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "arrInterlocks": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "comment": "IN",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "bCmdBwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "bCmdFwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "bCmdOutBwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "bCmdOutFwd": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "bCmdStop": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "bEnableMonitor": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "bFault": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "bInterlocksOK": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "OUT",
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "bMaintCall": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 22
+            }
+          ]
+        },
+        "bServiceMode": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "bWritePreset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "rFeedback1": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "rFeedback2": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "iMaintHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 21
+            }
+          ]
+        },
+        "iMaintLimit": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "iMonitorTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "iMonitorTolerance": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "iPresetValue": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "iSetpoint": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "iState": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 23
+            }
+          ]
+        },
+        "iTotalHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 20
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "id": "tchmi:project#/definitions/PLC1.ST_Interface_MotorCtrl"
+    },
+    "PLC1.ST_Interface_MotorCoilsCtrl": {
+      "properties": {
+        "arrAlarms": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "arrInterlocks": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_1..8_OF-BOOL"
+            },
+            {
+              "comment": "IN",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "bCmdFast": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "bCmdOutFast": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "bCmdOutSlow": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "bCmdSlow": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "bCmdStop": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "bEnableMonitor": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "bFault": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 20
+            }
+          ]
+        },
+        "bInterlocksOK": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "OUT",
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "bMaintCall": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 23
+            }
+          ]
+        },
+        "bServiceMode": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "bWritePreset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "rFeedback1": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "rFeedback2": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "iMaintHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 22
+            }
+          ]
+        },
+        "iMaintLimit": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "iMonitorTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "iMonitorTolerance": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "iPresetValue": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "iState": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 24
+            }
+          ]
+        },
+        "iTotalHours": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 21
+            }
+          ]
+        },
+        "rFastSpeed": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "rSlowSpeed": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "id": "tchmi:project#/definitions/PLC1.ST_Interface_MotorCoilsCtrl"
+    },
+    "AnalogOutput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AnalogOutput.usercontrol.json",
+      "id": "tchmi:project#/definitions/AnalogOutput",
+      "type": "object"
+    },
+    "Faceplate_AnalogOutput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_AnalogOutput.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_AnalogOutput",
+      "type": "object"
+    },
+    "Faceplate_TemperatureInput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_TemperatureInput.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Faceplate_TemperatureInput"
+    },
+    "Dev_Valve_-_Copy": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Dev_Cyl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Dev_Valve_-_Copy"
+    },
+    "AlarmDiagnostic": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AlarmDiagnostic.usercontrol.json",
+      "id": "tchmi:project#/definitions/AlarmDiagnostic",
+      "type": "object"
+    },
+    "PLC1.FB_AlarmDiagnostic": {
+      "properties": {
+        "TON": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "i_bActive": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "i_bEnable": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "i_bInput": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "i_bReset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "i_bTest": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "i_iID": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "i_iOnDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "q_bActive": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "q_iDetections": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "TON": {
+      "properties": {
+        "ET": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "elapsed time",
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "IN": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "starts timer with rising edge, resets timer with falling edge",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "M": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "PT": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "time to pass, before Q is set",
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "Q": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "gets TRUE, delay time (PT) after a rising edge at IN",
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "StartTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SequenceControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\SequenceControl.usercontrol.json",
+      "id": "tchmi:project#/definitions/SequenceControl",
+      "type": "object"
+    },
+    "PLC1.ARRAY_0..10_OF-INT": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/INT"
+      },
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11
+    },
+    "PLC1.ARRAY_0..10_OF-STRING-80": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+      },
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11
+    },
+    "PLC1.ST_SeqControl": {
+      "properties": {
+        "bPhaseEnabled": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "iCurrentPhase": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "iCurrentStep": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "iPhaseType": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "iPreviousStep": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "iRecipeType": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "iStepNumbers": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_0..10_OF-INT"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "iTotalSteps": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "sPhaseTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/STRING%2880%29"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "sStepDescription": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_0..10_OF-STRING-80"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "TemperatureInput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\TemperatureInput.usercontrol.json",
+      "id": "tchmi:project#/definitions/TemperatureInput",
+      "type": "object"
+    },
+    "PLC1.ARRAY_0..499_OF-REALs": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/REAL"
+      },
+      "type": "array",
+      "minItems": 500,
+      "maxItems": 500
+    },
+    "PLC1.FB_TemperatureInput": {
+      "properties": {
+        "K": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 17
+            }
+          ]
+        },
+        "arrSignals": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.ARRAY_0..499_OF-REAL"
+            },
+            {
+              "propertyOrder": 22
+            }
+          ]
+        },
+        "i_AlarmDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "i_HighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "i_HighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "i_LowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "i_LowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "i_WarningDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "i_iFilter": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "comment": "0-5s",
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "i_rOffset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "i_rRaw": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "q_HighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 13
+            }
+          ]
+        },
+        "q_HighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 14
+            }
+          ]
+        },
+        "q_LowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 16
+            }
+          ]
+        },
+        "q_LowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 15
+            }
+          ]
+        },
+        "q_rReal": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 12
+            }
+          ]
+        },
+        "q_rRealNoFilter": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "q_rScaled": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/REAL"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        },
+        "tonHighAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 18
+            }
+          ]
+        },
+        "tonHighWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 19
+            }
+          ]
+        },
+        "tonLowAlarm": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 21
+            }
+          ]
+        },
+        "tonLowWarning": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 20
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PLC1.Tc2_Standard.TONs": {
+      "properties": {
+        "ET": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "elapsed time",
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "IN": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "starts timer with rising edge, resets timer with falling edge",
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "M": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "PT": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "comment": "time to pass, before Q is set",
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "Q": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "comment": "gets TRUE, delay time (PT) after a rising edge at IN",
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "StartTime": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/TIME"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Array(0..0) OF String": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/String"
+      },
+      "type": "array"
+    }
+  }
+}

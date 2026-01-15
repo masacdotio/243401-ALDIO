@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_TimerHMI" Id="{ecdb0b86-3b13-402d-abd3-edb7a92617be}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_TimerHMI : STRING
+VAR_INPUT
+	i_iTime				:TIME;
+END_VAR
+VAR
+	iTimeInSec			:UDINT;
+	iHours				:UDINT;
+	iMinutes			:UDINT;
+	iSeconds			:UDINT;
+	sQuery				:STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iTimeInSec:=TO_UDINT(i_iTIme)/1000;
+
+iHours:=iTimeInSec/3600;
+iMinutes:=(iTimeInSec/60)-(iHours*60);
+iSeconds:=iTimeInSec - (iMinutes*60) - (iHours*3600);
+
+IF iHours = 0 THEN
+	sQuery:='00:';
+ELSIF iHours > 0 AND iHours < 10 THEN
+	sQuery:=CONCAT('0',TO_STRING(iHours));
+	sQuery:=CONCAT(sQuery,':');
+ELSE
+	sQuery:=TO_STRING(iHours);
+	sQuery:=CONCAT(sQuery,':');
+END_IF
+
+IF iMinutes = 0 THEN
+	sQuery:=CONCAT(sQuery,'00:');
+ELSIF iMinutes > 0 AND iMinutes < 10 THEN
+	sQuery:=CONCAT(sQuery,'0');
+	sQuery:=CONCAT(sQuery,TO_STRING(iMinutes));
+	sQuery:=CONCAT(sQuery,':');
+ELSE
+	sQuery:=CONCAT(sQuery,TO_STRING(iMinutes));
+	sQuery:=CONCAT(sQuery,':');
+END_IF
+
+IF iSeconds = 0 THEN
+	sQuery:=CONCAT(sQuery,'00');
+ELSIF iSeconds > 0 AND iSeconds < 10 THEN
+	sQuery:=CONCAT(sQuery,'0');
+	sQuery:=CONCAT(sQuery,TO_STRING(iSeconds));
+ELSE
+	sQuery:=CONCAT(sQuery,TO_STRING(iSeconds));
+END_IF
+
+
+F_TimerHMI:=sQuery;]]></ST>
+    </Implementation>
+    <LineIds Name="F_TimerHMI">
+      <LineId Id="38" Count="31" />
+      <LineId Id="71" Count="1" />
+      <LineId Id="74" Count="2" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

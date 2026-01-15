@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AuditTrail_Write" Id="{9cd53a48-afdd-4e74-83df-1da370628e8e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AuditTrail_Write
+VAR_INPUT
+	i_iType			:INT; //0-REAL,1-STRING,2-BOOL
+	i_bScan			:BOOL;
+	i_bWrite		:BOOL;
+	i_rVar			:REAL;
+	i_sVar			:STRING;
+	i_enEvent		:EN_Events;
+	i_sDescription	:STRING;
+END_VAR
+VAR
+	iVarOld			:REAL;
+	sVarOld			:STRING;
+	bVarOld			:BOOL;
+	bScan			:BOOL;
+	Scan_TON		:TON;
+END_VAR
+VAR_IN_OUT
+	iq_stParams		:ST_AuditTrail;
+	iq_bWrite		:BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_iType = 0 THEN
+	ACT_REAL();
+ELSIF i_iType = 1 THEN
+	ACT_STRING();
+ELSIF i_iType = 2 THEN
+	ACT_BOOL();
+END_IF]]></ST>
+    </Implementation>
+    <Action Name="ACT_BOOL" Id="{2b203aeb-5874-4db8-ad74-d9cfe0e1dfa6}">
+      <Implementation>
+        <ST><![CDATA[IF i_bWrite THEN
+	iq_stParams.Event:=TO_STRING(i_enEvent);
+	iq_stParams.Description := i_sDescription;
+	iq_stParams.Oldvalue:='/';
+	iq_stParams.Newvalue:='/';
+	iq_bWrite:=TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_REAL" Id="{5e6333ad-861a-4520-a7d2-375c8bd61dc7}">
+      <Implementation>
+        <ST><![CDATA[IF i_bScan THEN
+	bScan:=TRUE;
+END_IF
+Scan_TON(IN:=bScan,PT:=T#1S);
+IF Scan_TON.Q THEN
+	iVarOld:=i_rVar;
+	bScan:=FALSE;
+END_IF
+IF i_bWrite AND NOT bScan AND iVarOld <> i_rVar THEN
+	iq_stParams.Event:=TO_STRING(i_enEvent);
+	iq_stParams.Description := i_sDescription;
+	iq_stParams.Oldvalue:=REAL_TO_STRING(iVarOld);
+	iq_stParams.Newvalue:=REAL_TO_STRING(i_rVar);
+	iVarOld:=i_rVar;
+	iq_bWrite:=TRUE;
+END_IF
+
+]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ACT_STRING" Id="{1794a235-42b9-4c1c-b64b-409ccfb28718}">
+      <Implementation>
+        <ST><![CDATA[IF i_bScan THEN
+	bScan:=TRUE;
+END_IF
+Scan_TON(IN:=bScan,PT:=T#1S);
+IF Scan_TON.Q THEN
+	sVarOld:=i_sVar;
+	bScan:=FALSE;
+END_IF
+IF i_bWrite AND NOT bScan AND sVarOld <> i_sVar THEN
+	iq_stParams.Event:=TO_STRING(i_enEvent);
+	iq_stParams.Description := i_sDescription;
+	iq_stParams.Oldvalue:=sVarOld;
+	iq_stParams.Newvalue:=i_sVar;
+	sVarOld:=i_sVar;
+	iq_bWrite:=TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="FB_AuditTrail_Write">
+      <LineId Id="56" Count="0" />
+      <LineId Id="304" Count="0" />
+      <LineId Id="306" Count="3" />
+      <LineId Id="305" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_AuditTrail_Write.ACT_BOOL">
+      <LineId Id="2" Count="1" />
+      <LineId Id="5" Count="3" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_AuditTrail_Write.ACT_REAL">
+      <LineId Id="2" Count="16" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_AuditTrail_Write.ACT_STRING">
+      <LineId Id="28" Count="7" />
+      <LineId Id="37" Count="6" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

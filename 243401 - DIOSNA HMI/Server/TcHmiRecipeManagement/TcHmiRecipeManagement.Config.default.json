@@ -1,0 +1,1350 @@
+{
+    "recipeList": {
+        "Cleaning": {
+            "final test": {
+                "recipeTypeName": "Cleaning",
+                "values": {
+                    "ADS.PLC1.Recipes.Cleaning": {
+                        "iActivePhase": 6,
+                        "iType": 1,
+                        "sName": "final test",
+                        "stInfo": {
+                            "bVerification": false,
+                            "iVersion": 0,
+                            "sTimeCreated": "15-01-2026 16:00:35",
+                            "sTimeEdited": "",
+                            "sTimeVerified": "",
+                            "sUserCreated": "__SystemUser",
+                            "sUserEdited": "",
+                            "sUserVerified": ""
+                        },
+                        "stPhase": [
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": true,
+                                "bEnable": true,
+                                "bMixerWater": true,
+                                "bSPWater": true,
+                                "iChopper": 1,
+                                "iDetergent": 0,
+                                "iMedium": 1,
+                                "iTime1": {
+                                    "mins": 1,
+                                    "sec": 1
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 1.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 1.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": true,
+                                "bEnable": true,
+                                "bMixerWater": true,
+                                "bSPWater": true,
+                                "iChopper": 1,
+                                "iDetergent": 1,
+                                "iMedium": 1,
+                                "iTime1": {
+                                    "mins": 2,
+                                    "sec": 2
+                                },
+                                "iTime2": {
+                                    "mins": 2,
+                                    "sec": 2
+                                },
+                                "iTime3": {
+                                    "mins": 2,
+                                    "sec": 2
+                                },
+                                "iType": 1,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 2.0,
+                                "rMixerSpeed3": 2.0,
+                                "rSieveSpeed": 2.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": true,
+                                "bEnable": true,
+                                "bMixerWater": true,
+                                "bSPWater": true,
+                                "iChopper": 2,
+                                "iDetergent": 0,
+                                "iMedium": 2,
+                                "iTime1": {
+                                    "mins": 3,
+                                    "sec": 3
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 2,
+                                "rMixerSpeed1": 3.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 3.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": true,
+                                "bEnable": true,
+                                "bMixerWater": true,
+                                "bSPWater": true,
+                                "iChopper": 1,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 4,
+                                    "sec": 4
+                                },
+                                "iTime2": {
+                                    "mins": 4,
+                                    "sec": 4
+                                },
+                                "iTime3": {
+                                    "mins": 4,
+                                    "sec": 4
+                                },
+                                "iType": 3,
+                                "rMixerSpeed1": 4.0,
+                                "rMixerSpeed2": 4.0,
+                                "rMixerSpeed3": 4.0,
+                                "rSieveSpeed": 4.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": true,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 5,
+                                    "sec": 5
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 4,
+                                "rMixerSpeed1": 5.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": true,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 2,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 6,
+                                    "sec": 6
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 5,
+                                "rMixerSpeed1": 6.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 6.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bChopperWater": false,
+                                "bEnable": false,
+                                "bMixerWater": false,
+                                "bSPWater": false,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "Cleaning_Template": {
+            "recipeTypeName": "Cleaning",
+            "values": {
+                "ADS.PLC1.Recipes.Cleaning": {
+                    "iActivePhase": 0,
+                    "iType": 1,
+                    "sName": "''",
+                    "stInfo": {
+                        "bVerification": true,
+                        "iVersion": 0,
+                        "sTimeCreated": "''",
+                        "sTimeEdited": "''",
+                        "sTimeVerified": "''",
+                        "sUserCreated": "''",
+                        "sUserEdited": "''",
+                        "sUserVerified": "''"
+                    },
+                    "stPhase": [
+                        {
+                            "bChopperWater": true,
+                            "bEnable": true,
+                            "bMixerWater": true,
+                            "bSPWater": true,
+                            "iChopper": 0,
+                            "iDetergent": 0,
+                            "iMedium": 0,
+                            "iTime1": {
+                                "mins": 0,
+                                "sec": 0
+                            },
+                            "iTime2": {
+                                "mins": 0,
+                                "sec": 0
+                            },
+                            "iTime3": {
+                                "mins": 0,
+                                "sec": 0
+                            },
+                            "iType": 0,
+                            "rMixerSpeed1": 0.0,
+                            "rMixerSpeed2": 0.0,
+                            "rMixerSpeed3": 0.0,
+                            "rSieveSpeed": 0.0,
+                            "sDescription": "''"
+                        },
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {}
+                    ]
+                }
+            }
+        },
+        "Production": {
+            "final test": {
+                "recipeTypeName": "Production",
+                "values": {
+                    "ADS.PLC1.Recipes.Production": {
+                        "iActivePhase": 4,
+                        "iType": 0,
+                        "sName": "final test",
+                        "stInfo": {
+                            "bVerification": true,
+                            "iVersion": 1,
+                            "sTimeCreated": "15-01-2026 15:24:17",
+                            "sTimeEdited": "15-01-2026 15:41:08",
+                            "sTimeVerified": "",
+                            "sUserCreated": "__SystemUser",
+                            "sUserEdited": "__SystemUser",
+                            "sUserVerified": "__SystemUser"
+                        },
+                        "stPhase": [
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": true,
+                                "bPause": true,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 1,
+                                "iFilterPause": 1,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 1.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": true,
+                                "bPause": true,
+                                "iChopper": 1,
+                                "iEndPoint": 2,
+                                "iFilterClean": 2,
+                                "iFilterPause": 2,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 2,
+                                    "sec": 2
+                                },
+                                "iType": 1,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 2.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": true,
+                                "bPause": true,
+                                "iChopper": 2,
+                                "iEndPoint": 2,
+                                "iFilterClean": 3,
+                                "iFilterPause": 3,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 3,
+                                    "sec": 3
+                                },
+                                "iType": 2,
+                                "rMixerCurrent": 3.0,
+                                "rMixerSpeed": 3.0,
+                                "rSP_MixingSpeed": 3.0,
+                                "rSP_Pressure": 3.0,
+                                "rSP_Temperature": 3.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": true,
+                                "bPause": true,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 4,
+                                "iFilterPause": 4,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 4.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            },
+                            {
+                                "bEnable": false,
+                                "bPause": false,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": ""
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "Production_Template": {
+            "recipeTypeName": "Production",
+            "values": {
+                "ADS.PLC1.Recipes.Production": {
+                    "iActivePhase": 0,
+                    "iType": 0,
+                    "sName": "''",
+                    "stInfo": {
+                        "bVerification": true,
+                        "iVersion": 0,
+                        "sTimeCreated": "''",
+                        "sTimeEdited": "''",
+                        "sTimeVerified": "''",
+                        "sUserCreated": "''",
+                        "sUserEdited": "''",
+                        "sUserVerified": "''"
+                    },
+                    "stPhase": [
+                        {
+                            "bEnable": true,
+                            "bPause": true,
+                            "iChopper": 0,
+                            "iEndPoint": 0,
+                            "iFilterClean": 0,
+                            "iFilterPause": 0,
+                            "iMixer": 0,
+                            "iPhaseTime": {
+                                "mins": 0,
+                                "sec": 0
+                            },
+                            "iType": 0,
+                            "rMixerCurrent": 0.0,
+                            "rMixerSpeed": 0.0,
+                            "rSP_MixingSpeed": 0.0,
+                            "rSP_Pressure": 0.0,
+                            "rSP_Temperature": 0.0,
+                            "rSieveSpeed": 0.0,
+                            "sDescription": "''"
+                        },
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {}
+                    ]
+                }
+            }
+        }
+    },
+    "recipeTypeList": {
+        "Cleaning": {
+            "members": {
+                "ADS.PLC1.Recipes.Cleaning": {
+                    "defaultValue": {
+                        "iActivePhase": 0,
+                        "iType": 1,
+                        "sName": "''",
+                        "stInfo": {
+                            "bVerification": true,
+                            "iVersion": 0,
+                            "sTimeCreated": "''",
+                            "sTimeEdited": "''",
+                            "sTimeVerified": "''",
+                            "sUserCreated": "''",
+                            "sUserEdited": "''",
+                            "sUserVerified": "''"
+                        },
+                        "stPhase": [
+                            {
+                                "bChopperWater": true,
+                                "bEnable": true,
+                                "bMixerWater": true,
+                                "bSPWater": true,
+                                "iChopper": 0,
+                                "iDetergent": 0,
+                                "iMedium": 0,
+                                "iTime1": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime2": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iTime3": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerSpeed1": 0.0,
+                                "rMixerSpeed2": 0.0,
+                                "rMixerSpeed3": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": "''"
+                            },
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "ADS.PLC1.Recipes.Cleaning",
+                    "unit": "",
+                    "version": 1.0
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
+        "Production": {
+            "members": {
+                "ADS.PLC1.Recipes.Production": {
+                    "defaultValue": {
+                        "iActivePhase": 0,
+                        "iType": 0,
+                        "sName": "''",
+                        "stInfo": {
+                            "bVerification": true,
+                            "iVersion": 0,
+                            "sTimeCreated": "''",
+                            "sTimeEdited": "''",
+                            "sTimeVerified": "''",
+                            "sUserCreated": "''",
+                            "sUserEdited": "''",
+                            "sUserVerified": "''"
+                        },
+                        "stPhase": [
+                            {
+                                "bEnable": true,
+                                "bPause": true,
+                                "iChopper": 0,
+                                "iEndPoint": 0,
+                                "iFilterClean": 0,
+                                "iFilterPause": 0,
+                                "iMixer": 0,
+                                "iPhaseTime": {
+                                    "mins": 0,
+                                    "sec": 0
+                                },
+                                "iType": 0,
+                                "rMixerCurrent": 0.0,
+                                "rMixerSpeed": 0.0,
+                                "rSP_MixingSpeed": 0.0,
+                                "rSP_Pressure": 0.0,
+                                "rSP_Temperature": 0.0,
+                                "rSieveSpeed": 0.0,
+                                "sDescription": "''"
+                            },
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "ADS.PLC1.Recipes.Production",
+                    "unit": "",
+                    "version": 1.0
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        }
+    }
+}

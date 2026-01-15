@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Sieve" Id="{b1c2b63c-9165-4a79-88b7-218181821946}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Sieve
+VAR_INPUT
+	i_iOperation					:INT;
+	i_rSetSpeed						:REAL;
+END_VAR
+
+VAR_OUTPUT
+	q_rSpeed_Cmd					:REAL;
+	q_bStart_Cmd					:BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_iOperation = 0 OR i_rSetSpeed = 0 OR NOT GV.stControl.bRunning THEN
+	q_rSpeed_Cmd:=0;
+	q_bStart_Cmd:=FALSE;
+ELSIF i_iOperation = 1 THEN
+	q_rSpeed_Cmd:=i_rSetSpeed;
+	q_bStart_Cmd:=TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="_Sieve">
+      <LineId Id="14" Count="5" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

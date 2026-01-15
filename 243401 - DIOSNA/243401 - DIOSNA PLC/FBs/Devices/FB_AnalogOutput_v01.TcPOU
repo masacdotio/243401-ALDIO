@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AnalogOutput_v01" Id="{cd9f5c74-7e84-4725-849e-005640f61686}" SpecialFunc="None">
+    <Declaration><![CDATA[// Created by Dimitar Stojanov 06.2023 
+
+//Functionality: Use this block to scale Analog Outputs
+
+FUNCTION_BLOCK FB_AnalogOutput_v01
+VAR_INPUT
+	i_rValue 							:REAL;
+	i_rData_Low 						:REAL;
+	i_rData_High 						:REAL;
+	i_rScaled_Low						:INT	:=0;
+	i_rScaled_High						:INT	:=32676;
+	
+END_VAR
+VAR_OUTPUT
+	q_iScaled							:INT;
+END_VAR
+VAR
+	K								    :REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[K := ((i_rScaled_High - i_rScaled_Low) / (i_rData_High - i_rData_Low));
+q_iScaled:=REAL_TO_INT(K * i_rValue);
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AnalogOutput_v01">
+      <LineId Id="226" Count="0" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

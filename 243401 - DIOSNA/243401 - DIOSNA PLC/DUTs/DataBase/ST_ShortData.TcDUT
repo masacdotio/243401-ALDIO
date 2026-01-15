@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ShortData" Id="{ecb01ee9-3084-4315-a2c8-b67d66b40d92}">
+    <Declaration><![CDATA[TYPE ST_ShortData :
+STRUCT
+	Batch		: STRING(100);
+	Number		: STRING(100);
+	Name		: STRING(100);
+	Event		: STRING(100);
+	DateTime	: DT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

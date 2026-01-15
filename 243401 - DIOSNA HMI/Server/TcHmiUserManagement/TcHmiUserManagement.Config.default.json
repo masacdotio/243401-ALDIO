@@ -1,0 +1,84 @@
+{
+    "EXCLUDE_SYSTEM_ADMINISTRATOR_FROM_LOCKOUT": false,
+    "MAX_INVALID_LOGIN_ATTEMPTS": 0,
+    "PASSWORD_BLACKLIST": "",
+    "PASSWORD_ENABLE_AGING": false,
+    "PASSWORD_FORCE_COMPLEX": 0,
+    "PASSWORD_HISTORY_SIZE": 0,
+    "PASSWORD_MAXIMUM_AGE": "P90D",
+    "PASSWORD_MINIMUM_LENGTH": 1,
+    "USERS": {
+        "DefaultUser": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "cce5c412caa1a7c4bc3b6cdbdd5d7545238554e3d234787b094524ebe211bc6e99bdbc978ac755c40a720a22ca80b59ae9c5830dfd28105079834eebbf158171",
+            "PASSWORD_HISTORY": [],
+            "SALT": "rTqipIm9B/6TRKvY+VEaWyWuC/VrA1PJHZLphFqh91b/uP4WTNvTCudVL5ys1gaILnnnPC+XB8oktoWysrpLDA==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemAdministrator": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "faed3f7863f56b50fcaad3261e67d71dfb205ee4fc641a9ac3c1fd7697f0c43c06325a0421302bbfd0b30ce03d95bad675504d5c58ac70a5ecc871dceaf0d324",
+            "PASSWORD_HISTORY": [],
+            "SALT": "IDcd8BkadYh/6LsE8Vg9z3xfasWLU0McnNmyYPxsOLl/VLUQybXsi0HkYd88qpA2Fp8EyVtmp2P658ExojpaNQ==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemGuest": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "PASSWORD": "",
+            "PASSWORD_HISTORY": [],
+            "SALT": "",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemUser": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "PASSWORD": "",
+            "PASSWORD_HISTORY": [],
+            "SALT": "",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "locadministrator": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "3f34ef61e336b6799828784bdb904cf7a13ab0b3c3ddb457f88380c62fb972d17c3656c8f853d813b4d9aaab8368584b7cfd59a285483c14232d90e7d85a22e1",
+            "PASSWORD_HISTORY": [],
+            "SALT": "2lyaXgC+M60pTOSKtUlz/slN7Cnq2H6hrWDbXkbOq7qwiOVC6Xz+ey7LBs2kKkWVZxTYYJdyKUmEHs9vMGmAPg==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "locmaster": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "f6864918963c0f789a87b504eefaa737d10bb214f7b8a9948f6cc28125a1d645e772348264db58f1cbdfa4e80823b4ca1b67f333ae4d068eddb6538f2f5727a6",
+            "PASSWORD_HISTORY": [],
+            "SALT": "3m8olF+f0a82t4f2vAdmuwXr1w+pNLA17Kf6lkKJH1AxI98dq8Qbm/CyiCqF0JBqjjIIdmW+3tywwvtpV0gisA==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "locoperator": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "fb92ec5304ccb4e4978f97e6e24f14868cfabf913d09b1ccd1b282a90e3a58f8e7f77e5d3831da15bcea6c2c9e8e51e5793c92af17cf343d4d3c79e7a70d4315",
+            "PASSWORD_HISTORY": [],
+            "SALT": "My3bSju0AKXU2tggJVUtMaj6GghtsgkmLlEo7EQV451lP04eSBHMrYJXT0ujeuNFvIXbgrWEnH5S1cWN1TUgFQ==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "locservice": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "5fd97436689aa8d87746558cb02b3c8a8d8009024ec9402ab6a1c105ab135ca2431b5e172d26ae7f977c718f062c7cd8d85e494e51f559a66ee14efd03bfb171",
+            "PASSWORD_HISTORY": [],
+            "SALT": "fWrqCqXHPSGpTJ2XYo/Eu2YiVXldE5gGolhhoYY8Dt7KtvI4rgu0kSpy4Z4esc4IJZbFjRXoxyfDjX95dTo8Aw==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "locsupervisor": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "24c91fd3681228c155ea737e9109b32187d0c610dfc7dcc09aa5679b83e1f6e0dd21f2b99421a963d5fd8cc92c3167f41c37e694ac45a76a6757e68f92e390e9",
+            "PASSWORD_HISTORY": [],
+            "SALT": "Xrf1UDgwIT+FhYkdgFPabdjdfjiZhPb9vd4H0Y8BFdwG0Pi9reXNBEH9Eg/9N3jT5CF60HokOX+QLos+GxEKhA==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        }
+    }
+}

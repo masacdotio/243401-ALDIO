@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_TimeElapsed_HMI" Id="{d3c9f531-d565-421c-9b84-27919f12ef36}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_TimeElapsed_HMI
+VAR_INPUT
+	i_RectWidth				:INT;
+	i_tTimeActual			:TIME;
+	i_tTimeSet				:TIME;
+END_VAR
+VAR_OUTPUT
+	q_iValue				:REAL;
+END_VAR
+VAR
+	iTimeActual_Min				:DINT;
+	iTimeSet_Min				:DINT;
+	fbScale						:FB_Scale;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iTimeSet_Min:=TIME_TO_DINT(i_tTimeSet)/100;
+iTimeActual_Min:=TIME_TO_DINT(i_tTimeActual)/100;
+
+IF iTimeSet_Min <> 0 THEN
+	fbSCale(i_iValue:=DINT_TO_INT(iTimeActual_Min),
+			i_iRawData_Low:=0,
+			i_iRawData_High:=DINT_TO_INT(iTimeSet_Min),
+			i_rScaled_Low:=0,
+			i_rScaled_High:=i_RectWidth,
+			i_rOffset:=0,
+			q_rScaled=>q_iValue);
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_TimeElapsed_HMI">
+      <LineId Id="9" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

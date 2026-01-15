@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_TimeBarHMI" Id="{5ff33a70-6356-44b5-8e6a-958dd8b13bed}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_TimeBarHMI : REAL
+VAR_INPUT
+	i_RectWidth				:INT;
+	i_tTimeActual			:TIME;
+	i_tTimeSet				:TIME;
+END_VAR
+VAR
+	iTimeActual_Min				:DINT;
+	iTimeSet_Min				:DINT;
+	fbScale						:FB_Scale;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iTimeSet_Min:=TIME_TO_DINT(i_tTimeSet)/100;
+iTimeActual_Min:=TIME_TO_DINT(i_tTimeActual)/100;
+
+IF iTimeSet_Min <> 0 THEN
+	fbSCale(i_rValue:=DINT_TO_REAL(iTimeActual_Min),
+			i_rRawData_Low:=0,
+			i_rRawData_High:=DINT_TO_INT(iTimeSet_Min),
+			i_rScaled_Low:=0,
+			i_rScaled_High:=i_RectWidth,
+			i_rOffset:=0,
+			q_rScaled=>F_TimeBarHMI);
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="F_TimeBarHMI">
+      <LineId Id="8" Count="11" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

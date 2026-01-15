@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Mixer" Id="{ddeb3988-df3d-4517-96de-69400915d9cb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Mixer
+VAR_INPUT
+	i_iOperation					:INT;
+	i_rSetSpeed						:REAL;
+END_VAR
+
+VAR_OUTPUT
+	q_rSpeed_Cmd					:REAL;
+	q_bStart_Cmd					:BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_iOperation = 0 OR i_rSetSpeed = 0 OR NOT GV.stControl.bRunning THEN
+	q_rSpeed_Cmd:=0;
+	q_bStart_Cmd:=FALSE;
+ELSIF i_iOperation = 1 THEN
+	q_rSpeed_Cmd:=i_rSetSpeed;
+	q_bStart_Cmd:=TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="_Mixer">
+      <LineId Id="5" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="13" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AnalogInput" Id="{db682fc1-0a3f-4988-843c-746650009faa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AnalogInput
+VAR_INPUT
+	i_rRaw		 			:REAL;
+	i_rRaw_Low				:REAL := 0;
+	i_rRaw_High 			:REAL := 32767;
+	i_rScaled_Low			:REAL := 0;
+	i_rScaled_High			:REAL := 32767;
+	i_rOffset 				:REAL;
+	i_iFilter				:REAL  := 0.1;		//0-5s
+	i_HighAlarm				:REAL;
+	i_HighWarning			:REAL;
+	i_LowWarning			:REAL;
+	i_LowAlarm				:REAL;
+	i_WarningDelay			:INT;
+	i_AlarmDelay			:INT;
+END_VAR
+VAR_OUTPUT
+	q_rScaled 				:REAL;
+	q_rRealNoFilter			:REAL;
+	q_rReal 				:REAL;
+	q_HighAlarm				:BOOL;
+	q_HighWarning			:BOOL;
+	q_LowWarning			:BOOL;
+	q_LowAlarm				:BOOL;
+END_VAR
+VAR
+	K						:REAL;
+	rRawInput				:REAL;
+	tonHighAlarm			:TON;
+	tonHighWarning			:TON;
+	tonLowWarning			:TON;
+	tonLowAlarm				:TON;
+	arrSignals				:ARRAY[0..499] OF REAL;
+
+	iLength					:INT;
+	i						:INT;
+	j						:INT;
+	p						:INT;
+	Sum						:REAL;
+	
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Validation rules (protect divide by zero)
+IF i_rRaw_High - i_rRaw_Low = 0 THEN
+	i_rRaw_High := i_rRaw_Low + 1;
+END_IF
+
+//Scaling
+K 				:= ((i_rScaled_High - i_rScaled_Low) /(i_rRaw_High - i_rRaw_Low));
+rRawInput 		:= i_rRaw - i_rRaw_Low ;
+q_rScaled 		:= (K * rRawInput) +  i_rScaled_Low;
+q_rRealNoFilter	:= q_rScaled + i_rOffset;
+
+//Filter
+A_Filter();
+
+//Warnings and alarms
+tonHighAlarm(IN:=q_rReal>i_HighAlarm, PT:=INT_TO_TIME(i_AlarmDelay*1000));
+tonHighWarning(IN:=q_rReal>i_HighWarning, PT:=INT_TO_TIME(i_WarningDelay*1000));
+tonLowWarning(IN:=q_rReal<i_LowWarning, PT:=INT_TO_TIME(i_WarningDelay*1000));
+tonLowAlarm(IN:=q_rReal<i_LowAlarm, PT:=INT_TO_TIME(i_AlarmDelay*1000));
+
+q_HighAlarm := tonHighAlarm.Q;
+q_HighWarning := tonHighWarning.Q;
+q_LowWarning := tonLowWarning.Q;
+q_LowAlarm := tonLowAlarm.Q;
+
+//Warning and alarms validation rules
+i_LowAlarm := LIMIT(i_rScaled_Low, i_LowAlarm, i_LowWarning);
+i_HighAlarm := LIMIT(i_HighWarning, i_HighAlarm, i_rScaled_High);
+i_LowWarning := LIMIT(i_LowAlarm, i_LowWarning, i_HighWarning);
+i_HighWarning := LIMIT(i_LowWarning, i_HighWarning, i_HighAlarm);
+]]></ST>
+    </Implementation>
+    <Action Name="A_Filter" Id="{9dd04804-9138-42d0-a861-2ea9ec3d01c7}">
+      <Implementation>
+        <ST><![CDATA[i_iFilter := LIMIT(0.1, i_iFilter, 5);
+iLength := TO_INT(i_iFilter*100);
+
+FOR p:=0 TO iLength-2 DO
+	arrSignals[p]:=arrSignals[p+1];
+END_FOR
+arrSignals[iLength-1]:=q_rRealNoFilter;
+Sum:=0;
+FOR j:=0 TO iLength-1 DO
+	Sum := Sum + arrSignals[j];
+END_FOR
+IF Sum <> 0 THEN
+	q_rReal:=Sum/iLength;
+ELSE
+	q_rReal:=0;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Method Name="M_Filter" Id="{1c4de494-4214-4aa8-b8b9-960ab7d252e3}">
+      <Declaration><![CDATA[//Created by MASAC Jan,2025
+
+// Filter for analog signal (in seconds). Min filter time: 0s, Max filter time 5s
+// Calculate average value of samples taken in last x seconds (if scan cycle remains 10ms)
+
+METHOD M_Filter
+VAR
+	iLength				:INT;
+	i					:INT;
+	j					:INT;
+	k					:INT;
+	Sum					:REAL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[i_iFilter := LIMIT(0.1, i_iFilter, 5);
+iLength := TO_INT(i_iFilter*100);
+
+FOR k:=0 TO iLength-2 DO
+	arrSignals[k]:=arrSignals[k+1];
+END_FOR
+arrSignals[iLength-1]:=q_rRealNoFilter;
+Sum:=0;
+FOR j:=0 TO iLength-1 DO
+	Sum := Sum + arrSignals[j];
+END_FOR
+IF Sum <> 0 THEN
+	q_rReal:=Sum/iLength;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_AnalogInput">
+      <LineId Id="161" Count="0" />
+      <LineId Id="262" Count="2" />
+      <LineId Id="267" Count="0" />
+      <LineId Id="265" Count="0" />
+      <LineId Id="162" Count="17" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="218" Count="0" />
+      <LineId Id="220" Count="3" />
+      <LineId Id="152" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_AnalogInput.A_Filter">
+      <LineId Id="2" Count="14" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_AnalogInput.M_Filter">
+      <LineId Id="35" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="17" Count="9" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

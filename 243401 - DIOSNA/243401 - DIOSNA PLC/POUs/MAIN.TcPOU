@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <POU Name="MAIN" Id="{76eafec1-8538-4a1b-ae91-920474164478}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bFirstCycle				:BOOL:=TRUE;
+	tonFirstCycleDelay		:TON;
+	bFirstCycleDelay		:BOOL;
+	
+	//UPS
+	fbUPS					:FB_S_UPS_BAPI;
+	eGlobalSUpsState 		:E_S_UPS_State;
+	fbWritePersistent		:WritePersistentData;
+	
+
+	//IPC diagnostic
+	fbReg					:FB_IPCDiag_Register;
+	fbIPC_Temp				:FB_IPCDiag_ReadParameter;
+	fbIPC_BootCnt			:FB_IPCDiag_ReadParameter;
+	fbIPC_OperTime			:FB_IPCDiag_ReadParameter;	
+	
+	//Close application	
+	fbCloseHMI				:NT_StartProcess;
+	fbCloseRDP				:NT_StartProcess;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bFirstCycle THEN
+	bFirstCycleDelay:=TRUE;
+END_IF
+
+tonFirstCycleDelay(IN:=bFirstCycleDelay,PT:=T#500MS);
+IF tonFirstCycleDelay.Q THEN
+	bFirstCycleDelay:=FALSE;
+END_IF
+
+P02_GlobalSystemTime();
+
+P0_00_MAIN();
+P1_00_MAIN();
+P2_00_MAIN();
+P3_00_MAIN();
+P4_00_MAIN();
+P5_00_MAIN();
+
+SIMULATION();
+
+//Reset first cycle bit after reading all programs
+bFirstCycle:=FALSE;
+
+//********************DETECT UPS FAILURE*************************
+fbUPS(sNetID:=CONST.AMS_NETID,
+	iPLCPort:=851,
+	tTimeout:=DEFAULT_ADS_TIMEOUT,
+	eUpsMode:=eSUPS_WrPersistData_NoShutdown,
+	ePersistentMode:=SPDM_2PASS,
+	tRecoverTime:=T#10S,
+	bPowerFailDetect=>GV.bUPSdetect, eState=>eGlobalSUpsState);
+
+fbWritePersistent(NETID:=CONST.AMS_NETID,
+	PORT:=851,
+	START:=GV.stTime.bClock_60s,
+	TMOUT:=T#10S);
+
+//********************IPC DIAGNOSTIC*************************
+fbReg(bExecute:=GV.stTime.bClock_5s,
+	sNetId:=CONST.AMS_NETID);
+
+//Motherboard temperature
+fbIPC_Temp(bExecute:=fbReg.bValid,
+	eParameterKey:=E_IPCDiag_ParameterKey.MB_Temperature,
+	sNetId:=CONST.AMS_NETID,
+	fbRegister:=fbReg);
+IF NOT fbIPC_Temp.bBusy AND fbIPC_Temp.bValid THEN
+	fbIPC_Temp.GetParameter(pBuffer:=ADR(GV.stIPCDiag.Temperature),
+					nBufferSize:=SIZEOF(GV.stIPCDiag.Temperature));
+END_IF
+
+GV.bIPC_Overheated:= GV.stIPCDiag.Temperature > 80;
+//Boot count
+fbIPC_BootCnt(bExecute:=fbReg.bValid,
+	eParameterKey:=E_IPCDiag_ParameterKey.MB_BootCnt,
+	sNetId:=CONST.AMS_NETID,
+	fbRegister:=fbReg);
+IF NOT fbIPC_BootCnt.bBusy AND fbIPC_BootCnt.bValid THEN
+	fbIPC_BootCnt.GetParameter(pBuffer:=ADR(GV.stIPCDiag.BootCount),
+					nBufferSize:=SIZEOF(GV.stIPCDiag.BootCount));
+END_IF
+//Operation time
+fbIPC_OperTime(bExecute:=fbReg.bValid,
+	eParameterKey:=E_IPCDiag_ParameterKey.MB_OperationTime,
+	sNetId:=CONST.AMS_NETID,
+	fbRegister:=fbReg);
+IF NOT fbIPC_OperTime.bBusy AND fbIPC_OperTime.bValid THEN
+	fbIPC_OperTime.GetParameter(pBuffer:=ADR(GV.stIPCDiag.OperationTime),
+					nBufferSize:=SIZEOF(GV.stIPCDiag.OperationTime));
+END_IF
+
+
+GV.stIPCDiag.OperationDuration:=F_OperationalTime(GV.stIPCDiag.OperationTime);
+
+
+fbCloseHMI(NETID:='',
+		PATHSTR:='C:\Windows\System32\taskkill.exe',
+		DIRNAME:='C:\Windows\System32',
+		COMNDLINE:='/F /IM "msedge.exe"',
+		START:=GV.stHMI.bCloseHMI,
+		TMOUT:=T#3S);
+fbCloseRDP(NETID:='',
+		PATHSTR:='C:\Windows\System32\taskkill.exe',
+		DIRNAME:='C:\Windows\System32',
+		COMNDLINE:='/F /IM "mstsc.exe"',
+		START:=GV.stHMI.bCloseHMI,
+		TMOUT:=T#3S);
+			
+GV.stHMI.bCloseHMI:=FALSE;
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

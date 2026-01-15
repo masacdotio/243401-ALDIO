@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Alarm" Id="{5ad0ce64-6139-448b-ab94-548ec01127d0}">
+    <Declaration><![CDATA[TYPE ST_Alarm :
+STRUCT
+	Alarm			:ARRAY[0..99] OF fb_TcAlarm;
+	Active			:ARRAY[0..99] OF BOOL;
+	Raise			:ARRAY[0..99] OF BOOL;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

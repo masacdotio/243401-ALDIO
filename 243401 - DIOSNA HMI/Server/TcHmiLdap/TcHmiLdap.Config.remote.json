@@ -1,0 +1,6 @@
+{
+    "HOST": "10.0.0.10",
+    "PORT": 636,
+    "TRUST_ALL_CERTIFICATES": true,
+    "USE_TLS": true
+}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_Interlocks" Id="{a0ddab21-eeb3-4d16-909d-580ddaf1eb2b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_Interlocks : ARRAY[1..5] OF BOOL
+VAR_INPUT
+	In1		:BOOL;
+	In2		:BOOL;
+	In3		:BOOL;
+	In4		:BOOL;
+	In5		:BOOL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_Interlocks[1] := In1;
+F_Interlocks[2] := In2;
+F_Interlocks[3] := In3;
+F_Interlocks[4] := In4;
+F_Interlocks[5] := In5;]]></ST>
+    </Implementation>
+    <LineIds Name="F_Interlocks">
+      <LineId Id="18" Count="3" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

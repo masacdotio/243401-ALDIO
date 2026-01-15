@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="EN_AuditEvent" Id="{e5c444a5-4ba3-42b6-9813-e5525bfa9fc4}">
+    <Declaration><![CDATA[{attribute 'to_string'}
+TYPE EN_AuditEvent :
+(
+	ALL				:= 0,
+	RECIPE		    := 1,
+	BATCH			:= 2,
+	SETTINGS		:= 3,
+	CALIBRATION		:= 4,
+	ACTIONS			:= 5
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

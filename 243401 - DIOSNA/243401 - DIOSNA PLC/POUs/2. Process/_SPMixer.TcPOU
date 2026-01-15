@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_SPMixer" Id="{8e5fcc92-9fae-42d8-9a72-a94f46375497}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _SPMixer
+VAR_INPUT
+	i_bStart						:BOOL;
+	i_bToggleCmd					:BOOL;
+	i_iOperation					:INT;
+	i_rSetSpeed						:REAL;
+END_VAR
+VAR
+	bStopMixer						:BOOL;
+END_VAR
+
+VAR_OUTPUT
+	q_rSpeed_Cmd					:REAL;
+	q_bStart_Cmd					:BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_bStart AND i_iOperation = 1 AND NOT bStopMixer THEN
+	q_rSpeed_Cmd:=i_rSetSpeed;
+	q_bStart_Cmd:=TRUE;
+ELSE
+	q_rSpeed_Cmd:=0;
+	q_bStart_Cmd:=FALSE;
+END_IF
+
+IF i_bToggleCmd THEN
+	bStopMixer:=NOT bStopMixer;
+END_IF
+
+
+IF GV.stSP_Control.bStopped THEN
+	bStopMixer:=FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="_SPMixer">
+      <LineId Id="25" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="30" Count="3" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="37" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Rinsing" Id="{29e37c97-c7c3-483e-a591-dbd688becec1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Rinsing
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_stPhaseTime				:ST_HMI_Time;
+	i_rMixerSpeed				:REAL;
+	i_iChopper					:INT;
+	i_rSieveSpeed				:REAL;
+	i_iMedium					:INT;
+	i_bMixerWater				:BOOL;
+	i_bChopperWater				:BOOL;
+	i_bSPWater					:BOOL;
+END_VAR
+VAR
+	Seq_Time					:ARRAY[0..9] OF TIME;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+	q_bRunning					:BOOL;
+	q_bFinished					:BOOL;
+	q_bPromptReq				:BOOL;
+	q_tStepTime					:TIME;
+END_VAR
+VAR PERSISTENT
+	iStep						:INT;
+	iPrevStep					:INT;
+	Seq_TON						:ARRAY[0..9] OF FB_TONP;
+	tonStepTime					:FB_TONP;
+	stSeqControl				:ST_SeqControl;
+	
+END_VAR	]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//****************RECIPE CALCULATIONS*********************
+Seq_Time[1]:=DINT_TO_TIME(i_stPhaseTime.mins)*60000 + 
+			 DINT_TO_TIME(i_stPhaseTime.sec)*1000;
+
+//****************SEQUENE STATE AND CONTROL*********************
+q_bRunning:=iStep<>0;
+//Finish sequence if phase change is requested
+IF q_bRunning AND (GV.stControl.bNext OR GV.stControl.bPrevious OR GV.stControl.bJump) THEN
+	iStep:=1000;
+END_IF
+//Idle if phase is not active
+IF NOT i_bStart THEN
+	iStep:=0;
+END_IF
+//Timers
+Seq_TON[1](IN:=iStep=100,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[1]);
+//****************SEQUENCE*********************
+
+CASE iStep OF
+	0:
+		IF i_bStart THEN
+			q_bFinished:=FALSE;
+			iStep:=50;
+		END_IF
+		
+		IF iStep <> 0 THEN
+			iPrevStep:=0;
+		END_IF
+	
+		IF GV.stControl.bPaused THEN
+			iStep:=0;
+		END_IF
+	
+	50://Check outlet if open
+	IF IN.bOutletPos_Opened THEN
+		iStep := 100;
+	END_IF
+	IF iStep <> 50 THEN
+		iPrevStep:=50;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 50;
+	END_IF
+	
+	100://Cleaning
+	IF Seq_TON[1].Q THEN
+		iStep := 1000;
+	END_IF
+	IF iStep <> 100 THEN
+		iPrevStep:=100;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 100;
+	END_IF
+	
+	1000:
+		q_bFinished:=TRUE;
+		IF GV.stControl.bPhaseFinished THEN
+			q_bFinished:=FALSE;
+			iStep:=0;
+		END_IF
+END_CASE
+
+
+//****************COMMAND*********************
+
+//Outlet
+IF F_StepCMP(iStep,50,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=TRUE;
+ELSE
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=FALSE;
+END_IF
+
+//Mixer
+IF F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bMixerStart:=TRUE;
+	q_stCmd.rMixerSpeed:=i_rMixerSpeed;
+ELSE
+	q_stCmd.bMixerStart:=FALSE;
+	q_stCmd.rMixerSpeed:=0;
+END_IF
+
+//Chopper
+IF F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.iChopper:=i_iChopper;
+ELSE
+	q_stCmd.iChopper:=0;
+END_IF
+
+//Sieve
+IF F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND IN.bOutletPos_Opened THEN
+	q_stCmd.bSieveStart:=TRUE;
+	q_stCmd.rSieveSpeed:=i_rSieveSpeed;
+ELSE
+	q_stCmd.bSieveStart:=FALSE;
+	q_stCmd.rSieveSpeed:=0;
+END_IF
+
+//Medium
+q_stCmd.bColdWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND (i_iMedium = 0);
+q_stCmd.bWarmWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND (i_iMedium = 1);
+q_stCmd.bPurifiedWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND (i_iMedium = 2);
+
+//Filling
+q_stCmd.bMixerWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bMixerWater;
+q_stCmd.bChopperWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bChopperWater;
+q_stCmd.bSPWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bSPWater;
+
+//Drain
+q_stCmd.bMainDrain:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+q_stCmd.bSPDrain:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bSPWater;
+
+
+//****************Statistic and Status*********************
+tonStepTime(IN:=q_bRunning OR MAIN.bFirstCycle,PAUSE:=GV.bUPSdetect,PT:=T#3H);
+q_tStepTime:=tonStepTime.ET;
+
+
+//Sequence control HMI
+stSeqControl.iCurrentStep:=iStep;
+stSeqControl.iPreviousStep:=iPrevStep;
+stSeqControl.iRecipeType:=1;
+stSeqControl.iPhaseType:=2;
+stSeqControl.sPhaseTime:=F_TimerHMI(q_tStepTime);
+
+stSeqControl.iStepNumbers[0]:=0;
+stSeqControl.sStepDescription[0]:='Wait for phase start';
+
+stSeqControl.iStepNumbers[1]:=50;
+stSeqControl.sStepDescription[1]:='Check if outlet is opened';
+
+stSeqControl.iStepNumbers[2]:=100;
+stSeqControl.sStepDescription[2]:='Cleaning time';
+
+stSeqControl.iStepNumbers[3]:=1000;
+stSeqControl.sStepDescription[3]:='Phase finished';
+
+stSeqControl.iStepNumbers[4]:=0;
+stSeqControl.sStepDescription[4]:='';
+
+stSeqControl.iStepNumbers[5]:=0;
+stSeqControl.sStepDescription[5]:='';
+
+stSeqControl.iStepNumbers[6]:=0;
+stSeqControl.sStepDescription[6]:='';
+
+stSeqControl.iStepNumbers[7]:=0;
+stSeqControl.sStepDescription[7]:='';
+
+stSeqControl.iStepNumbers[8]:=0;
+stSeqControl.sStepDescription[8]:='';
+
+stSeqControl.iStepNumbers[9]:=0;
+stSeqControl.sStepDescription[9]:='';]]></ST>
+    </Implementation>
+    <LineIds Name="_Rinsing">
+      <LineId Id="412" Count="154" />
+      <LineId Id="150" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

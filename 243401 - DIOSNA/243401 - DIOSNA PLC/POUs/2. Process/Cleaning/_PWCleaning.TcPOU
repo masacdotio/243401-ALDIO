@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_PWCleaning" Id="{dc4dda45-36b0-42cb-ba7f-d671ad4a9b90}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _PWCleaning
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_stTimeStep1				:ST_HMI_Time;
+	i_stTimeStep2				:ST_HMI_Time;
+	i_stTimeStep3				:ST_HMI_Time;
+	i_rMixerSpeed1				:REAL;
+	i_rMixerSpeed2				:REAL;
+	i_rMixerSpeed3				:REAL;
+	i_iChopper					:INT;
+	i_rSieveSpeed				:REAL;
+	i_iDetergent				:INT;
+	i_bMixerWater				:BOOL;
+	i_bChopperWater				:BOOL;
+	i_bSPWater					:BOOL;
+	i_bDetergentConfirm			:BOOL;
+END_VAR
+VAR
+	Seq_Time					:ARRAY[0..9] OF TIME;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+	q_bRunning					:BOOL;
+	q_bFinished					:BOOL;
+	q_bPromptReq				:BOOL;
+	q_tStepTime					:TIME;
+	
+END_VAR
+VAR PERSISTENT
+	iStep						:INT;
+	iPrevStep					:INT;
+	Seq_TON						:ARRAY[0..9] OF FB_TONP;
+	tonStepTime					:FB_TONP;
+	stSeqControl				:ST_SeqControl;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//****************RECIPE CALCULATIONS*********************
+Seq_Time[1]:=DINT_TO_TIME(i_stTimeStep1.mins)*60000 + 
+			 DINT_TO_TIME(i_stTimeStep1.sec)*1000;
+Seq_Time[2]:=DINT_TO_TIME(i_stTimeStep2.mins)*60000 + 
+			 DINT_TO_TIME(i_stTimeStep2.sec)*1000;
+Seq_Time[3]:=DINT_TO_TIME(i_stTimeStep3.mins)*60000 + 
+			 DINT_TO_TIME(i_stTimeStep3.sec)*1000;
+
+			 
+Seq_TON[1](IN:=iStep=100,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[1]);
+Seq_TON[2](IN:=iStep=200,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[2]);
+Seq_TON[3](IN:=iStep=300,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[3]);
+
+//****************SEQUENE STATE AND CONTROL*********************
+q_bRunning:=iStep<>0;
+//Finish sequence if phase change is requested
+IF q_bRunning AND (GV.stControl.bNext OR GV.stControl.bPrevious OR GV.stControl.bJump) THEN
+	iStep:=1000;
+END_IF
+//Idle if phase is not active
+IF NOT i_bStart THEN
+	iStep:=0;
+END_IF
+
+
+//****************SEQUENCE*********************
+
+CASE iStep OF
+	0:
+		IF i_bStart THEN
+			q_bFinished:=FALSE;
+			iStep:=50;
+		END_IF
+		
+		IF iStep <> 0 THEN
+			iPrevStep:=0;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=0;
+		END_IF
+	
+	50://Check if outlet is closed
+		IF IN.bOutletPos_Closed THEN
+			iStep:=100;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=50;
+		END_IF
+	
+	
+	100://Filling time
+		IF Seq_TON[1].Q THEN
+			iStep:=150;
+		END_IF
+		
+		IF iStep <> 100 THEN
+			iPrevStep:=100;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=100;
+		END_IF
+	
+	150: //Wait for detergent confirmation
+		IF (i_iDetergent = 0) OR (i_iDetergent = 1 AND i_bDetergentConfirm) THEN
+			iStep:=200;
+		END_IF
+		
+		IF iStep <> 150 THEN
+			iPrevStep:=150;	
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=150;
+		END_IF
+		
+	//Cleaning time
+	200:
+		IF Seq_TON[2].Q THEN
+			iStep:=250;
+		END_IF
+		
+		IF iStep <> 200 THEN
+			iPrevStep:=200;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=200;
+		END_IF
+	
+
+	250://Check if outlet is opened
+		IF IN.bOutletPos_Opened THEN
+			iStep:=300;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=250;
+		END_IF
+		
+	//Discharge time
+	300:
+		IF Seq_TON[3].Q THEN
+			iStep:=1000;
+		END_IF	
+		
+		IF iStep <> 300 THEN
+			iPrevStep:=300;
+		END_IF
+		
+		IF GV.stControl.bPaused THEN
+			iStep:=300;
+		END_IF
+		
+	1000:
+		q_bFinished:=TRUE;
+		IF GV.stControl.bPhaseFinished THEN
+			q_bFinished:=FALSE;
+			iStep:=0;
+		END_IF
+END_CASE
+
+
+//****************COMMAND*********************
+q_bPromptReq:=(iStep=150);
+
+
+//Outlet
+IF F_StepCMP(iStep,50,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bOutletOpen:=FALSE;
+	q_stCmd.bOutletClose:=TRUE;
+ELSIF F_StepCMP(iStep,250,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bOutletClose:=FALSE; 
+	q_stCmd.bOutletOpen:=TRUE;
+ELSE
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=FALSE;
+END_IF
+
+//Mixer
+IF F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bMixerStart:=TRUE;
+	q_stCmd.rMixerSpeed:=i_rMixerSpeed1;
+ELSIF F_StepCMP(iStep,200,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bMixerStart:=TRUE;
+	q_stCmd.rMixerSpeed:=i_rMixerSpeed2; 
+ELSIF F_StepCMP(iStep,300,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bMixerStart:=TRUE;
+	q_stCmd.rMixerSpeed:=i_rMixerSpeed3; 
+ELSE
+	q_stCmd.bMixerStart:=FALSE;
+	q_stCmd.rMixerSpeed:=0;
+END_IF
+
+//Chopper
+IF F_StepCMP(iStep,200,0,0,0,0,0,0,0,0,0)  THEN
+	q_stCmd.iChopper:=i_iChopper;
+ELSE
+	q_stCmd.iChopper:=0;
+END_IF
+
+//Sieve
+IF F_StepCMP(iStep,300,0,0,0,0,0,0,0,0,0)  THEN
+	q_stCmd.bSieveStart:=TRUE;
+	q_stCmd.rSieveSpeed:=i_rSieveSpeed;
+ELSE
+	q_stCmd.bSieveStart:=FALSE;
+	q_stCmd.rSieveSpeed:=0;
+END_IF
+
+//Medium
+q_stCmd.bPurifiedWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+
+//Filling
+q_stCmd.bMixerWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bMixerWater;
+q_stCmd.bChopperWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bChopperWater;
+q_stCmd.bSPWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) AND i_bSPWater
+							AND Seq_TON[1].ET < TO_TIME(GV.stSettings.iSP_WaterFillingMaxTime*1000);
+
+//Drain
+q_stCmd.bMainDrain:=F_StepCMP(iStep,0,0,0,0,0,0,0,0,0,0);
+q_stCmd.bSPDrain:=F_StepCMP(iStep,300,0,0,0,0,0,0,0,0,0) AND i_bSPWater;
+
+//****************Statistic and Status*********************
+tonStepTime(IN:=q_bRunning OR MAIN.bFirstCycle,PAUSE:=GV.bUPSdetect,PT:=T#3H);
+q_tStepTime:=tonStepTime.ET;
+
+
+//Sequence control HMI
+stSeqControl.iCurrentStep:=iStep;
+stSeqControl.iPreviousStep:=iPrevStep;
+stSeqControl.iRecipeType:=1;
+stSeqControl.iPhaseType:=3;
+stSeqControl.sPhaseTime:=F_TimerHMI(q_tStepTime);
+
+stSeqControl.iStepNumbers[0]:=0;
+stSeqControl.sStepDescription[0]:='Wait for phase start';
+
+stSeqControl.iStepNumbers[1]:=50;
+stSeqControl.sStepDescription[1]:='Check if outlet is Closed';
+
+stSeqControl.iStepNumbers[2]:=100;
+stSeqControl.sStepDescription[2]:='Filling time';
+
+stSeqControl.iStepNumbers[3]:=150;
+stSeqControl.sStepDescription[3]:='Check if detergent confirmation is needed';
+
+stSeqControl.iStepNumbers[4]:=200;
+stSeqControl.sStepDescription[4]:='Cleaning time';
+
+stSeqControl.iStepNumbers[5]:=250;
+stSeqControl.sStepDescription[5]:='Check if outlet is opened';
+
+stSeqControl.iStepNumbers[6]:=300;
+stSeqControl.sStepDescription[6]:='Discharge time';
+
+stSeqControl.iStepNumbers[7]:=1000;
+stSeqControl.sStepDescription[7]:='Phase finished';
+
+stSeqControl.iStepNumbers[8]:=0;
+stSeqControl.sStepDescription[8]:='';
+
+stSeqControl.iStepNumbers[9]:=0;
+stSeqControl.sStepDescription[9]:='';
+]]></ST>
+    </Implementation>
+    <LineIds Name="_PWCleaning">
+      <LineId Id="599" Count="178" />
+      <LineId Id="858" Count="0" />
+      <LineId Id="778" Count="45" />
+      <LineId Id="211" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

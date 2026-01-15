@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <POU Name="P2_00_MAIN" Id="{7025d72f-4ac0-4fe7-b00c-d1f6adc4d094}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P2_00_MAIN
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[P2_01_Production_Seq();
+P2_02_Cleaning_Seq();
+P2_03_Production_Ctrl();
+P2_04_Cleaning_Ctrl();
+P2_05_Process_Ctrl();
+//P2_05_SP_Process_Ctrl();
+P2_06_Device_Ctrl();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

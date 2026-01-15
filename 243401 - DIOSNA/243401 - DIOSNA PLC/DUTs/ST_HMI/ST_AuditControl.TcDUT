@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_AuditControl" Id="{9ca6db73-5e80-4bac-b8e8-aa9e584d0c01}">
+    <Declaration><![CDATA[TYPE ST_AuditControl :
+STRUCT
+	
+	
+	stParam							:ST_AuditTrail;
+	bWriteParam						:BOOL;
+
+
+	bReadDB							:BOOL;
+	bReadDBSize						:BOOL;
+
+	bFilter							:BOOL;
+	bClear							:BOOL;
+	sFilter_Key						:STRING;
+	dtFilter_From					:DT;
+	dtFilter_To						:DT;
+	sFilter_User					:STRING;
+	//enFilter_Event					:EN_BatchEvents;
+	iViewFilter						:BOOL;
+	
+	bExport							:BOOL;
+	sExportName						:STRING;
+	
+	bDelete							:BOOL;
+	bSend							:BOOL;
+	
+	iProdSelectedPhase				:INT;
+	iCleanSelectedPhase				:INT;
+	iBatchSelectedPhase				:INT;
+	
+	bScanRecipeParams				:BOOL;
+	bWriteRecipeParamChange			:BOOL;
+	bScanBatchParams				:BOOL;
+	bWriteBatchParamChange			:BOOL;
+	bScanSPParams					:BOOL;
+	bWriteSPParamChange				:BOOL;
+	
+	
+	
+	enFilter_Event					:EN_Events;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

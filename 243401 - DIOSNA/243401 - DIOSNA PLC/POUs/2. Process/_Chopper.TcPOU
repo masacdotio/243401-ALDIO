@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Chopper" Id="{6a2acdcb-3f7a-4ed5-a691-678e4a1ffdb1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Chopper
+VAR_INPUT
+	i_iOperation				:INT;
+END_VAR
+
+VAR
+END_VAR
+
+VAR_OUTPUT
+	q_bCmd_Slow					:BOOL;
+	q_bCmd_Fast					:BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_iOperation = 0 OR NOT GV.stControl.bRunning THEN
+	q_bCmd_Slow:=FALSE;
+	q_bCmd_Fast:=FALSE;
+ELSIF i_iOperation = 1 THEN
+	q_bCmd_Slow:=TRUE;
+	q_bCmd_Fast:=FALSE;
+ELSIF i_iOperation = 2 THEN
+	q_bCmd_Slow:=FALSE;
+	q_bCmd_Fast:=TRUE;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="_Chopper">
+      <LineId Id="30" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="53" Count="6" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

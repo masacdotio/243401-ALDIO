@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="EN_RecipeType" Id="{83e2f4af-93e1-4dd5-93af-4134ece5ea07}">
+    <Declaration><![CDATA[{attribute 'to_string'}
+TYPE EN_RecipeType :
+(
+	Production			:= 0,
+	Cleaning		    := 1
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

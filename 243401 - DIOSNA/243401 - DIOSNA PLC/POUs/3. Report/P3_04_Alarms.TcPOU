@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P3_04_Alarms" Id="{6413df8d-b0e8-453f-b184-6acee373b8ea}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P3_04_Alarms
+VAR 
+	fbEventLogger		:FB_TcEventLogger;
+	fbCsvExportSetting	:FB_TcEventCsvExportSettings;
+	fbExportFilter		:FB_TcEventFilter;
+
+	fbTrig				:R_TRIG;
+	
+	ulFilter1			:ULINT;
+	ulFilter2			:ULINT;
+	
+	sPath				:STRING;
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Link here...
+
+ulFilter1:=P3_01_BatchData.ulBatchOpen;
+ulFilter2:=P3_01_BatchData.ulBatchClose;
+
+fbTrig(CLK:=GV.stReport.bExport_Alarms);
+IF GV.stReport.bExport_Alarms THEN
+	IF fbTrig.Q THEN
+		fbCsvExportSetting.Clear();
+		fbCsvExportSetting.bWithHeader:=TRUE;
+		fbCsvExportSetting.sDelimiter:=',';
+		fbCsvExportSetting.AddFilter(fbExportFilter);
+		fbExportFilter.Clear();
+		fbExportFilter.IsAlarm().AND_OP().
+		TimeRaised.GreaterThanOrEqualTo(ulFilter1).AND_OP().
+		TimeRaised.LessThanOrEqualTo(ulFilter2).AND_OP().
+		Source.Name.EqualTo('GV.stAlarm');
+	END_IF
+	
+	sPath:=CONCAT(CONST.PROJECT_DIR,'Reports\1. Raw Data\AlarmLog.txt');
+	
+	IF fbEventLogger.ExportLoggedEvents(sPath,fbCsvExportSetting) THEN
+		GV.stReport.bExport_Alarms:=FALSE;
+	END_IF
+END_IF
+	
+]]></ST>
+    </Implementation>
+    <LineIds Name="P3_04_Alarms">
+      <LineId Id="243" Count="18" />
+      <LineId Id="269" Count="0" />
+      <LineId Id="268" Count="0" />
+      <LineId Id="262" Count="4" />
+      <LineId Id="65" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

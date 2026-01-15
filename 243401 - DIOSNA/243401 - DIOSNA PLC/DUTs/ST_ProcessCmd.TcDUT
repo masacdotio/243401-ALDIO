@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ProcessCmd" Id="{1750ab6e-e516-484d-ae13-f3a2c9c34738}">
+    <Declaration><![CDATA[TYPE ST_ProcessCmd :
+STRUCT
+	
+	bAspiration				:BOOL;	
+
+	bOutletOpen				:BOOL;
+	bOutletClose			:BOOL;
+	
+	rMixerSpeed				:REAL;
+	bMixerStart				:BOOL;
+	bMixerAir				:BOOL;
+	bChopperAir				:BOOL;
+	iChopper				:INT;
+	rSieveSpeed				:REAL;
+	bSieveStart				:BOOL;
+	
+	bVacuumValve			:BOOL;
+	bVacuumPump				:BOOL;
+	bFilterClean			:BOOL;
+		
+	bColdWater				:BOOL;
+	bWarmWater				:BOOL;
+	bPurifiedWater			:BOOL;
+	bCompressedAir			:BOOL;
+	
+	bMixerWater				:BOOL;
+	bChopperWater			:BOOL;
+	bSPWater				:BOOL;
+	
+	bMainDrain				:BOOL;
+	bSPDrain				:BOOL;
+	
+	bMixer					:BOOL;
+	bSieve					:BOOL;
+	bChopperSlow			:BOOL;
+	bChopperFast			:BOOL;
+	
+	rSP_Pressure			:REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Feeding" Id="{a8907d4f-b399-42bd-be89-680b20efb138}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Feeding
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_bStartVacuum				:BOOL;
+	i_bStopVacuum				:BOOL;
+	i_bStartMixer				:BOOL;
+	i_bStopMixer				:BOOL;
+	i_bConfirmFinishPhase		:BOOL;
+	i_rMixerSpeed				:REAL;
+END_VAR
+VAR
+	Seq_Time					:ARRAY[0..9] OF TIME;
+	bVacuumStart				:BOOL;
+	bMixerStart					:BOOL;
+	tonDelayPrompt				:TON;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+	q_bRunning					:BOOL;
+	q_bFinished					:BOOL;
+	q_bPromptReq				:BOOL;
+	q_tStepTime					:TIME;
+	
+END_VAR
+VAR PERSISTENT
+	iStep						:INT;
+	iPrevStep					:INT;
+	Seq_TON						:ARRAY[0..9] OF FB_TONP;
+	tonStepTime					:FB_TONP;
+	stSeqControl				:ST_SeqControl;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//****************RECIPE CALCULATIONS*********************
+
+
+//****************SEQUENE STATE AND CONTROL*********************
+q_bRunning:=iStep<>0;
+//Finish sequence if phase change is requested
+IF q_bRunning AND (GV.stControl.bNext OR GV.stControl.bPrevious OR GV.stControl.bJump) THEN
+	iStep:=1000;
+END_IF
+//Idle if phase is not active
+IF NOT i_bStart THEN
+	iStep:=0;
+END_IF
+
+//Timers
+tonDelayPrompt(IN:=(iStep=500),PT:=T#30S);
+
+//****************SEQUENCE*********************
+CASE iStep OF
+	0:
+	IF i_bStart THEN
+		q_bFinished := FALSE;
+		iStep := 50;
+	END_IF
+	IF iStep <> 0 THEN
+		iPrevStep:=0;
+	END_IF
+	
+	50: //Check outlet
+	IF IN.bOutletPos_Closed THEN
+		iStep := 500;
+	END_IF
+	IF iStep <> 50 THEN
+		iPrevStep:=50;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 50;
+	END_IF
+		
+	500://Wait for confirmation
+	IF i_bConfirmFinishPhase THEN
+		iStep := 1000;
+	END_IF
+	IF iStep <> 500 THEN
+		iPrevStep := 500;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 500;
+	END_IF
+	
+	1000://Finish phase
+	q_bFinished:=TRUE;
+	IF GV.stControl.bPhaseFinished THEN
+		q_bFinished:=FALSE;
+		iStep:=0;
+	END_IF
+END_CASE
+
+//****************COMMAND*********************
+q_bPromptReq:=tonDelayPrompt.Q;
+
+//Outlet
+IF F_StepCMP(iStep,50,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bOutletOpen:=FALSE;
+	q_stCmd.bOutletClose:=TRUE;
+ELSE
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=FALSE;
+END_IF
+
+//Vacuum
+IF i_bStartVacuum THEN
+	bVacuumStart:=TRUE;
+ELSIF i_bStopVacuum OR NOT F_StepCMP(iStep,500,0,0,0,0,0,0,0,0,0) THEN
+	bVacuumStart:=FALSE;
+END_IF
+
+q_stCmd.bVacuumValve:=F_StepCMP(iStep,500,0,0,0,0,0,0,0,0,0) AND bVacuumStart;
+q_stCmd.bVacuumPump:=F_StepCMP(iStep,500,0,0,0,0,0,0,0,0,0) AND bVacuumStart;
+
+//Mixer 
+IF i_bStartMixer THEN
+	bMixerStart:=TRUE;
+ELSIF i_bStopMixer OR NOT F_StepCMP(iStep,500,0,0,0,0,0,0,0,0,0) THEN
+	bMixerStart:=FALSE;
+END_IF
+
+
+IF F_StepCMP(iStep,500,0,0,0,0,0,0,0,0,0) AND bMixerStart THEN
+	q_stCmd.rMixerSpeed := i_rMixerSpeed;
+	IF q_stCmd.rMixerSpeed > 0 THEN
+		q_stCmd.bMixerAir:=TRUE;
+		q_stCmd.bMixerStart:=TRUE;
+	ELSE
+		q_stCmd.bMixerAir:=FALSE;
+		q_stCmd.bMixerStart:=FALSE;
+	END_IF
+ELSE
+	q_stCmd.rMixerSpeed := 0;
+	q_stCmd.bMixerAir:=FALSE;
+	q_stCmd.bMixerStart:=FALSE;
+END_IF
+
+
+
+
+//Statistic and Status
+tonStepTime(IN:=q_bRunning OR MAIN.bFirstCycle,PAUSE:=GV.bUPSdetect,PT:=T#3H);
+q_tStepTime:=tonStepTime.ET;
+
+//Sequence control HMI
+stSeqControl.iCurrentStep:=iStep;
+stSeqControl.iPreviousStep:=iPrevStep;
+stSeqControl.iRecipeType:=0;
+stSeqControl.iPhaseType:=0;
+stSeqControl.sPhaseTime:=F_TimerHMI(q_tStepTime);
+
+stSeqControl.iStepNumbers[0]:=0;
+stSeqControl.sStepDescription[0]:='Wait for phase start';
+
+stSeqControl.iStepNumbers[1]:=50;
+stSeqControl.sStepDescription[1]:='Check if outlet flap is closed';
+
+stSeqControl.iStepNumbers[2]:=500;
+stSeqControl.sStepDescription[2]:='Wait for operator to confirm that phase is finished';
+
+stSeqControl.iStepNumbers[3]:=1000;
+stSeqControl.sStepDescription[3]:='Phase finished';
+
+stSeqControl.iStepNumbers[4]:=0;
+stSeqControl.sStepDescription[4]:='';
+
+stSeqControl.iStepNumbers[5]:=0;
+stSeqControl.sStepDescription[5]:='';
+
+stSeqControl.iStepNumbers[6]:=0;
+stSeqControl.sStepDescription[6]:='';
+
+stSeqControl.iStepNumbers[7]:=0;
+stSeqControl.sStepDescription[7]:='';
+
+stSeqControl.iStepNumbers[8]:=0;
+stSeqControl.sStepDescription[8]:='';
+
+stSeqControl.iStepNumbers[9]:=0;
+stSeqControl.sStepDescription[9]:='';
+]]></ST>
+    </Implementation>
+    <LineIds Name="_Feeding">
+      <LineId Id="1103" Count="37" />
+      <LineId Id="1146" Count="107" />
+      <LineId Id="895" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <DUT Name="ST_Production_Phases" Id="{cc715f6d-65db-44a1-a6c0-ac9b249f9fc3}">
+    <Declaration><![CDATA[TYPE ST_Production_Phases :
+STRUCT
+	bEnable					:BOOL;
+	iType					:INT;  				//0-Feeding,1-Mixing,2-Granulation,3-Discharge
+	sDescription			:STRING;		
+	iEndPoint				:INT;    			//0-Manual,1-Auto,2-Mixer current
+	iPhaseTime				:ST_HMI_Time;		//min:sec
+	iFilterClean			:DINT;				//sec
+	iFilterPause			:DINT;				//sec
+	iMixer					:INT;				//0-off,1-on
+	rMixerSpeed				:REAL;				//rpm
+	rMixerCurrent			:REAL;				//A
+	iChopper				:INT;				//0-OFF,1-Slow,2-Fast
+	rSieveSpeed				:REAL;				//rpm
+	bPause					:BOOL;				//0-continue,1-pause
+	rSP_MixingSpeed			:REAL;
+	rSP_Temperature			:REAL;
+	rSP_Pressure			:REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

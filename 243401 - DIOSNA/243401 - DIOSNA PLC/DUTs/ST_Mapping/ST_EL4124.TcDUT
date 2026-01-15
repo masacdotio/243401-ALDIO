@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EL4124" Id="{77fbac37-c60d-4840-a99c-6ea87ffa2ce8}">
+    <Declaration><![CDATA[TYPE ST_EL4124 :
+STRUCT
+	Ch1_Value						AT %Q*	:INT;
+	Ch2_Value						AT %Q*	:INT;
+	Ch3_Value						AT %Q*	:INT;
+	Ch4_Value						AT %Q*	:INT;
+	State							AT %I*	:UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

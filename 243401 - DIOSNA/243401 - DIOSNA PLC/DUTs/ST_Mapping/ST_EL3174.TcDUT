@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EL3174" Id="{723921e4-7ffc-481a-b9b1-e4ad0e9bef43}">
+    <Declaration><![CDATA[TYPE ST_EL3174 :
+STRUCT
+	Ch1_Status						AT %I*	:Status_7EBB4A47_Plc;
+	Ch1_Value						AT %I*	:INT;
+	Ch2_Status						AT %I*	:Status_7EBB4A47_Plc;
+	Ch2_Value						AT %I*	:INT;
+	Ch3_Status						AT %I*	:Status_7EBB4A47_Plc;
+	Ch3_Value						AT %I*	:INT;
+	Ch4_Status						AT %I*	:Status_7EBB4A47_Plc;
+	Ch4_Value						AT %I*	:INT;
+	State							AT %I*	:UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_AuditTrail" Id="{7cb43d7b-3a78-4d52-8753-cc6c77bfd1f6}">
+    <Declaration><![CDATA[TYPE ST_AuditTrail :
+STRUCT
+	DateTime	: DT;
+	User		: STRING(100);
+	Event		: STRING(100);
+	Description	: STRING(100);
+	Oldvalue	: STRING(100);
+	Newvalue	: STRING(100);	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

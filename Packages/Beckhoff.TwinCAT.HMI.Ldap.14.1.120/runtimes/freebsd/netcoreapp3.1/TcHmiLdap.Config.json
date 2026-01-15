@@ -1,0 +1,98 @@
+{
+  "$schema": "../../TcHmiSrv/schema/ExtensionSettings.Schema.json",
+  "version": "1.12.760.59",
+  "configVersion": "1.0.0.13",
+  "guid": "2c502ca4-e795-40ad-856c-8c0b09f5d414",
+  "visibility": "AlwaysShow",
+  "policies": [
+    "StrictPropertyValidation"
+  ],
+  "symbols": {
+    "ListNamingContexts": {
+      "readValue": {
+        "function": true,
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "description": "Get a list of the naming contexts that are hosted by the configured LDAP server."
+    },
+    "ListUsers": {
+      "readValue": {
+        "function": true,
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "description": "Get a list of the users that are known by this authentication extension."
+    },
+    "Diagnostics": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "type": "object",
+        "readOnly": true,
+        "properties": {
+          "connectionState": {
+            "propertyOrder": 1,
+            "readOnly": true,
+            "type": "string",
+            "enum": [
+              "Good",
+              "Not Connected",
+              "Timeout",
+              "Internal Error"
+            ]
+          },
+          "sinceLastStateCheck": {
+            "propertyOrder": 2,
+            "readOnly": true,
+            "type": "string",
+            "format": "timespan",
+            "hidden": true
+          },
+          "tcpConnectionEstablished": {
+            "propertyOrder": 3,
+            "readOnly": true,
+            "type": "boolean"
+          },
+          "anonBindSucceeded": {
+            "propertyOrder": 4,
+            "readOnly": true,
+            "type": "boolean"
+          },
+          "bindUserBindSucceeded": {
+            "propertyOrder": 5,
+            "readOnly": true,
+            "type": "boolean"
+          },
+          "ldapErrorCode": {
+            "propertyOrder": 6,
+            "readOnly": true,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "connectionState"
+        ]
+      },
+      "sample": {
+        "description": "LDAP connectionState Subscription",
+        "path": "connectionState",
+        "requestType": "Subscription"
+      },
+      "description": "Get information about the connection between the HMI server and the configured LDAP server."
+    }
+  },
+  "dotNetTargetFramework": "netcoreapp3.1",
+  "dotNetTargetFrameworkVersion": "v3.0",
+  "dotNetPlatformTarget": "AnyCPU",
+  "dotNetConfiguration": "Release",
+  "packageVersion": "14.1.120",
+  "productVersion": "1.12.760.59",
+  "signature": "M5EYQ26NzQ1icHN8YcYyybqzX/equbIitv5rrFu3yUUPwP57PBuZ/5zU+0pRtSDRam3Q/oJuI72s5GQN6lwyyB2+fZHNVuFXdeazRzE3kwDauf/X69ICFM0A3pC/ZiUkOUvJKRGCedFXgpJCYQRUfTR1WCYUc2TTYkBc3b+2nHwNV8RvrESG3sVTBYZ3IC45U+THkmmGztrOEXEsAmPdfAfE6Ng1BpiMh+mPWtII0ROCClNWOnutoUgQoxDABwYU0YKNJ4ZKJw3J+Dur2a/rB4PBgNnL4ZlNfD6cd8ynDOpwUbwtbaRotVPmHmDwXg+1QPX+WzsjzpWpfkVVEqtt7g=="
+}

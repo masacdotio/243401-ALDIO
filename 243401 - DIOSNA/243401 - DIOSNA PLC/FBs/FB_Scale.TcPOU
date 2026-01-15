@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Scale" Id="{0c92a2e1-1b2f-4ecc-b294-d5030b1198ae}" SpecialFunc="None">
+    <Declaration><![CDATA[// Created by Jovica Blagojeski 13.01.2022
+// JB: If not known, raw data should be from 0 to 32767 (whole positive integer range), otherwise the known calibration range (highest and lowest)
+// Edited by Dimitar stojanov 06.2023
+// DS: Offset is added for small corrections, declaration names of variables are changed corresponding new template i_ stands for block input parameter, q_ stands for block output paramter.
+
+
+//Functionality: Use this block to Scale Analog Inputs or some other Lienarization
+
+FUNCTION_BLOCK FB_Scale
+VAR_INPUT
+	i_rValue 				:REAL;
+	i_rRawData_Low			:REAL := 0;
+	i_rRawData_High 		:REAL := 32767;
+	i_rScaled_Low			:REAL:= 0;
+	i_rScaled_High			:REAL:= 32767;
+	i_rOffset 				:REAL;
+	
+END_VAR
+VAR_OUTPUT
+	q_rScaled 				:REAL;
+END_VAR
+VAR
+	K 						:REAL;
+	rInput 					:REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[K := ((i_rScaled_High - i_rScaled_Low) /(i_rRawData_High - i_rRawData_Low));
+rInput:=i_rValue - i_rRawData_Low ;
+q_rScaled:=(K * rInput) +  i_rScaled_Low + i_rOffset;
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Scale">
+      <LineId Id="87" Count="2" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

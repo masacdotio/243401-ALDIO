@@ -1,0 +1,962 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
+  "scaleMode": "ScaleToFit",
+  "startupView": "Desktop.view",
+  "loginPage": "",
+  "splash": {
+    "versionSource": "Framework"
+  },
+  "projectVersion": "1.0.0.0",
+  "tcHmiServer": {
+    "websocketIntervalTime": 100,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": null
+  },
+  "activeTheme": "Base",
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [
+    {
+      "url": "UserControls/AlarmDiagnostic.usercontrol"
+    },
+    {
+      "url": "UserControls/AnalogInput.usercontrol"
+    },
+    {
+      "url": "UserControls/AnalogOutput.usercontrol"
+    },
+    {
+      "url": "UserControls/Dev_Cyl.usercontrol"
+    },
+    {
+      "url": "UserControls/Dev_GeneralCoil.usercontrol"
+    },
+    {
+      "url": "UserControls/Dev_MotorCoils.usercontrol"
+    },
+    {
+      "url": "UserControls/Dev_MotorFreq.usercontrol"
+    },
+    {
+      "url": "UserControls/Dev_Valve.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_AnalogInput.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_AnalogOutput.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_GeneralCoil.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_MotorCoils.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_MotorFreq.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_PID_Control.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_TemperatureInput.usercontrol"
+    },
+    {
+      "url": "UserControls/Faceplate_Valve.usercontrol"
+    },
+    {
+      "url": "UserControls/PID_Control_Temperature.usercontrol"
+    },
+    {
+      "url": "UserControls/SequenceControl.usercontrol"
+    },
+    {
+      "url": "UserControls/TemperatureInput.usercontrol"
+    }
+  ],
+  "content": [
+    {
+      "url": "Content/ALARMDIAG.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/ALARMS.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/ALARMSETTING.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/AUDIT.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_BLOW.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_CONTROL.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_DRAIN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_MAINC.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_PHASES.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_PRECLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_PWCLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_CLEAN_RINSE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_PROD_DISCHARGE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_PROD_FEEDING.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_PROD_GRANULATION.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_PROD_MIXING.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH/BATCH_PROD_PHASES.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH_EDIT.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/BATCH_VIEW.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/DIAGNOSTIC.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/HOME.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/PID.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Machine_Pause.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Machine_Start.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Machine_Stop.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Recipe_delete.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Recipe_rename.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Recipe_save.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/POPUP/Recipe_saveas.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/PROMPTS/PROMPT_CLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/PROMPTS/PROMPT_MAIN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_BLOW.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_CONTROL.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_CREATE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_DRAIN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_EDIT.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_MAINC.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_PHASES.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_PRECLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_PWCLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_CLEAN_RINSE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_CREATE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_DISCHARGE.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_EDIT.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_FEEDING.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_GRANULATION.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_MIXING.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES/RECIPE_PROD_PHASES.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES_CLEAN.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/RECIPES_PROD.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/REPORT.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SEQCONTROL_PHASES.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SEQUENCECONTROL.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SERVER.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SETTINGS.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SP.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/SYSTEM.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Content/TRENDS.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {
+      "localization": {
+        "value": "mk",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
+        "readonly": false
+      },
+      "batchmenu": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "settingmenu": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "systemmenu": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "recipemenu": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeProd_SelectedPhase": {
+        "value": 0,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "copyphase": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "ProductionPhases": {
+        "value": [
+          "Feeding",
+          "Mixing",
+          "Granulation",
+          "Discharging"
+        ],
+        "type": "tchmi:project#/definitions/Array%280..3%29%20OF%20String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeClean_SelectedPhase": {
+        "value": 0,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "Batch_SelectedPhase": {
+        "value": 0,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeErrorMsg": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeNameCurr": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeNameNew": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeStatusMsg": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeType": {
+        "value": 0,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeList_Clean": {
+        "type": "tchmi:project#/definitions/Array%280..0%29%20OF%20String",
+        "persist": false,
+        "readonly": false
+      },
+      "RecipeList_Prod": {
+        "type": "tchmi:project#/definitions/Array%280..0%29%20OF%20String",
+        "persist": false,
+        "readonly": false
+      }
+    },
+    "themedResources": {},
+    "timer": {}
+  },
+  "intervals": {},
+  "trigger": [
+    {
+      "event": "%i%RecipeProd_SelectedPhase%/i%",
+      "actions": [
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.iProdSelectedPhase%/s%",
+          "value": {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%RecipeProd_SelectedPhase%/i%"
+          },
+          "asyncWait": true
+        }
+      ]
+    },
+    {
+      "event": "%i%RecipeClean_SelectedPhase%/i%",
+      "actions": [
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.iCleanSelectedPhase%/s%",
+          "value": {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%RecipeClean_SelectedPhase%/i%"
+          },
+          "asyncWait": true
+        }
+      ]
+    },
+    {
+      "event": "onInitialized",
+      "actions": [
+        {
+          "objectType": "Comment",
+          "comment": "Get current user and group in PLC"
+        },
+        {
+          "objectType": "JavaScript",
+          "active": true,
+          "sourceLines": [
+            "var clientIp = document.location.hostname;",
+            "console.log(\"Client IP:\", clientIp);",
+            "",
+            "var user = TcHmi.Server.getCurrentUser();",
+            "var group = TcHmi.Server.getGroupsOfCurrentUser();",
+            "var symbol_user = new TcHmi.Symbol('%s%PLC1.GV.sUserLogged%/s%');",
+            "",
+            "if (user) {",
+            "    symbol_user.write(user, function (data) {    ",
+            "        console.log(\"User written:\", data);",
+            "    });",
+            "} else {",
+            "    console.log(\"Not a local IP\");",
+            "}"
+          ],
+          "injectContextObject": false,
+          "asyncWait": true,
+          "waitMode": "Synchronous"
+        },
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%s%PLC1.GV.stHMI.stMachine_Ctrl.bLogIn%/s%",
+          "value": {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/BOOL",
+            "value": true
+          },
+          "asyncWait": true
+        }
+      ]
+    },
+    {
+      "event": "onUserChanged",
+      "actions": [
+        {
+          "objectType": "Comment",
+          "comment": "Get current user and group in PLC"
+        },
+        {
+          "objectType": "JavaScript",
+          "active": true,
+          "sourceLines": [
+            "var clientIp = document.location.hostname;",
+            "console.log(\"Client IP:\", clientIp);",
+            "",
+            "var user = TcHmi.Server.getCurrentUser();",
+            "var group = TcHmi.Server.getGroupsOfCurrentUser();",
+            "var symbol_user = new TcHmi.Symbol('%s%PLC1.GV.sUserLogged%/s%');",
+            "",
+            "if (user) {",
+            "    symbol_user.write(user, function (data) {    ",
+            "        console.log(\"User written:\", data);",
+            "    });",
+            "} else {",
+            "    console.log(\"Not a local IP\");",
+            "}"
+          ],
+          "injectContextObject": false,
+          "asyncWait": true,
+          "waitMode": "Synchronous"
+        },
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%s%PLC1.GV.stHMI.stMachine_Ctrl.bLogIn%/s%",
+          "value": {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/BOOL",
+            "value": true
+          },
+          "asyncWait": true
+        }
+      ]
+    },
+    {
+      "event": "%s%PLC1.GV.stToHMI.stPrompts.bShow%/s%",
+      "actions": [
+        {
+          "objectType": "Condition",
+          "active": true,
+          "parts": [
+            {
+              "if": [
+                {
+                  "compare1": {
+                    "objectType": "Symbol",
+                    "valueType": "tchmi:general#/definitions/BOOL",
+                    "symbolExpression": "%s%PLC1.GV.stToHMI.stPrompts.bShow%/s%"
+                  },
+                  "compare2": {
+                    "objectType": "StaticValue",
+                    "valueType": "tchmi:general#/definitions/BOOL",
+                    "value": true
+                  },
+                  "compareOperator": "==",
+                  "logic": null
+                }
+              ],
+              "then": [
+                {
+                  "objectType": "Condition",
+                  "active": true,
+                  "parts": [
+                    {
+                      "if": [
+                        {
+                          "compare1": {
+                            "objectType": "Symbol",
+                            "valueType": "tchmi:general#/definitions/BOOL",
+                            "symbolExpression": "%s%PLC1._Control.q_bPromptReq%/s%"
+                          },
+                          "compare2": {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:general#/definitions/String",
+                            "value": true
+                          },
+                          "compareOperator": "==",
+                          "logic": null
+                        }
+                      ],
+                      "then": [
+                        {
+                          "objectType": "WriteToSymbol",
+                          "active": true,
+                          "symbolExpression": "%ctrl%TcHmiPopup_Prompt::TargetFile%/ctrl%",
+                          "value": {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+                            "value": {
+                              "path": "Content/PROMPTS/PROMPT_CLEAN.content"
+                            }
+                          },
+                          "asyncWait": true
+                        }
+                      ]
+                    },
+                    {
+                      "else": [
+                        {
+                          "objectType": "WriteToSymbol",
+                          "active": true,
+                          "symbolExpression": "%ctrl%TcHmiPopup_Prompt::TargetFile%/ctrl%",
+                          "value": {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+                            "value": {
+                              "path": "Content/PROMPTS/PROMPT_MAIN.content"
+                            }
+                          },
+                          "asyncWait": true
+                        }
+                      ]
+                    }
+                  ],
+                  "asyncWait": true
+                },
+                {
+                  "objectType": "ControlApiFunction",
+                  "active": true,
+                  "control": "TcHmiPopup_Prompt",
+                  "fn": "open",
+                  "asyncWait": true
+                }
+              ]
+            },
+            {
+              "else": [
+                {
+                  "objectType": "ControlApiFunction",
+                  "active": true,
+                  "control": "TcHmiPopup_Prompt",
+                  "fn": "close",
+                  "asyncWait": true
+                }
+              ]
+            }
+          ],
+          "asyncWait": true
+        }
+      ]
+    },
+    {
+      "event": "%i%Batch_SelectedPhase%/i%",
+      "actions": [
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.iBatchSelectedPhase%/s%",
+          "value": {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%Batch_SelectedPhase%/i%"
+          },
+          "asyncWait": true
+        }
+      ]
+    }
+  ],
+  "actionTemplates": [],
+  "languages": {
+    "en": "Localization/en.localization",
+    "mk": "Localization/mk.localization"
+  },
+  "languageFallback": "mk",
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 800,
+      "defaultHeight": 600
+    }
+  },
+  "binding": {
+    "symbolError": "Ignore",
+    "symbolWriteError": "ReadBack"
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.EcDiagnosticsControl",
+      "basePath": "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/Numpad (plusminus) - indirect.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - basic.keyboard.json"
+    }
+  ],
+  "systemKeyboard": {
+    "providerName": "Beckhoff.TcHmiKeyboard",
+    "autoOpen": true,
+    "projectKeyboardMapping": {
+      "mk": {
+        "text": "KeyboardLayouts/US - basic.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus) - indirect.keyboard.json",
+        "numeric": "KeyboardLayouts/Numpad (plusminus) - indirect.keyboard.json"
+      },
+      "en": {
+        "text": "KeyboardLayouts/US - basic.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus) - indirect.keyboard.json",
+        "numeric": "KeyboardLayouts/Numpad (plusminus) - indirect.keyboard.json"
+      }
+    },
+    "layout": {
+      "position": "footer"
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
+}

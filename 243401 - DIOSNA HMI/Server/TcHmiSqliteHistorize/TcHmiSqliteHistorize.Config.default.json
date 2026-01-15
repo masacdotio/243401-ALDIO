@@ -1,0 +1,34 @@
+{
+    "commitInterval": "PT10S",
+    "enableBackup": false,
+    "historizedSymbolList": {
+        "PLC1.GV.stTrend.rSP_MixingSpeed_AP": {
+            "interval": "PT1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "PLC1.GV.stTrend.rSP_MixingSpeed_SP": {
+            "interval": "PT1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "PLC1.GV.stTrend.rSP_Temeprature_AP": {
+            "interval": "PT1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "PLC1.GV.stTrend.rSP_Temperature_SP": {
+            "interval": "PT1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        }
+    },
+    "inMemory": false,
+    "maxBackups": 1,
+    "mode": 3,
+    "vacuumOnStartup": false
+}

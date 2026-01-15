@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_BatchData" Id="{16d0d617-414a-4621-8d09-2ffe509f5573}">
+    <Declaration><![CDATA[TYPE ST_BatchData :
+STRUCT
+	Batch		: STRING(100);
+	Parameter	: STRING(100);
+	Value		: STRING(100);
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

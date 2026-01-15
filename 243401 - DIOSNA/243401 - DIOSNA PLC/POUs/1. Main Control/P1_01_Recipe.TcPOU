@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <POU Name="P1_01_Recipe" Id="{67afc90b-a1b6-4885-a21f-5537626bd2cc}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P1_01_Recipe
+VAR
+	i						:INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Recipes.Production.stPhase[1].bEnable:=TRUE;
+Recipes.Production_Phase_HMI.bEnable:=TRUE;
+
+Recipes.Cleaning.stPhase[1].bEnable:=TRUE;
+Recipes.Cleaning_Phase_HMI.bEnable:=TRUE;
+
+Recipes.Production.iActivePhase:=0;
+Recipes.Cleaning.iActivePhase:=0;
+
+FOR i := 1 TO 20 DO
+	IF Recipes.Production.stPhase[i].bEnable THEN
+		Recipes.Production.iActivePhase := i;
+	END_IF
+	
+	IF NOT Recipes.Production.stPhase[i].bEnable THEN
+		Recipes.Production.stPhase[i] := Recipes.Production_Empty.stPhase[0];
+	END_IF
+	
+	IF Recipes.Cleaning.stPhase[i].bEnable THEN
+		Recipes.Cleaning.iActivePhase := i;
+	END_IF
+	
+	IF NOT Recipes.Cleaning.stPhase[i].bEnable THEN
+		Recipes.Cleaning.stPhase[i] := Recipes.Cleaning_Empty.stPhase[0];
+	END_IF
+END_FOR]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

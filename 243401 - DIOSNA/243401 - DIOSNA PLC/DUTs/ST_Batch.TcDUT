@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Batch" Id="{09c12afd-3bc8-4810-b79e-928305e5884a}">
+    <Declaration><![CDATA[TYPE ST_Batch :
+STRUCT
+	sBatchNumber		:STRING;
+	sBatchName			:STRING;
+	sRecipeName			:STRING;
+	sRecipeType			:STRING;
+	sProductName		:STRING;
+	sComment			:STRING;
+	sUser				:STRING;
+	sStarted			:STRING;
+	sFinished			:STRING;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

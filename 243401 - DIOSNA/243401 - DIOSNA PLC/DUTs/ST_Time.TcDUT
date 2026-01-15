@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Time" Id="{b3f2b342-c9c6-4576-a23e-85ac33f7e579}">
+    <Declaration><![CDATA[TYPE ST_Time :
+STRUCT
+	dtDateTime			:DT;
+	sTime				:STRING;
+	sDate				:STRING;
+	sDateTime			:STRING;
+	sFormatDateTime		:STRING;
+	bClock_500ms		:BOOL;
+	bClock_1s			:BOOL;
+	bClock_2s			:BOOL;
+	bClock_5s			:BOOL;
+	bClock_60s			:BOOL;
+	bClock_1OFF_2ON		:BOOL;
+	bPulse_10s			:BOOL;
+	bPulse_30s			:BOOL;
+	bPulse_60s			:BOOL;
+	bCustomBlink1		:BOOL;
+	bCustomBlink2		:BOOL;
+	bCustomBlink3		:BOOL;
+	bNewDay				:BOOL;
+	bNewMonth			:BOOL;
+	bNewYear			:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

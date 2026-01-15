@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_SPHeater" Id="{d8827551-f070-4249-a61f-c6cb473421e6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _SPHeater
+VAR_INPUT
+	i_bStart						:BOOL;
+	i_bToggleCmd					:BOOL;
+	i_rSetpoint						:REAL;
+END_VAR
+VAR
+	bStopHeater						:BOOL;
+END_VAR
+VAR_OUTPUT
+	q_bStart_Cmd					:BOOL;
+	q_rSetpoint_Cmd					:REAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF i_bStart AND NOT bStopheater AND GV.rSP_Water_ActualTemperature < 80 THEN
+	q_rSetpoint_Cmd:=i_rSetpoint;
+	q_bStart_Cmd:=TRUE;
+ELSE
+	q_rSetpoint_Cmd:=0;
+	q_bStart_Cmd:=FALSE;
+END_IF
+
+IF i_bToggleCmd THEN
+	bStopheater:=NOT bStopheater;
+END_IF
+
+IF GV.stSP_Control.bStopped THEN
+	bStopHeater:=FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="_SPHeater">
+      <LineId Id="26" Count="5" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="21" Count="2" />
+      <LineId Id="20" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Interface_PidCtrl" Id="{4bb26a55-e9d8-4511-899e-327094ae60cc}">
+    <Declaration><![CDATA[TYPE ST_Interface_PidCtrl :
+STRUCT
+	//Input
+	i_bEnablePID		:BOOL;
+	i_rSetpoint			:REAL;
+	i_rActual			:REAL;
+	i_rKp				:REAL;
+	i_rKi				:REAL;
+	i_rKd				:REAL;
+	i_rTdamp			:REAL;
+	i_rOutMin			:REAL;
+	i_rOutMax			:REAL;
+	i_rManualOutput		:REAL;
+	i_bEnablePWM		:BOOL;
+	i_iFreqPWM			:INT;
+	i_bAutotuneStart	:BOOL;
+	i_rAutotuneSetpoint	:REAL;
+	i_bAutotuneAccept	:BOOL;
+	i_bEnableAlarms		:BOOL;
+	i_iHighAlarm		:INT;
+	i_iHighWarning		:INT;
+	i_iLowWarning		:INT;
+	i_iLowAlarm			:INT;
+	i_iWarningDelay		:INT;
+	i_iAlarmDelay		:INT;
+	//Output
+	q_rOutputPID		:REAL;
+	q_bOutputPWM		:BOOL;
+	q_Difference		:REAL;
+	q_AutotuneActive	:BOOL;
+	q_AutotuneDone		:BOOL;
+	i_sAutotuneTime		:STRING;
+	q_rAutotuneKp		:REAL;
+	q_rAutotuneKi		:REAL;
+	q_rAutotuneKd		:REAL;
+	q_bError			:BOOL;
+	q_bErrorID			:INT;
+	q_bAlarmHigh		:BOOL;
+	q_bWarningHigh		:BOOL;
+	q_bWarningLow		:BOOL;
+	q_bAlarmLow			:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EnableControl" Id="{bf0090cf-9d03-40b8-8b5c-08b0b2f5de8e}">
+    <Declaration><![CDATA[TYPE ST_EnableControl :
+STRUCT
+	
+	bLocalization_Img		:BOOL;
+	bScreenShot_Img			:BOOL;
+
+	bBatchEdit_Button		:BOOL;
+	bBatchCreate_Button		:BOOL;
+	
+	bStop_Button			:BOOL;
+	bPause_Button			:BOOL;
+	bStart_Button			:BOOL;
+	bAuto_Button			:BOOL;
+	bService_Button			:BOOL;
+	
+	bOutlet_Buttons			:BOOL;
+	bLid_Buttons			:BOOL;
+	bSeal_Buttons			:BOOL;
+	bTool_Buttons			:BOOL;
+	bFindPos_Button			:BOOL;
+	bTool_Container			:BOOL;
+	
+	bPump_Button			:BOOL;
+	bMixer_Button			:BOOL;
+	bSieve_Button			:BOOL;
+	
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

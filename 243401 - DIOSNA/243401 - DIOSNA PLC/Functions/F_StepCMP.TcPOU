@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_StepCMP" Id="{637fa364-14fd-4468-a752-82d782d67300}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_StepCMP : BOOL
+VAR_INPUT
+	iStep			:INT:=0;
+	i1				:INT:=0;
+	i2				:INT:=0;
+	i3				:INT:=0;
+	i4				:INT:=0;
+	i5				:INT:=0;
+	i6				:INT:=0;
+	i7				:INT:=0;
+	i8				:INT:=0;
+	i9				:INT:=0;
+	i10				:INT:=0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_StepCMP:=((iStep=i1) OR 
+			(iStep=i2) OR 
+			(iStep=i3) OR 
+			(iStep=i4) OR 
+			(iStep=i5) OR 
+			(iStep=i6) OR 
+			(iStep=i7) OR 
+			(iStep=i8) OR 
+			(iStep=i9) OR 
+			(iStep=i10)) AND
+			(iStep<>0);]]></ST>
+    </Implementation>
+    <LineIds Name="F_StepCMP">
+      <LineId Id="7" Count="0" />
+      <LineId Id="51" Count="9" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

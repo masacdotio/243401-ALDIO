@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="OUT" Id="{0823cfec-aa09-4974-a205-ce4650458597}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	//DO1
+	bMixerContactor_ON					:BOOL;
+	bMixerFrequency_Start				:BOOL;
+	bChopper_Slow						:BOOL;
+	bChopper_Fast						:BOOL;
+	bSieveContactor_ON					:BOOL;
+	bSieveFrequency_Start				:BOOL;
+	bVacuum_Start						:BOOL;
+	
+	bOutlet_Valve_Open					:BOOL;
+	bOutlet_Valve_Close					:BOOL;
+	bTool_Valve_Lift					:BOOL;
+	bTool_Valve_Lower					:BOOL;
+	bLid_Valve_Close					:BOOL;
+	bLid_Valve_Open						:BOOL;
+	bSelSeave_On						:BOOL;
+	bSelSeave_Off						:BOOL;
+	
+	//DO2
+	bAirPurgeMax_V205A_V305A_1			:BOOL;
+	bAirPurgeMin_V205A_V305A_2			:BOOL;
+	bAspiration_V817C					:BOOL;
+	bVacuum_V866A						:BOOL;
+	bFilterClean_V861B					:BOOL;
+	bAirInput_V882C						:BOOL;  //Glaven dovod za pnevmatikata, koga se vklucuva?
+	bMixer_Air_V807_4					:BOOL;
+	bChopper_Air_V807_6					:BOOL;
+	
+	bVentilationOutlet_V625D			:BOOL; //Ova e povrzano so outlet flapot, koga se vklucuva?
+	bCleanAir_WIP_V807_1				:BOOL;
+	bPurifiedWater_WIP_V807_2			:BOOL;
+	bWarmWater_WIP_V807_3				:BOOL;
+	bColdWater_WIP_V807_4				:BOOL;
+	bDrain_WIP_V807_2					:BOOL;
+	bMixer_WIP_V807_3					:BOOL;
+	bChopper_WIP_V807_5					:BOOL;
+	
+	//DO3
+	bSP_WIP								:BOOL;
+	bSPDrain_WIP						:BOOL;
+	bSP_Mixer_Start						:BOOL;
+	bSP_Heater_ON						:BOOL;
+	
+	bMixerRun_Light						:BOOL;
+	bOutletOpen_Light					:BOOL;
+	bOutletClose_Light					:BOOL;
+	bSieveRun_Light						:BOOL;
+	bVacuumRun_Light						:BOOL;
+	
+	//AO1
+	iMixerSpeed							:INT;
+	iSieveSpeed							:INT;
+	iSP_MixerSpeed						:INT;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

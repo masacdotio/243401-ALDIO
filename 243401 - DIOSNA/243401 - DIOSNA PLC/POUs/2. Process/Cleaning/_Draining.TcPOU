@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Draining" Id="{baa126d0-2b84-4c6f-a0d9-0e0771a1e6d7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Draining
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_stPhaseTime				:ST_HMI_Time;
+	i_rMixerSpeed				:REAL;
+END_VAR
+VAR
+	Seq_Time					:ARRAY[0..9] OF TIME;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+	q_bRunning					:BOOL;
+	q_bFinished					:BOOL;
+	q_bPromptReq				:BOOL;
+	q_tStepTime					:TIME;
+END_VAR
+VAR PERSISTENT
+	iStep						:INT;
+	iPrevStep					:INT;
+	Seq_TON						:ARRAY[0..9] OF FB_TONP;
+	tonStepTime					:FB_TONP;
+	stSeqControl				:ST_SeqControl;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//****************RECIPE CALCULATIONS*********************
+Seq_Time[1]:=DINT_TO_TIME(i_stPhaseTime.mins)*60000 + 
+			 DINT_TO_TIME(i_stPhaseTime.sec)*1000;
+
+//****************SEQUENE STATE AND CONTROL*********************
+q_bRunning:=iStep<>0;
+//Finish sequence if phase change is requested
+IF q_bRunning AND (GV.stControl.bNext OR GV.stControl.bPrevious OR GV.stControl.bJump) THEN
+	iStep:=1000;
+END_IF
+//Idle if phase is not active
+IF NOT i_bStart THEN
+	iStep:=0;
+END_IF
+//Timers
+Seq_TON[1](IN:=iStep=100,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[1]);
+//****************SEQUENCE*********************
+
+CASE iStep OF
+	0:
+		IF i_bStart THEN
+			q_bFinished:=FALSE;
+			iStep:=50;
+		END_IF
+		
+		IF iStep <> 0 THEN
+			iPrevStep:=0;
+		END_IF
+	
+		IF GV.stControl.bPaused THEN
+			iStep:=0;
+		END_IF
+	
+	50://Check outlet if open
+	IF IN.bOutletPos_Opened THEN
+		iStep := 100;
+	END_IF
+	IF iStep <> 50 THEN
+		iPrevStep:=50;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 50;
+	END_IF
+	
+	100://Draining
+	IF Seq_TON[1].Q THEN
+		iStep := 1000;
+	END_IF
+	IF iStep <> 100 THEN
+		iPrevStep:=100;
+	END_IF
+	IF GV.stControl.bPaused THEN
+		iStep := 100;
+	END_IF
+	
+	1000:
+		q_bFinished:=TRUE;
+		IF GV.stControl.bPhaseFinished THEN
+			q_bFinished:=FALSE;
+			iStep:=0;
+		END_IF
+END_CASE
+
+
+//****************COMMAND*********************
+
+//Outlet
+IF F_StepCMP(iStep,50,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=TRUE;
+ELSE
+	q_stCmd.bOutletClose:=FALSE;
+	q_stCmd.bOutletOpen:=FALSE;
+END_IF
+
+//Mixer
+IF F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0) THEN
+	q_stCmd.bMixerStart:=TRUE;
+	q_stCmd.rMixerSpeed:=i_rMixerSpeed;
+ELSE
+	q_stCmd.bMixerStart:=FALSE;
+	q_stCmd.rMixerSpeed:=0;
+END_IF
+
+//Drain
+q_stCmd.bMixerWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+q_stCmd.bChopperWater:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+
+q_stCmd.bMainDrain:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+q_stCmd.bSPDrain:=F_StepCMP(iStep,100,0,0,0,0,0,0,0,0,0);
+
+
+//****************Statistic and Status*********************
+tonStepTime(IN:=q_bRunning OR MAIN.bFirstCycle,PAUSE:=GV.bUPSdetect,PT:=T#3H);
+q_tStepTime:=tonStepTime.ET;
+
+
+//Sequence control HMI
+stSeqControl.iCurrentStep:=iStep;
+stSeqControl.iPreviousStep:=iPrevStep;
+stSeqControl.iRecipeType:=1;
+stSeqControl.iPhaseType:=4;
+stSeqControl.sPhaseTime:=F_TimerHMI(q_tStepTime);
+
+stSeqControl.iStepNumbers[0]:=0;
+stSeqControl.sStepDescription[0]:='Wait for phase start';
+
+stSeqControl.iStepNumbers[1]:=50;
+stSeqControl.sStepDescription[1]:='Check if outlet is opened';
+
+stSeqControl.iStepNumbers[2]:=100;
+stSeqControl.sStepDescription[2]:='Draining time';
+
+stSeqControl.iStepNumbers[3]:=1000;
+stSeqControl.sStepDescription[3]:='Phase finished';
+
+stSeqControl.iStepNumbers[4]:=0;
+stSeqControl.sStepDescription[4]:='';
+
+stSeqControl.iStepNumbers[5]:=0;
+stSeqControl.sStepDescription[5]:='';
+
+stSeqControl.iStepNumbers[6]:=0;
+stSeqControl.sStepDescription[6]:='';
+
+stSeqControl.iStepNumbers[7]:=0;
+stSeqControl.sStepDescription[7]:='';
+
+stSeqControl.iStepNumbers[8]:=0;
+stSeqControl.sStepDescription[8]:='';
+
+stSeqControl.iStepNumbers[9]:=0;
+stSeqControl.sStepDescription[9]:='';]]></ST>
+    </Implementation>
+    <LineIds Name="_Draining">
+      <LineId Id="491" Count="131" />
+      <LineId Id="259" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

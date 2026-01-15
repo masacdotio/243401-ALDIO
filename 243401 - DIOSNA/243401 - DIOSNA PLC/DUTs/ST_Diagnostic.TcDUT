@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_Diagnostic" Id="{654957b3-4771-4c01-a6c2-f95c529c28fc}">
+    <Declaration><![CDATA[TYPE ST_Diagnostic :
+STRUCT
+	Temperature			:UDINT;
+	BootCount			:UDINT;
+	OperationTime		:UDINT;
+	OperationDuration	:ARRAY[0..2] OF INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

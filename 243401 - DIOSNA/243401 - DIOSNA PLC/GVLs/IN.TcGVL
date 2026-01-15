@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="IN" Id="{64dd6c04-ac1c-423f-b662-5ffbf5c9cfe6}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL PERSISTENT
+	
+	//DI1
+	bFuseControlAC_OK						:BOOL:=TRUE;
+	bFuseControlDC_NOK						:BOOL;
+	bVoltageMonitor_NOK						:BOOL;
+	bTemperatureCabinetPC_NOK				:BOOL;
+	bTemperatureCabinetPLC_NOK				:BOOL;
+	bCabinetFanMotorProtection_Trip			:BOOL;
+	bEEXModules_OK							:BOOL:=TRUE;
+	bEStop_Relay_OK							:BOOL:=TRUE;
+	
+	bEStop_Cabinet_NOK						:BOOL;
+	bEStop_Operation_NOK					:BOOL;
+	bCompressedAir_PAL882A_OK				:BOOL:=TRUE; 
+	bCompressedAirWIP_PAL807_OK				:BOOL:=TRUE;
+	bCompressedAirSeal_PAL625_OK			:BOOL:=TRUE;
+	bLid_Closed								:BOOL;
+	bOutletCleaningPos_Open					:BOOL; //Sto tocno e ova?
+	bSieveMachine_InPos						:BOOL:=TRUE;
+	
+	//DI2
+	bMixerThermalProtection_Fault			:BOOL;
+	bChopperThermalProtection_Fault			:BOOL;
+	bSieveThermalProtection_Fault			:BOOL;
+	bMixerContactor_ON						:BOOL;
+	bChopperContactor_ON					:BOOL;
+	bSieveContactor_ON						:BOOL;
+	bVacuumMP_Trip							:BOOL;
+	bVacuumContactor_ON						:BOOL;
+	
+	bMixerTempOil_Trip						:BOOL;
+	bMixerFrequency_Ready					:BOOL;
+	bMixerFrequency_Run						:BOOL;
+	bSieveFrequency_Ready					:BOOL;
+	bSieveFrequency_Run						:BOOL;
+	//DI3
+	bFlowSealDrive_FAL205A_OK				:BOOL;
+	bFlowSealChopper_FAL305A_OK				:BOOL;
+	bFlowSealDrive_FAL205C_OK				:BOOL;
+	bFlowSealChopper_FAL305C_OK				:BOOL;
+	
+	bOutletPos_Opened						:BOOL;
+	bOutletPos_Closed						:BOOL;
+	bToolPos_Down1							:BOOL:=TRUE;
+	bToolPos_Down2							:BOOL:=TRUE;
+	bToolPos_Up								:BOOL;
+	bMixerTool_InPos						:BOOL;
+	bLid_Open								:BOOL;
+	
+	//DI4
+	bMixerStop_Button						:BOOL;
+	bMixerStart_Button						:BOOL;
+	bOutletOpen_Button						:BOOL;
+	bOutletClose_Button						:BOOL;
+	bSieveStop_Button						:BOOL;
+	bSieveStart_Button						:BOOL;
+	bVacuumStop_Button						:BOOL; 
+	bVacuumStart_Button						:BOOL;
+	
+	bSP_Lid_Closed							:BOOL;
+	bSP_Water_MinLevel						:BOOL;
+	bSP_MixerFreq_Run						:BOOL;
+
+	//TI1
+	iSP_LiquidTemperature					:INT;
+	iSP_VesselTemperature					:INT;
+	// AI1
+	iMixer_ActualSpeed						:INT;
+	iMixer_ActualCurrent					:INT;
+	iSieve_ActualSpeed						:INT;
+	iChopper_ActualCurrent					:INT;
+	//AI2
+	iSP_ActualPressure						:INT;
+	iSP_ActualSpeed							:INT;
+
+	bReserveEx								:BOOL; //?
+
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EL4008" Id="{50b5f788-df2e-4ed2-80cd-12e711ebbc91}">
+    <Declaration><![CDATA[TYPE ST_EL4008 :
+STRUCT
+	Ch1_Value						AT %Q*	:INT;
+	Ch2_Value						AT %Q*	:INT;
+	Ch3_Value						AT %Q*	:INT;
+	Ch4_Value						AT %Q*	:INT;
+	Ch5_Value						AT %Q*	:INT;
+	Ch6_Value						AT %Q*	:INT;
+	Ch7_Value						AT %Q*	:INT;
+	Ch8_Value						AT %Q*	:INT;
+	State							AT %I*	:UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

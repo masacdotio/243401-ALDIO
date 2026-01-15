@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <DUT Name="ST_HMI" Id="{c99a5bf1-1e99-4d85-a667-5c2f839af9bd}">
+    <Declaration><![CDATA[TYPE ST_HMI :
+STRUCT
+	
+	stMachine_Ctrl						:ST_MachineControl;
+	stSP_Machine_Ctrl					:ST_MachineControl;
+	stBatch_Ctrl						:ST_BatchControl;
+	stRecipeProd_Ctrl					:ST_RecipeControl;
+	stRecipeClean_Ctrl					:ST_RecipeControl;
+
+	stRecipeProd						:ST_Production_Phases;
+	stRecipeProdCopy					:ST_Production_Phases;
+	stRecipeClean						:ST_Cleaning_Phases;
+	stRecipeCleanCopy					:ST_Cleaning_Phases;
+	
+	stReport_Ctrl						:ST_ReportControl;
+	stAudit_Ctrl						:ST_AuditControl;
+	stProcess_Ctrl						:ST_ProcessControl;
+	stAlarm_Ctrl						:ST_AlarmControl;
+	
+	iSelectedPhase						:INT;
+	bCloseHMI							:BOOL;
+	bScreenshot							:BOOL;
+		
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

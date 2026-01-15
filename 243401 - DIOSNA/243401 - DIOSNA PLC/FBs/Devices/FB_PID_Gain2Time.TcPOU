@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_PID_Gain2Time" Id="{1731f0a5-81f4-4d62-be9a-6cba906a4e4b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PID_Gain2Time
+VAR_INPUT
+	i_rKp					:REAL;
+	i_rKi					:REAL;
+	i_rKd					:REAL;
+	i_rTdamp				:REAL := 10;
+	i_OutMin				:REAL := 0;
+	i_OutMax				:REAL := 100;
+END_VAR
+
+VAR_OUTPUT
+	q_rKp					:REAL;
+	q_rTi					:REAL;
+	q_rTder					:REAL;
+	q_rTdamp				:REAL;
+	
+	q_PID_Params			:st_CTRL_pid_params;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Limitation and validation rules
+i_rKi := LIMIT(0.000000000001, i_rKi, 1000000);
+i_rKp := LIMIT(0.000000000001, i_rKp, 1000000);
+i_OutMin := LIMIT(0, i_OutMin, 100);
+i_OutMax := LIMIT(0, i_OutMax, 100);
+IF i_OutMin >= i_OutMax THEN
+	i_OutMin := 0;
+END_IF
+
+
+q_rKp := i_rKp;
+q_rTi := (i_rKp*0.01/i_rKi);
+q_rTder := i_rKd/i_rKp;
+q_rTdamp := i_rTdamp;
+
+q_PID_Params.tCtrlCycleTime := T#10MS;
+q_PID_Params.tTaskCycleTime := T#10MS;
+q_PID_Params.fKp := q_rKp; //gain
+q_PID_Params.tTn := REAL_TO_TIME(q_rTi*1000);
+q_PID_Params.tTv := REAL_TO_TIME(q_rTder*1000); //derivative
+q_PID_Params.tTd := REAL_TO_TIME(q_rTder*1000); //dampening
+q_PID_Params.fOutMinLimit := i_OutMin;
+q_PID_Params.fOutMaxLimit := i_OutMax;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PID_Gain2Time">
+      <LineId Id="317" Count="0" />
+      <LineId Id="282" Count="0" />
+      <LineId Id="313" Count="0" />
+      <LineId Id="318" Count="1" />
+      <LineId Id="315" Count="0" />
+      <LineId Id="320" Count="1" />
+      <LineId Id="316" Count="0" />
+      <LineId Id="314" Count="0" />
+      <LineId Id="283" Count="11" />
+      <LineId Id="214" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

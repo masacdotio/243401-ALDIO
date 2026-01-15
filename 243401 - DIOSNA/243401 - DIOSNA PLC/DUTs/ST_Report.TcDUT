@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Report" Id="{1fa25576-b54b-4294-845c-8ae69b8846ff}">
+    <Declaration><![CDATA[TYPE ST_Report :
+STRUCT
+	bStartCreate_Sequence				:BOOL;
+	bStartSend_Sequence					:BOOL;
+	bSend_Report						:BOOL;
+	bExport_Alarms						:BOOL;
+	bSaveAs_Alarms						:BOOL;
+	bCreate_Report						:BOOL;
+	bDelete_Data						:BOOL;
+	bDelete_SPData						:BOOL;
+	bDelete_OldestReport				:BOOL;
+	bCreate_ProcessReport				:BOOL;
+	bCreate_SPReport					:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

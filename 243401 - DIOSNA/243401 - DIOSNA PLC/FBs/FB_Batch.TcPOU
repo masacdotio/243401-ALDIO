@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <POU Name="FB_Batch" Id="{fe7fd090-901c-413f-80f9-8b402fd3e9cb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Batch
+VAR_INPUT
+	i_bOpen						:BOOL; 
+	i_bClose					:BOOL; 
+	i_iRecipeType				:INT;
+	i_sBatchID					:STRING; 
+	i_sBatchSubID				:STRING;
+	i_sRecipe					:STRING;
+	i_sProductName				:STRING;
+	i_bCreateReport				:BOOL;
+	i_bSendReport				:BOOL;
+END_VAR
+VAR_IN_OUT
+	q_stParams					:ST_Batch;
+	q_stLastBatch				:ST_Batch;
+END_VAR
+VAR_OUTPUT
+	q_bBusy						:BOOL;	
+	q_bOpened					:BOOL:=FALSE; 
+	q_bClosed					:BOOL:=FALSE; 		
+END_VAR
+
+VAR
+	tDelayCreateReport			:TON;
+	tDelaySendReport			:TON;
+	tDelayClose					:TON;
+END_VAR	
+
+VAR PERSISTENT
+	iStep						:INT;
+	sUserOpened					:STRING;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tDelayCreateReport(IN:=(iStep=200),PT:=T#3S);
+tDelaySendReport(IN:=(iStep=300),PT:=T#3S);
+tDelayClose(IN:=(iStep=110),PT:=T#500MS);
+
+CASE iStep OF
+
+	0: 
+		MEMSET(ADR(q_stParams),0,SIZEOF(q_stParams));
+		IF i_bOpen THEN
+			iStep:=50;
+		END_IF
+		
+	50:
+		q_stParams.sRecipeType:=SEL(i_iRecipeType=0,'Cleaning','Production');
+		IF i_sBatchSubID <> '0' THEN
+			q_stParams.sBatchNumber:=CONCAT(i_sBatchID,'-');
+			q_stParams.sBatchNumber:=CONCAT(q_stParams.sBatchNumber,i_sBatchSubID);
+		ELSE
+			q_stParams.sBatchNumber:=i_sBatchID;
+		END_IF
+		q_stParams.sRecipeName:=i_sRecipe;
+		q_stParams.sProductName:=i_sProductName;
+		q_stParams.sUser:=GV.sUserLogged;
+		q_stParams.sStarted:=GV.stTime.sDateTime;
+		sUserOpened:=GV.sUserLogged;
+		iStep:=100;
+			
+	100:
+		q_stParams.sUser:=sUserOpened;
+		IF i_bClose THEN
+			iStep:=110;
+		END_IF
+		
+	110:
+		IF tDelayClose.Q THEN
+			q_stParams.sFinished:=GV.stTime.sDateTime;
+			q_stLastBatch:=q_stParams;
+			iStep:=200;
+		END_IF
+	200:
+		IF tDelayCreateReport.Q AND NOT i_bCreateReport THEN
+			iStep:=300;
+		END_IF
+	300:
+		IF tDelaySendReport.Q AND NOT i_bSendReport THEN
+			iStep:=1000;
+		END_IF
+		
+	1000:
+		iStep:=0;	
+END_CASE
+
+q_bBusy:=iStep<>0;
+q_bOpened:=iStep=100;
+q_bClosed:=iStep>110;
+
+
+
+
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

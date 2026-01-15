@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_Control" Id="{d1275e34-212a-4f20-8320-f5efc2cf67f5}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _Control
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_bMachineClean				:BOOL;
+END_VAR
+VAR
+	Seq_Time					:ARRAY[0..9] OF TIME;
+END_VAR
+VAR_OUTPUT
+	q_stCmd						:ST_ProcessCmd;
+	q_bRunning					:BOOL;
+	q_bFinished					:BOOL;
+	q_bPromptReq				:BOOL;
+	q_tStepTime					:TIME;
+	
+END_VAR
+VAR PERSISTENT
+	iStep						:INT;
+	iPrevStep					:INT;
+	Seq_TON						:ARRAY[0..9] OF FB_TONP;
+	tonStepTime					:FB_TONP;
+	stSeqControl				:ST_SeqControl;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//****************RECIPE CALCULATIONS*********************
+
+//****************SEQUENE STATE AND CONTROL*********************
+q_bRunning:=iStep<>0;
+//Finish sequence if phase change is requested
+IF q_bRunning AND (GV.stControl.bNext OR GV.stControl.bPrevious OR GV.stControl.bJump) THEN
+	iStep:=1000;
+END_IF
+//Idle if phase is not active
+IF NOT i_bStart THEN
+	iStep:=0;
+END_IF
+//Timers
+Seq_TON[1](IN:=iStep=100,PAUSE:=GV.stControl.bPaused,PT:=Seq_Time[1]);
+//****************SEQUENCE*********************
+
+CASE iStep OF
+	0:
+		IF i_bStart THEN
+			q_bFinished:=FALSE;
+			iStep:=100;
+		END_IF
+		
+		IF iStep <> 0 THEN
+			iPrevStep:=0;
+		END_IF
+	
+		IF GV.stControl.bPaused THEN
+			iStep:=0;
+		END_IF
+		
+	100:
+		GV.stControl.bPhasePaused:=TRUE;
+		IF GV.stControl.bPaused THEN
+			iStep := 200;
+		END_IF
+		
+	200:
+		IF IN.bToolPos_Up THEN
+			iStep:=300;
+		END_IF
+		
+	300:
+		IF IN.bLid_Open THEN
+			iStep:=400;
+		END_IF
+	400:
+		IF IN.bToolPos_Down1 AND IN.bToolPos_Down2 THEN
+			iStep:=500;
+		END_IF
+	
+	500:
+		IF i_bMachineClean THEN
+			iStep := 1000;
+		END_IF
+	
+	1000:
+		q_bFinished:=TRUE;
+		IF GV.stControl.bPhaseFinished THEN
+			q_bFinished:=FALSE;
+			iStep:=0;
+		END_IF
+END_CASE
+
+
+//****************COMMAND*********************
+q_bPromptReq:=(iStep=500);
+
+
+//****************Statistic and Status*********************
+tonStepTime(IN:=q_bRunning OR MAIN.bFirstCycle,PAUSE:=GV.bUPSdetect,PT:=T#3H);;
+q_tStepTime:=tonStepTime.ET;
+
+
+//Sequence control HMI
+stSeqControl.iCurrentStep:=iStep;
+stSeqControl.iPreviousStep:=iPrevStep;
+stSeqControl.iRecipeType:=1;
+stSeqControl.iPhaseType:=6;
+stSeqControl.sPhaseTime:=F_TimerHMI(q_tStepTime);
+
+stSeqControl.iStepNumbers[0]:=0;
+stSeqControl.sStepDescription[0]:='Wait for phase start';
+
+stSeqControl.iStepNumbers[1]:=100;
+stSeqControl.sStepDescription[1]:='Autopausing the process';
+
+stSeqControl.iStepNumbers[2]:=200;
+stSeqControl.sStepDescription[2]:='Wait for operator to raise the mixer tool';
+
+stSeqControl.iStepNumbers[3]:=300;
+stSeqControl.sStepDescription[3]:='Wait for operator to open the main lid';
+
+stSeqControl.iStepNumbers[4]:=400;
+stSeqControl.sStepDescription[4]:='Wait for operator to lower the mixer tool';
+
+stSeqControl.iStepNumbers[5]:=500;
+stSeqControl.sStepDescription[5]:='Wait for operator to confirm that machine is clean';
+
+stSeqControl.iStepNumbers[6]:=1000;
+stSeqControl.sStepDescription[6]:='Phase finished';
+
+stSeqControl.iStepNumbers[7]:=0;
+stSeqControl.sStepDescription[7]:='';
+
+stSeqControl.iStepNumbers[8]:=0;
+stSeqControl.sStepDescription[8]:='';
+
+stSeqControl.iStepNumbers[9]:=0;
+stSeqControl.sStepDescription[9]:='';]]></ST>
+    </Implementation>
+    <LineIds Name="_Control">
+      <LineId Id="442" Count="45" />
+      <LineId Id="569" Count="0" />
+      <LineId Id="571" Count="1" />
+      <LineId Id="570" Count="0" />
+      <LineId Id="488" Count="58" />
+      <LineId Id="24" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

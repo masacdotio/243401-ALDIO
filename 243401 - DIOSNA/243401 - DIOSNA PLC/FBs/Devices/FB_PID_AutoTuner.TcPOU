@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_PID_AutoTuner" Id="{21e9c0de-f36c-48d9-95c8-5b14a586e71b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PID_AutoTuner
+VAR_INPUT
+	i_bStart					:BOOL;
+	i_rSignal					:REAL;
+	i_rSetPoint					:REAL;
+END_VAR
+
+VAR_OUTPUT			
+	q_rOutput					:REAL;
+	q_rKp						:REAL;
+	q_rKi						:REAL;
+	q_rKd						:REAL;
+	q_Active					:BOOL;
+	q_Done						:BOOL;
+END_VAR
+
+VAR
+	rPeakMax					:REAL;	
+	rPrevMax					:REAL:=1;
+	rPeakMin					:REAL;
+	rPrevMin					:REAL:=0;
+	tPrevPeriod					:TIME;
+	tNewPeriod					:TIME;
+	tonPeriodTimer				:TON;
+	iStep						:INT:=0;
+	rtrigStart					:R_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rtrigStart(CLK:=i_bStart);
+
+IF NOT i_bStart THEN
+	iStep := 0;
+END_IF
+
+//Output - autotune active
+IF iStep <> 0 THEN	
+	q_Active := TRUE; 
+ELSE 
+	q_Active := FALSE; 
+END_IF
+	
+//Output - autotune done
+IF iStep=700 THEN 
+	q_Done:=TRUE; 
+ELSIF iStep=50 THEN 
+	q_Done:=FALSE; 
+END_IF
+
+CASE iStep OF 
+	//start pod setpoint
+	0:
+		rPeakMax:=i_rSetPoint;
+		rPeakMin:=i_rSetPoint;
+		rPrevMax:=i_rSetPoint;
+		rPrevMin:=0;
+		tPrevPeriod:=T#1ms;
+		IF rtrigStart.Q THEN
+			iStep := 50;
+		END_IF
+		
+	50:
+		q_rKp := 1;
+		q_rKi := 1;
+		q_rKd := 1;
+		iStep := 100;
+		
+	100: 
+		IF i_rSignal > i_rSetPoint THEN
+			iStep := 200;
+		END_IF
+		
+	//nad setpoint
+	200: 
+		IF i_rSignal >= rPeakMax THEN
+			rPeakMax := i_rSignal;
+		END_IF
+		
+		IF i_rSignal < i_rSetPoint THEN
+				iStep := 300;
+		END_IF
+	
+	//pod setpoint
+	300:
+		IF i_rSignal <= rPeakMin THEN
+			rPeakMin := i_rSignal;
+		END_IF
+		IF i_rSignal > i_rSetPoint THEN
+			iStep := 400;
+		END_IF
+		
+	//proverka za da ne delime so 0
+	400: 
+		IF tPrevPeriod <> T#0MS AND (rPrevMax-rPrevMin) <> 0 THEN
+			iStep := 500;
+		ELSE
+			rPeakMax := i_rSetpoint;
+			rPeakMin := i_rSetpoint;
+			iStep := 200;
+		END_IF
+		
+	//compare
+	500:
+		IF (ABS(((rPeakMax-rPeakMin) - (rPrevMax-rPrevMin))/(rPrevMax-rPrevMin)) <= (0.1)) AND (ABS(TIME_TO_REAL(tNewPeriod) - TIME_TO_REAL(tPrevPeriod))/TIME_TO_REAL(tPrevPeriod) <= (0.1)) THEN 
+			iStep := 600;
+		ELSE
+			rPrevMax := rPeakMax;
+			rPrevMin := rPeakMin;
+			rPeakMax := i_rSetpoint;
+			rPeakMin := i_rSetpoint;
+			
+			tPrevPeriod := tNewPeriod;
+			iStep := 200;
+		END_IF
+	
+	//presmetki PID
+	600:
+		q_rKp := 0.35*4*100/(PI*(rPeakMax-rPeakMin));
+		q_rKi := 1.85*4*100/(PI*(rPeakMax-rPeakMin))/(TIME_TO_REAL(tNewPeriod)/1000); 
+		q_rKd := 0.05*4*100/(PI*(rPeakMax-rPeakMin))*(TIME_TO_REAL(tNewPeriod)/1000); 
+		iStep := 700;
+		
+	700:
+		iStep := 0;
+	
+END_CASE
+
+IF (iStep=100 OR iStep=300) THEN
+	q_rOutput := 100;
+ELSE
+	q_rOutput := 0;
+END_IF
+
+tonPeriodTimer(IN := (iStep>=100 AND iStep<=300), PT := T#15H);
+IF tonPeriodTimer.IN THEN
+	tNewPeriod := tonPeriodTimer.ET;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PID_AutoTuner">
+      <LineId Id="961" Count="0" />
+      <LineId Id="960" Count="0" />
+      <LineId Id="911" Count="2" />
+      <LineId Id="926" Count="0" />
+      <LineId Id="918" Count="0" />
+      <LineId Id="917" Count="0" />
+      <LineId Id="989" Count="3" />
+      <LineId Id="927" Count="0" />
+      <LineId Id="932" Count="0" />
+      <LineId Id="931" Count="0" />
+      <LineId Id="1000" Count="3" />
+      <LineId Id="921" Count="0" />
+      <LineId Id="652" Count="82" />
+      <LineId Id="910" Count="0" />
+      <LineId Id="736" Count="3" />
+      <LineId Id="165" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

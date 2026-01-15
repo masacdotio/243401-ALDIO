@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_PythonScript" Id="{fbc4a31d-6df8-4873-a5db-6f39f4daff21}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PythonScript
+VAR_INPUT
+	i_sScriptName		:STRING;
+	i_sScriptPath		:STRING;
+	i_sScriptDir		:STRING;
+	i_bStart			:BOOL;
+END_VAR
+VAR_IN_OUT
+	iq_bScriptBusy		:BOOL;
+	iq_bScriptDone		:BOOL;
+	iq_bScriptError		:BOOL;
+	iq_sScriptError		:STRING;
+END_VAR
+VAR_OUTPUT
+	q_bBusy				:BOOL;
+	q_bError			:BOOL;
+	q_bDone				:BOOL;
+	q_sStatus			:STRING;
+END_VAR
+VAR
+	ntProcess			:NT_StartProcess;
+	bStartNT			:BOOL;
+
+	iStep				:INT;
+	tTimeOut_TON1		:TON;
+	tTimeOut1			:TIME;
+	tTimeOut_TON2		:TON;
+	tTimeOut2			:TIME;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ACT_StartProcess();
+
+tTimeOut1:=T#300S;
+tTimeOut2:=T#300S;
+
+q_sStatus:=iq_sScriptError;
+
+CASE iStep OF
+	
+	0:
+
+		q_bBusy:=FALSE;
+		tTimeOut_TON1(IN:=FALSE,PT:=tTimeOut1);
+		tTimeOut_TON2(IN:=FALSE,PT:=tTimeOut2);
+	
+		IF i_bStart THEN
+			q_bError:=FALSE;
+			q_bDone:=FALSE;
+			q_bBusy:=TRUE;
+			
+			iq_bScriptBusy:=FALSE;
+			iq_bScriptDone:=FALSE;
+			iq_bScriptError:=FALSE;
+			iq_sScriptError:='';
+			
+			iStep:=10;
+		END_IF
+	
+	10:
+		bStartNT:=TRUE;
+		IF ntProcess.BUSY THEN
+			iStep:=15;
+		END_IF
+	
+	15:
+		IF NOT ntProcess.BUSY THEN
+			iStep:=20;
+		ELSIF ntProcess.ERR THEN
+			iStep:=999;
+		END_IF
+	20:
+		tTimeOut_TON1(IN:=TRUE,PT:=tTimeOut1);
+		IF NOT iq_bScriptDone AND NOT iq_bScriptError THEN
+			iStep:=30;
+		ELSIF tTimeOut_TON1.Q OR iq_bScriptError THEN
+			iStep:=999;
+		END_IF
+	30:
+		tTimeOut_TON2(IN:=TRUE,PT:=tTimeOut2);
+		IF iq_bScriptDone AND NOT iq_bScriptError THEN 
+			iStep:=50;	
+		ELSIF tTimeOut_TON2.Q OR iq_bScriptError THEN
+			iStep:=999;
+		END_IF
+		
+	50:
+		q_bDone:=TRUE;
+		iStep:=0;
+	999:
+		
+		q_bError:=TRUE;
+		iStep:=0;
+		
+		
+END_CASE]]></ST>
+    </Implementation>
+    <Action Name="ACT_StartProcess" Id="{84a73c2c-4e2d-4e6a-91f5-23f0553e2a30}">
+      <Implementation>
+        <NWL>
+          <XmlArchive>
+            <Data>
+              <o xml:space="preserve" t="NWLImplementationObject">
+                <v n="NetworkListComment">""</v>
+                <v n="DefaultViewMode">"Fbd"</v>
+                <l2 n="NetworkList" cet="Network">
+                  <o>
+                    <v n="ILActive">false</v>
+                    <v n="FBDValid">false</v>
+                    <v n="ILValid">false</v>
+                    <l2 n="ILLines" />
+                    <v n="Comment">""</v>
+                    <v n="Title">""</v>
+                    <v n="Label">""</v>
+                    <v n="OutCommented">false</v>
+                    <l2 n="NetworkItems" cet="BoxTreeBox">
+                      <o>
+                        <v n="BoxType">"NT_StartProcess"</v>
+                        <o n="Instance" t="Operand">
+                          <v n="Operand">"ntProcess"</v>
+                          <v n="Type">"NT_StartProcess"</v>
+                          <v n="Comment">""</v>
+                          <v n="SymbolComment">""</v>
+                          <v n="Address">""</v>
+                          <o n="Flags" t="Flags">
+                            <v n="Flags">0</v>
+                            <v n="Fixed">false</v>
+                            <v n="Extensible">false</v>
+                          </o>
+                          <v n="LValue">false</v>
+                          <v n="Boolean">false</v>
+                          <v n="IsInstance">true</v>
+                          <v n="Id">3L</v>
+                        </o>
+                        <o n="OutputItems" t="OutputItemList">
+                          <l2 n="OutputItems" cet="Operand">
+                            <n />
+                            <o>
+                              <v n="Operand">""</v>
+                              <n n="Type" />
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">true</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">5L</v>
+                            </o>
+                            <o>
+                              <v n="Operand">""</v>
+                              <n n="Type" />
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">true</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">6L</v>
+                            </o>
+                          </l2>
+                        </o>
+                        <o n="Flags" t="Flags">
+                          <v n="Flags">0</v>
+                          <v n="Fixed">true</v>
+                          <v n="Extensible">false</v>
+                        </o>
+                        <n n="InputFlags" />
+                        <l2 n="InputItems" cet="BoxTreeOperand">
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"''"</v>
+                              <v n="Type">"STRING(INT#0)"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">8L</v>
+                            </o>
+                            <v n="Id">7L</v>
+                          </o>
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"i_sScriptPath"</v>
+                              <v n="Type">"STRING"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">10L</v>
+                            </o>
+                            <v n="Id">9L</v>
+                          </o>
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"i_sScriptDir"</v>
+                              <v n="Type">"STRING"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">12L</v>
+                            </o>
+                            <v n="Id">11L</v>
+                          </o>
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"i_sScriptName"</v>
+                              <v n="Type">"STRING"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">14L</v>
+                            </o>
+                            <v n="Id">13L</v>
+                          </o>
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"bStartNT"</v>
+                              <v n="Type">"BOOL"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">16L</v>
+                            </o>
+                            <v n="Id">15L</v>
+                          </o>
+                          <o>
+                            <o n="Operand" t="Operand">
+                              <v n="Operand">"DEFAULT_ADS_TIMEOUT"</v>
+                              <v n="Type">"TIME"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">false</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">18L</v>
+                            </o>
+                            <v n="Id">17L</v>
+                          </o>
+                        </l2>
+                        <o n="InputParam" t="ParamList">
+                          <l2 n="Names" cet="String">
+                            <v>NETID</v>
+                            <v>PATHSTR</v>
+                            <v>DIRNAME</v>
+                            <v>COMNDLINE</v>
+                            <v>START</v>
+                            <v>TMOUT</v>
+                          </l2>
+                          <l2 n="Types" cet="String">
+                            <v>T_AmsNetId</v>
+                            <v>T_MaxString</v>
+                            <v>T_MaxString</v>
+                            <v>T_MaxString</v>
+                            <v>BOOL</v>
+                            <v>TIME</v>
+                          </l2>
+                        </o>
+                        <o n="OutputParam" t="ParamList">
+                          <l2 n="Names" cet="String">
+                            <v>BUSY</v>
+                            <v>ERR</v>
+                            <v>ERRID</v>
+                          </l2>
+                          <l2 n="Types" cet="String">
+                            <v>BOOL</v>
+                            <v>BOOL</v>
+                            <v>UDINT</v>
+                          </l2>
+                        </o>
+                        <v n="CallType" t="Operator">FunctionBlock</v>
+                        <v n="EN">false</v>
+                        <v n="ENO">false</v>
+                        <n n="STSnippet" />
+                        <v n="ContainsExtensibleInputs">false</v>
+                        <v n="ProvidesSTSnippet">false</v>
+                        <v n="Id">4L</v>
+                      </o>
+                    </l2>
+                    <l2 n="Connectors" />
+                    <v n="Id">2L</v>
+                  </o>
+                  <o>
+                    <v n="ILActive">false</v>
+                    <v n="FBDValid">false</v>
+                    <v n="ILValid">false</v>
+                    <l2 n="ILLines" />
+                    <v n="Comment">""</v>
+                    <v n="Title">""</v>
+                    <v n="Label">""</v>
+                    <v n="OutCommented">false</v>
+                    <l2 n="NetworkItems" cet="BoxTreeAssign">
+                      <o>
+                        <o n="OutputItems" t="OutputItemList">
+                          <l2 n="OutputItems" cet="Operand">
+                            <o>
+                              <v n="Operand">"bStartNT"</v>
+                              <v n="Type">"BOOL"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">3</v>
+                                <v n="Fixed">true</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">true</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">21L</v>
+                            </o>
+                          </l2>
+                        </o>
+                        <o n="Flags" t="Flags">
+                          <v n="Flags">0</v>
+                          <v n="Fixed">false</v>
+                          <v n="Extensible">false</v>
+                        </o>
+                        <o n="RValue" t="BoxTreeOperand">
+                          <o n="Operand" t="Operand">
+                            <v n="Operand">"TRUE"</v>
+                            <v n="Type">"BOOL"</v>
+                            <v n="Comment">""</v>
+                            <v n="SymbolComment">""</v>
+                            <v n="Address">""</v>
+                            <o n="Flags" t="Flags">
+                              <v n="Flags">0</v>
+                              <v n="Fixed">false</v>
+                              <v n="Extensible">false</v>
+                            </o>
+                            <v n="LValue">false</v>
+                            <v n="Boolean">false</v>
+                            <v n="IsInstance">false</v>
+                            <v n="Id">20L</v>
+                          </o>
+                          <v n="Id">19L</v>
+                        </o>
+                        <v n="Id">22L</v>
+                      </o>
+                    </l2>
+                    <l2 n="Connectors" />
+                    <v n="Id">1L</v>
+                  </o>
+                </l2>
+                <v n="BranchCounter">0</v>
+                <v n="ValidIds">true</v>
+              </o>
+            </Data>
+            <TypeList>
+              <Type n="Boolean">System.Boolean</Type>
+              <Type n="BoxTreeAssign">{9873c309-1f09-4ebf-9078-42d8057ef11b}</Type>
+              <Type n="BoxTreeBox">{acfc6f68-8e3a-4af5-bf81-3dd512095a46}</Type>
+              <Type n="BoxTreeOperand">{9de7f100-1b87-424c-a62e-45b0cfc85ed2}</Type>
+              <Type n="Flags">{668066f2-6069-46b3-8962-8db8d13d7db2}</Type>
+              <Type n="Int32">System.Int32</Type>
+              <Type n="Int64">System.Int64</Type>
+              <Type n="Network">{d9a99d73-b633-47db-b876-a752acb25871}</Type>
+              <Type n="NWLImplementationObject">{25e509de-33d4-4447-93f8-c9e4ea381c8b}</Type>
+              <Type n="Operand">{c9b2f165-48a2-4a45-8326-3952d8a3d708}</Type>
+              <Type n="Operator">{bffb3c53-f105-4e85-aba2-e30df579d75f}</Type>
+              <Type n="OutputItemList">{f40d3e09-c02c-4522-a88c-dac23558cfc4}</Type>
+              <Type n="ParamList">{71496971-9e0c-4677-a832-b9583b571130}</Type>
+              <Type n="String">System.String</Type>
+            </TypeList>
+          </XmlArchive>
+        </NWL>
+      </Implementation>
+    </Action>
+    <LineIds Name="FB_PythonScript">
+      <LineId Id="9" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="121" Count="0" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="218" Count="0" />
+      <LineId Id="22" Count="4" />
+      <LineId Id="29" Count="1" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="31" Count="1" />
+      <LineId Id="132" Count="0" />
+      <LineId Id="33" Count="1" />
+      <LineId Id="226" Count="1" />
+      <LineId Id="229" Count="2" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="35" Count="6" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="180" Count="3" />
+      <LineId Id="185" Count="1" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="122" Count="0" />
+      <LineId Id="49" Count="1" />
+      <LineId Id="124" Count="1" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="53" Count="2" />
+      <LineId Id="58" Count="1" />
+      <LineId Id="63" Count="1" />
+      <LineId Id="126" Count="1" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="149" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="138" Count="0" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

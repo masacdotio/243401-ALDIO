@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_RecipeControl" Id="{bcb743e8-a09e-48bc-be56-b4beb6a42032}">
+    <Declaration><![CDATA[TYPE ST_RecipeControl :
+STRUCT
+	iList					:INT;
+	bCreate					:BOOL;
+	bRefresh				:BOOL;
+	bOpen					:BOOL;
+	bClose					:BOOL;
+	bDelete					:BOOL;
+	bSaveAs					:BOOL;
+	iIndex					:INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

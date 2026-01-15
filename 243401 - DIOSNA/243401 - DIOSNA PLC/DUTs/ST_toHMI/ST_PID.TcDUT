@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_PID" Id="{e70fa3f5-00b2-4542-ae5d-412934b0dc9f}">
+    <Declaration><![CDATA[TYPE ST_PID :
+STRUCT
+	bShow_Labels				:BOOL;
+	bHide_Buttons				:BOOL;	
+
+	bFeeding					:BOOL;
+	
+	iMainUnit					:INT;
+	
+	iLid						:INT;
+	iOutlet						:INT;
+	iSieveSeal					:INT;
+	iTool						:INT;
+	iSieveMachine				:INT;
+	
+	iMixer						:INT;
+	iChopper					:INT;
+	
+	
+	iPAL_M882A					:INT;
+	iPAL_M625					:INT;
+	iPAL_M807					:INT;
+	iFAL_M305A					:INT;
+	iFAL_M205A					:INT;
+	iFAL_M305C					:INT;
+	iFAL_M205C					:INT;
+	
+	iSpray						:INT;
+	
+	iSieveSeal_Pipe				:INT;
+	iPurgeSelect_Pipe			:INT;
+	
+	iSealChopper				:INT;
+	iSealMixer					:INT;
+	
+	iMain_WIP_Pipe				:INT;
+	iChopper_Pipe				:INT;
+	iMixer_Pipe					:INT;
+	
+	iAspiration					:INT;
+	iVacuum						:INT;
+	iFilterClean				:INT;
+	iCommonOutlet_Pipe			:INT;
+	iDrain_Pipe					:INT;
+	iOutletDrain_Pipe			:INT;
+	iCommonDrain_Pipe			:INT;
+	iSP_WIP_Pipe				:INT;
+	iSP_WIP_Pipe2				:INT;
+	iSPDrain_Pipe				:INT;
+	iSP_Gran_Pipe				:INT;
+	
+	rWaterSimulation_Height		:REAL;
+	rWaterSimulation_Top		:REAL;
+	iWaterSimulation_Color		:INT;
+	
+	
+	iEquipment					:INT;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Interface_CoilCtrl" Id="{966f425b-e3bb-4c7e-b565-4365ce3531ce}">
+    <Declaration><![CDATA[TYPE ST_Interface_CoilCtrl :
+STRUCT
+	//IN
+	arrInterlocks		:ARRAY[1..8] OF BOOL;
+	arrAlarms			:ARRAY[1..8] OF BOOL;
+	bCmd				:BOOL;
+	bServiceMode		:BOOL;
+	iMaintLimit			:UDINT;
+	iPresetValue		:UDINT;
+	bWritePreset		:BOOL;
+	//OUT
+	bInterlocksOK		:BOOL;
+	bCmdOut				:BOOL;
+	bFault				:BOOL;
+	iTotalCycles		:UDINT;
+	iMaintCycles		:UDINT;
+	bMaintCall			:BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

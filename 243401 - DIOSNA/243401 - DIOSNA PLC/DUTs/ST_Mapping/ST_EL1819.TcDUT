@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EL1819" Id="{0211714f-ee3e-4833-bd26-9631d1bc0e3d}">
+    <Declaration><![CDATA[TYPE ST_EL1819 :
+STRUCT
+	Ch1_Value						AT %I*	:BOOL;
+	Ch2_Value						AT %I*	:BOOL;
+	Ch3_Value						AT %I*	:BOOL;
+	Ch4_Value						AT %I*	:BOOL;
+	Ch5_Value						AT %I*	:BOOL;
+	Ch6_Value						AT %I*	:BOOL;
+	Ch7_Value						AT %I*	:BOOL;
+	Ch8_Value						AT %I*	:BOOL;
+	Ch9_Value						AT %I*	:BOOL;
+	Ch10_Value						AT %I*	:BOOL;
+	Ch11_Value						AT %I*	:BOOL;
+	Ch12_Value						AT %I*	:BOOL;
+	Ch13_Value						AT %I*	:BOOL;
+	Ch14_Value						AT %I*	:BOOL;
+	Ch15_Value						AT %I*	:BOOL;
+	Ch16_Value						AT %I*	:BOOL;
+	State							AT %I*	:UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

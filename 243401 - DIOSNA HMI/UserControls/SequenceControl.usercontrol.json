@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-stseqcontrol",
+      "displayName": "stSeqControl",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:project#/definitions/PLC1.ST_SeqControl",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stSeqControl",
+      "propertySetterName": "setStSeqControl",
+      "propertyGetterName": "getStSeqControl",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-phasenumber",
+      "displayName": "PhaseNumber",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/INT",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "PhaseNumber",
+      "propertySetterName": "setPhaseNumber",
+      "propertyGetterName": "getPhaseNumber",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.59/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AnalogOutput_v02" Id="{d503e40d-f510-4f5c-9311-bc3eb709b51b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AnalogOutput_v02
+VAR_INPUT
+	i_rValue 							:REAL;
+	i_rData_Low 						:REAL	:=0;
+	i_rData_High 						:REAL	:=32676;
+	i_rScaled_Low						:INT	:=0;
+	i_rScaled_High						:INT	:=32676;
+	i_rOffset 							:REAL;
+	i_bSimToggle						:BOOL	:= FALSE;
+	i_rSimValue							:REAL	:= 0;
+	i_bServiceMode						:BOOL;				//Required signal from logic
+END_VAR
+VAR_OUTPUT
+	q_rValue							:REAL;
+	q_iScaled							:INT;
+	q_bSimActive						:BOOL;
+END_VAR
+VAR
+	K								    :REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Validation rules (protect divide by zero)
+IF i_rData_High - i_rData_Low = 0 THEN 	i_rData_High := i_rData_Low + 1; END_IF
+
+//Simulation
+q_bSimActive := i_bSimToggle AND i_bServiceMode;
+IF NOT i_bServiceMode THEN i_bSimToggle := FALSE; END_IF
+
+IF q_bSimActive THEN q_rValue := i_rSimValue + i_rOffset; ELSE q_rValue := i_rValue + i_rOffset; END_IF
+
+//Scaling
+K := ((i_rScaled_High - i_rScaled_Low) / (i_rData_High - i_rData_Low));
+q_iScaled:=REAL_TO_INT(K * q_rValue);]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AnalogOutput_v02">
+      <LineId Id="468" Count="10" />
+      <LineId Id="228" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

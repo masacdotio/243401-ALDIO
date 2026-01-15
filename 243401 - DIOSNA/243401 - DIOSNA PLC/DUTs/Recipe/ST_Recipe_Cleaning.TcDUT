@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <DUT Name="ST_Recipe_Cleaning" Id="{5a33ab64-2a17-4636-9650-9656d83c4f6a}">
+    <Declaration><![CDATA[TYPE ST_Recipe_Cleaning :
+STRUCT
+	sName					:STRING[80];
+	stInfo					:ST_RecipeInfo;
+	stPhase					:ARRAY[0..20] OF ST_Cleaning_Phases;
+	iType					:INT; 
+	iActivePhase			:INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

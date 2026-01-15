@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Trend" Id="{2a4045a6-6f29-443a-a2cc-709b6c64cf17}">
+    <Declaration><![CDATA[TYPE ST_Trend :
+STRUCT
+	rSP_Temperature_SP			:REAL;
+	rSP_Temeprature_AP			:REAL;
+	rSP_TemperatureW_AP			:REAL;
+	rSP_MixingSpeed_SP			:REAL;
+	rSP_MixingSpeed_AP			:REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

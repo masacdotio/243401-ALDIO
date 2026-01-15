@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <DUT Name="ST_Cleaning_Phases" Id="{53c946ce-9ee5-4d85-8a0c-ef5eccca9f49}">
+    <Declaration><![CDATA[TYPE ST_Cleaning_Phases :
+STRUCT
+	bEnable								:BOOL;
+	iType								:INT;  //0-Pre-Cleaning, 1-Main Clean, 2-Rinse, 3-PW Clean, 4 - Draining, 5 Blowing out, 6 - Control
+	sDescription						:STRING;
+	iChopper							:INT;  //0-OFF,1-ON
+	rMixerSpeed1						:REAL; //Mixer speed during filling
+	rMixerSpeed2						:REAL; //Mixer speed during mixing
+	rMixerSpeed3						:REAL; //Mixer speed during emptying
+	rSieveSpeed							:REAL; //Sieve speed
+	iMedium								:INT;  //0-Cold water,1-Warm water
+	iDetergent							:INT;  //0-OFF,1-ON
+	bMixerWater							:BOOL; //Fill water from mixer
+	bChopperWater						:BOOL; //Fill water fromo choper
+	bSPWater							:BOOL; //Fill water in SP
+	iTime1								:ST_HMI_Time;			
+	iTime2								:ST_HMI_Time;
+	iTime3								:ST_HMI_Time;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

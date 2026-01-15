@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_EL2809" Id="{76e342fa-f46c-43fb-a87b-2e42b06a6eaf}">
+    <Declaration><![CDATA[TYPE ST_EL2809 :
+STRUCT
+	Ch1_Value						AT %Q*	:BOOL;
+	Ch2_Value						AT %Q*	:BOOL;
+	Ch3_Value						AT %Q*	:BOOL;
+	Ch4_Value						AT %Q*	:BOOL;
+	Ch5_Value						AT %Q*	:BOOL;
+	Ch6_Value						AT %Q*	:BOOL;
+	Ch7_Value						AT %Q*	:BOOL;
+	Ch8_Value						AT %Q*	:BOOL;
+	Ch9_Value						AT %Q*	:BOOL;
+	Ch10_Value						AT %Q*	:BOOL;
+	Ch11_Value						AT %Q*	:BOOL;
+	Ch12_Value						AT %Q*	:BOOL;
+	Ch13_Value						AT %Q*	:BOOL;
+	Ch14_Value						AT %Q*	:BOOL;
+	Ch15_Value						AT %Q*	:BOOL;
+	Ch16_Value						AT %Q*	:BOOL;
+	State							AT %I*	:UINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

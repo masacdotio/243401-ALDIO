@@ -1,0 +1,28 @@
+{
+    "ADDED_GROUPS_CACHE": {},
+    "APPEND_DOMAIN_DURING_LOGIN": "",
+    "AUTHENTICATION_MECHANISM": "Simple",
+    "BASE_DN": "dc=masac,dc=io",
+    "BIND_USER_AUTHENTICATION_MECHANISM": "Simple",
+    "BIND_USER_DN": "uid=root,cn=users,dc=masac,dc=io",
+    "BIND_USER_PASSWORD": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmsEVBNcXQkmvpZnIZQbt3QAAAAACAAAAAAAQZgAAAAEAACAAAACOfKZhTnf0UsxATykmIXjsDsqk52wllnAuda0hPl++zgAAAAAOgAAAAAIAACAAAACXQ+yhvHh+KxLpYuOGCGcst1vEdp7h5mLXxJNmSS9xjRAAAAAkX8ZRUw4taoxKrlXHoeF1QAAAAHW6oUVILNYRygBkHOrzEPQpyhKzLn5njEfDNc9Ctx0R/A3qtg7yTK3GADml4kwQGb64ZDyuyiTvyORbJVQPWrc=",
+    "BLOCK_USERS": {
+        "LIST": [],
+        "USE_WHITELISTING": false,
+        "WHITELIST_ACCOUNTS_AFFECTED_BY_GROUP_MAPPINGS": false
+    },
+    "CASE_SENSITIVE_ATTRIBUTE_VALUE_COMPARISON": false,
+    "GROUP_MAPPINGS": [],
+    "HOST": "10.0.0.10",
+    "IGNORE_DOMAIN_SUFFIX_DURING_LOGIN": true,
+    "LDAP_OPT_REFERRALS": false,
+    "PORT": 636,
+    "SYNC_INTERVAL": "PT0S",
+    "TIMEOUT": "PT10S",
+    "TRUST_ALL_CERTIFICATES": true,
+    "USERNAME_ATTRIBUTE": "uid",
+    "USER_FILTER": "(&({username_attribute}={input})(objectClass=person))",
+    "USE_LDAP_SEARCH_FOR_LISTUSERS": true,
+    "USE_TLS": true,
+    "VISIBLE_ATTRIBUTES": []
+}

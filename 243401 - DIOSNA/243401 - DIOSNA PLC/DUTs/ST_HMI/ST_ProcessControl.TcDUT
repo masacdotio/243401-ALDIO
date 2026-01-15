@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_ProcessControl" Id="{3a358a33-15ef-4345-856d-289208d9432e}">
+    <Declaration><![CDATA[TYPE ST_ProcessControl :
+STRUCT
+
+	bLid_Open						:BOOL;
+	bLid_Close						:BOOL;
+	bOutlet_Open					:BOOL;
+	bOutlet_Close					:BOOL;
+	bSieve_SealOn					:BOOL;
+	bSieve_SealOff					:BOOL;
+	bTool_Raise						:BOOL;
+	bTool_Lower						:BOOL;
+	bMixer_FindPos					:BOOL;
+	
+	bPump_Start						:BOOL;
+	bPump_Stop						:BOOL;
+	bMixer_Start					:BOOL;
+	bMixer_Stop						:BOOL;
+	bSieve_Start					:BOOL;
+	bSieve_Stop						:BOOL;
+	
+	bSP_Mixer_Toggle				:BOOL;
+	bSP_Heater_Toggle				:BOOL;
+	
+	
+	bConfirm_Prompt					:BOOL;
+	bConfirm_IsClean				:BOOL;
+	bConfirm_NotClean				:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

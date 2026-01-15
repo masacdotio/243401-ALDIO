@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="EN_Events" Id="{3186baf1-e47c-413e-b614-5e3d02ed2386}">
+    <Declaration><![CDATA[{attribute 'to_string'}
+TYPE EN_Events :
+(
+	NOT_DEFINED		:= 0,
+	RECIPE		    := 1,
+	BATCH			:= 2,
+	GENERAL			:= 3,
+	SETTINGS		:= 4,
+	SP				:= 5		
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

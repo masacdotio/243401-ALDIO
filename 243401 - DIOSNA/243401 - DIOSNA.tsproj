@@ -1,0 +1,3524 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.19">
+	<Translations>
+		<Text TxtId="Fuse 240V AC failure">
+			<Text LcId="47"><![CDATA[Грешка во висок напон]]></Text>
+		</Text>
+		<Text TxtId="Fuse 24 VDC failure">
+			<Text LcId="47"><![CDATA[Грешка во контролен напон]]></Text>
+		</Text>
+		<Text TxtId="Ex I modules failure">
+			<Text LcId="47"><![CDATA[Модулите за заштита од електрицитет се во грешка]]></Text>
+		</Text>
+		<Text TxtId="AC Fuse tripped">
+			<Text LcId="47"><![CDATA[Избиена заштита за висок напон]]></Text>
+		</Text>
+		<Text TxtId="DC Fuse tripped">
+			<Text LcId="47"><![CDATA[Избиена заштита за контролен напон]]></Text>
+		</Text>
+		<Text TxtId="Voltage monitoring failure">
+			<Text LcId="47"><![CDATA[Грешка во напојување]]></Text>
+		</Text>
+		<Text TxtId="F8 detecting low voltage">
+			<Text LcId="47"><![CDATA[Детектиран низок напон од уред F8]]></Text>
+		</Text>
+		<Text TxtId="Temperature heating PC cabinet failure">
+			<Text LcId="47"><![CDATA[Кабинетот за компјутер прегреан]]></Text>
+		</Text>
+		<Text TxtId="Temperature inside PC cabinet exceeded limite temperature set by S7.1">
+			<Text LcId="47"><![CDATA[Температурата на кабинетот за компјутер ја надмина температурата зададена од S7.1]]></Text>
+		</Text>
+		<Text TxtId="Temperature heating PLC cabinet failure">
+			<Text LcId="47"><![CDATA[Кабинетот за контролер прегреан]]></Text>
+		</Text>
+		<Text TxtId="Temperature inside PLC cabinet exceeded limite temperature set by S5">
+			<Text LcId="47"><![CDATA[Температурата на кабинетот за контролерот ја надмина температурата зададена од S5]]></Text>
+		</Text>
+		<Text TxtId="Cooling fan failure">
+			<Text LcId="47"><![CDATA[Вентилаторот за ладење во грешка]]></Text>
+		</Text>
+		<Text TxtId="Cabinet cooling fans failure">
+			<Text LcId="47"><![CDATA[Вентилаторотите за кабинетот се во грешка]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop outlet">
+			<Text LcId="47"><![CDATA[Притиснат итен стоп на излез]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop button HZ-M7ELB at outlet is pressed">
+			<Text LcId="47"><![CDATA[Притиснат итен стоп HZ-M7ELB на излез]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop cabinet">
+			<Text LcId="47"><![CDATA[Притиснат итен стоп во кабинет]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop button HZ-M7ELC at cabinet is pressed">
+			<Text LcId="47"><![CDATA[Притиснат итен стоп HZ-M7ELC во кабинет]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop operation">
+			<Text LcId="47"><![CDATA[Притистнат итен стоп на машина]]></Text>
+		</Text>
+		<Text TxtId="Emergency stop button HZ-M7ELA at operation side is pressed">
+			<Text LcId="47"><![CDATA[Притиснат итен стоп HZ-M7ELA на машина]]></Text>
+		</Text>
+		<Text TxtId="Compressed air low">
+			<Text LcId="47"><![CDATA[Низок компримиран воздух]]></Text>
+		</Text>
+		<Text TxtId="Pressure switch PAL M882A detecting low pressure">
+			<Text LcId="47"><![CDATA[Мерачот за притисок PAL M882A детектира низок притисок]]></Text>
+		</Text>
+		<Text TxtId="Flow mixer shaft low">
+			<Text LcId="47"><![CDATA[Низок проток на воздух до миксер]]></Text>
+		</Text>
+		<Text TxtId="Flow sensor FAL M205A detecting low flow">
+			<Text LcId="47"><![CDATA[Мерачот за проток FAL M205A детектира низок проток]]></Text>
+		</Text>
+		<Text TxtId="Flow chopper shaft low">
+			<Text LcId="47"><![CDATA[Низок проток на воздух до секач]]></Text>
+		</Text>
+		<Text TxtId="Flow sensor FAL M305A detecting low flow">
+			<Text LcId="47"><![CDATA[Мерачот за проток FAL M305A детектира низок проток]]></Text>
+		</Text>
+		<Text TxtId="Flow sensor FAL M205C detecting low flow">
+			<Text LcId="47"><![CDATA[Мерачот за проток FAL M205C детектира низок проток]]></Text>
+		</Text>
+		<Text TxtId="Flow sensor FAL M305C detecting low flow">
+			<Text LcId="47"><![CDATA[Мерачот за проток FAL M305C детектира низок проток]]></Text>
+		</Text>
+		<Text TxtId="Compressed air WIP low">
+			<Text LcId="47"><![CDATA[Низок компримиран воздух за перенје]]></Text>
+		</Text>
+		<Text TxtId="Pressure switch PAL M807 detecting low pressure">
+			<Text LcId="47"><![CDATA[Мерачот за притисок PAL М807 детектира низок притисок]]></Text>
+		</Text>
+		<Text TxtId="Compressed air sealing low">
+			<Text LcId="47"><![CDATA[Низок компримиран воздух до заптивка на мелница]]></Text>
+		</Text>
+		<Text TxtId="Pressure switch PAL M625 detecting low pressure">
+			<Text LcId="47"><![CDATA[Мерачот за притисок PAL M625 детектира низок притисок]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor thermal fault">
+			<Text LcId="47"><![CDATA[Активирана заштита за миксер]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor M M020 thermal fault">
+			<Text LcId="47"><![CDATA[Активирана термална заштита на миксер мотор M M020]]></Text>
+		</Text>
+		<Text TxtId="Chopper motor thermal fault">
+			<Text LcId="47"><![CDATA[Активирана заштита за секач]]></Text>
+		</Text>
+		<Text TxtId="Chopper motor M M030 thermal fault">
+			<Text LcId="47"><![CDATA[Активирана термална заштита на секач мотор M M030]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor thermal fault">
+			<Text LcId="47"><![CDATA[Активирана заштита за мелница]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor M M063 thermal fault">
+			<Text LcId="47"><![CDATA[Активирана термална заштита на мечница мотор M M063]]></Text>
+		</Text>
+		<Text TxtId="Main contactor mixer motor failure">
+			<Text LcId="47"><![CDATA[Грешка при вклучување на миксер]]></Text>
+		</Text>
+		<Text TxtId="Main contactor mixer motor K020 failure">
+			<Text LcId="47"><![CDATA[Главниот контактор за миксерот K 020 не е затворен]]></Text>
+		</Text>
+		<Text TxtId="Main contactor chopper motor slow speed failure">
+			<Text LcId="47"><![CDATA[Грешка при вклучување на спора брзина на секач]]></Text>
+		</Text>
+		<Text TxtId="Main contactor chopper motor slow speed K030.1 failure">
+			<Text LcId="47"><![CDATA[Главниот контактор за секачот спора брзина K030.1 не е затворен]]></Text>
+		</Text>
+		<Text TxtId="Main contactor chopper motor fast speed failure">
+			<Text LcId="47"><![CDATA[Грешка при вклучување на брза брзина на секач]]></Text>
+		</Text>
+		<Text TxtId="Main contactor chopper motor slow speed K030.3 failure">
+			<Text LcId="47"><![CDATA[Главниот контактор за секачот брза брзина K030.3 не е затворен]]></Text>
+		</Text>
+		<Text TxtId="Main contactor sieve motor failure">
+			<Text LcId="47"><![CDATA[Грешка при вклучување на мелница]]></Text>
+		</Text>
+		<Text TxtId="Main contactor sieve motor K063 failure">
+			<Text LcId="47"><![CDATA[Главниот контактор за мелница мотор K063 не е затворен]]></Text>
+		</Text>
+		<Text TxtId="Vacuum pump thermal fault">
+			<Text LcId="47"><![CDATA[Активирана заштита за вакум пумпа]]></Text>
+		</Text>
+		<Text TxtId="Vacuum pump motor M M866 thermal fault">
+			<Text LcId="47"><![CDATA[Активирана термална заштита за вакум пумпа М М866]]></Text>
+		</Text>
+		<Text TxtId="Main contactor pump motor failure">
+			<Text LcId="47"><![CDATA[Грешка при вклучување на вакум пумпа]]></Text>
+		</Text>
+		<Text TxtId="Main contactor pump motor K866 failure">
+			<Text LcId="47"><![CDATA[Главниот контактор за вакум пумпата K866 не е затворен]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor oil temperature gear box max">
+			<Text LcId="47"><![CDATA[Температура на масло на миксерот над дозволената граница]]></Text>
+		</Text>
+		<Text TxtId="Oil temperature gear box TAH M244A over 85 C">
+			<Text LcId="47"><![CDATA[Мерачот за температура на масло во моторот TAH M244A надминува 86 степени]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor frequency convertor not ready">
+			<Text LcId="47"><![CDATA[Инвертерот на миксерот не е спремен]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor frequency converter SIC M020 not ready">
+			<Text LcId="47"><![CDATA[Фреквентниот регулатор за миксерот SIC M020 не е спремен за работа]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor frequency convertor not ready">
+			<Text LcId="47"><![CDATA[Инвертерот на мелницата не е спремен]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor frequency converter SIC M063 not ready">
+			<Text LcId="47"><![CDATA[Фреквентниот регулатор за мелницата SICM063 не е спремен за работа]]></Text>
+		</Text>
+		<Text TxtId="Mixer monitoring failure">
+			<Text LcId="47"><![CDATA[Грешка при мониторирање на брзината на миксерот]]></Text>
+		</Text>
+		<Text TxtId="Mixer motor out of setpoint">
+			<Text LcId="47"><![CDATA[Моменталната брзината на миксерот се разликува од зададената брзина]]></Text>
+		</Text>
+		<Text TxtId="Chopper monitoring failure">
+			<Text LcId="47"><![CDATA[Грешка при мониторирање на брзината на секачот]]></Text>
+		</Text>
+		<Text TxtId="Chopper motor out of setpoint">
+			<Text LcId="47"><![CDATA[Моменталната брзината на секачот се разликува од зададената брзина]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor monitoring failure">
+			<Text LcId="47"><![CDATA[Грешка при мониторирање на брзината на мелницата]]></Text>
+		</Text>
+		<Text TxtId="Sieve motor out of setpoint">
+			<Text LcId="47"><![CDATA[Моменталната брзина на мелницата се разликува од зададената брзина]]></Text>
+		</Text>
+		<Text TxtId="Outlet flap movement timeout">
+			<Text LcId="47"><![CDATA[Излезната клапна ја нема постигнато крајната позиција]]></Text>
+		</Text>
+		<Text TxtId="Tool mixer cylinder movement timeout">
+			<Text LcId="47"><![CDATA[Подигнувачот на миксерот ја нема постигнато крајната позиција]]></Text>
+		</Text>
+		<Text TxtId="Locking lid timeout">
+			<Text LcId="47"><![CDATA[Главниот капак не може да се заклучо]]></Text>
+		</Text>
+		<Text TxtId="IO card failure">
+			<Text LcId="47"><![CDATA[Грешка во модулите на контролерот]]></Text>
+		</Text>
+		<Text TxtId="Some of the IO cards lost EtherCAT communication, check System diagnostic screen">
+			<Text LcId="47"><![CDATA[Проверете на екранот за системска дијагностика, кој модул е во грешка]]></Text>
+		</Text>
+		<Text TxtId="IPC overheated">
+			<Text LcId="47"><![CDATA[Температурата на контролерот над дозволената граница]]></Text>
+		</Text>
+		<Text TxtId="IPC temperature exceeded 80 C, Check system screen">
+			<Text LcId="47"><![CDATA[Температурата на контролерот е над 80 степени, проверете го екранот за дијагностика]]></Text>
+		</Text>
+		<Text TxtId="Creating batch report failure">
+			<Text LcId="47"><![CDATA[Неуспешно креирање на репорт за моментална серија]]></Text>
+		</Text>
+		<Text TxtId="Python script failed to create batch report">
+			<Text LcId="47"><![CDATA[Грешка во скриптата за креирање на репортот за серијата]]></Text>
+		</Text>
+		<Text TxtId="Sending batch report failure">
+			<Text LcId="47"><![CDATA[Неуспешно испраќање на репортот за моменталната серија]]></Text>
+		</Text>
+		<Text TxtId="No connection with client's server">
+			<Text LcId="47"><![CDATA[Нарушена конекција со серверот на клиентот]]></Text>
+		</Text>
+		<Text TxtId="Low space on disk">
+			<Text LcId="47"><![CDATA[Дискот на контролерот нема слободна меморија]]></Text>
+		</Text>
+		<Text TxtId="Not enough free storage on disk to save data">
+			<Text LcId="47"><![CDATA[Дискот на контролерот нема слободна меморија да зачувува повеќе податоци]]></Text>
+		</Text>
+	</Translations>
+	<DataTypes>
+		<DataType>
+			<Name GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}" AutoDeleteType="true" ForceIecDecl="true">Status_7EBB4A47_Plc</Name>
+			<BitSize>16</BitSize>
+			<SubItem>
+				<Name>Underrange</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Overrange</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>1</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000011}">BIT2</Type>
+				<BitSize>2</BitSize>
+				<BitOffs>2</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000011}">BIT2</Type>
+				<BitSize>2</BitSize>
+				<BitOffs>4</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Error</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>6</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Sync_error</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>13</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>TxPDO_State</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>14</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>TxPDO_Toggle</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>15</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<BitSize>1</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000005}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..4] OF BIT</Name>
+			<BitSize>5</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>5</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{C148894A-3256-49E3-AB43-A8C567C0DB72}" PersistentType="true">Alarms</Name>
+			<DisplayName TxtId=""><![CDATA[NewEventClass_DisplayText]]></DisplayName>
+			<EventId>
+				<Name Id="1">AlarmsEvent1</Name>
+				<DisplayName TxtId=""><![CDATA[Fuse 240V AC failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">AlarmsEvent2</Name>
+				<DisplayName TxtId=""><![CDATA[Fuse 24 VDC failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="3">AlarmsEvent3</Name>
+				<DisplayName TxtId=""><![CDATA[3 phase control device F8 failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="4">AlarmsEvent4</Name>
+				<DisplayName TxtId=""><![CDATA[Temperature heating cabinet failure 1]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="5">AlarmsEvent5</Name>
+				<DisplayName TxtId=""><![CDATA[Ex I modules failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="6">AlarmsEvent6</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop screen mixer]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="7">AlarmsEvent7</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop techincal area PC cabinet]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="8">AlarmsEvent8</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop machine frame]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="9">AlarmsEvent9</Name>
+				<DisplayName TxtId=""><![CDATA[Fan electrical cabinet failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="10">AlarmsEvent10</Name>
+				<DisplayName TxtId=""><![CDATA[Temperature heating cabinet failure 2]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="11">AlarmsEvent11</Name>
+				<DisplayName TxtId=""><![CDATA[Pressure switch air PAL M882A low]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="12">AlarmsEvent12</Name>
+				<DisplayName TxtId=""><![CDATA[Flow mixer shaft FAL M205A low]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="13">AlarmsEvent13</Name>
+				<DisplayName TxtId=""><![CDATA[Flow chopper shaft FAL M305A low]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="14">AlarmsEvent14</Name>
+				<DisplayName TxtId=""><![CDATA[Flow mixer shaft FAL M205C low]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="15">AlarmsEvent15</Name>
+				<DisplayName TxtId=""><![CDATA[Flow chopper shaft FAL M305C]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="16">AlarmsEvent16</Name>
+				<DisplayName TxtId=""><![CDATA[Main contanctor mixer motor M M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="17">AlarmsEvent17</Name>
+				<DisplayName TxtId=""><![CDATA[Frequency converter mixer motor SIC M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="18">AlarmsEvent18</Name>
+				<DisplayName TxtId=""><![CDATA[Thermistor mixer motor TAH M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="19">AlarmsEvent19</Name>
+				<DisplayName TxtId=""><![CDATA[Motor protection switch mixer motor M M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="20">AlarmsEvent20</Name>
+				<DisplayName TxtId=""><![CDATA[Broken wire current mixer IIR M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="21">AlarmsEvent21</Name>
+				<DisplayName TxtId=""><![CDATA[Broken wire speed mixer SIR M020]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="22">AlarmsEvent22</Name>
+				<DisplayName TxtId=""><![CDATA[Oil temperature gear box max TAH M244A]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="23">AlarmsEvent23</Name>
+				<DisplayName TxtId=""><![CDATA[Thermistor chopper motor TAH M030]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="24">AlarmsEvent24</Name>
+				<DisplayName TxtId=""><![CDATA[Motor protection switch chopper M M030]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="25">AlarmsEvent25</Name>
+				<DisplayName TxtId=""><![CDATA[Broken wire current chopper IIR M030]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="26">AlarmsEvent26</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor chopper motor M M030 speed 1]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="27">AlarmsEvent27</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor chopper motor M M030 speed 2]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="28">AlarmsEvent28</Name>
+				<DisplayName TxtId=""><![CDATA[Drive mixer tool in position GS M244]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="29">AlarmsEvent29</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer tool lift GSH M244]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="30">AlarmsEvent30</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer tool lower GSL M244]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="31">AlarmsEvent31</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor vacuum pump P M866]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="32">AlarmsEvent32</Name>
+				<DisplayName TxtId=""><![CDATA[Outlet open GSH M625 timeout]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="33">AlarmsEvent33</Name>
+				<DisplayName TxtId=""><![CDATA[Outlet close GSL M625 timout]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="34">AlarmsEvent34</Name>
+				<DisplayName TxtId=""><![CDATA[Pressure switch sealing outlet PAL M625]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="35">AlarmsEvent35</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor sieving mill M M063]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="36">AlarmsEvent36</Name>
+				<DisplayName TxtId=""><![CDATA[Frequency converter sieving mill SIC M063]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="37">AlarmsEvent37</Name>
+				<DisplayName TxtId=""><![CDATA[Thermistor sieving mil TAH M063]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="38">AlarmsEvent38</Name>
+				<DisplayName TxtId=""><![CDATA[Motor protection switch sieving mill M M063]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="39">AlarmsEvent39</Name>
+				<DisplayName TxtId=""><![CDATA[Broken wire speed sieve machine SIR M063]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="40">AlarmsEvent40</Name>
+				<DisplayName TxtId=""><![CDATA[Pressure switch drainage PAL M807]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="41">AlarmsEvent41</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent41_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="42">AlarmsEvent42</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent42_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="43">AlarmsEvent43</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent43_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="44">AlarmsEvent44</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent44_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="45">AlarmsEvent45</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent45_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="46">AlarmsEvent46</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent46_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="47">AlarmsEvent47</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent47_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="48">AlarmsEvent48</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent48_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="49">AlarmsEvent49</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent49_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="50">AlarmsEvent50</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent50_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="51">AlarmsEvent51</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent51_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="52">AlarmsEvent52</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent52_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="53">AlarmsEvent53</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent53_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="54">AlarmsEvent54</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent54_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="55">AlarmsEvent55</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent55_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="56">AlarmsEvent56</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent56_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="57">AlarmsEvent57</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent57_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="58">AlarmsEvent58</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent58_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="59">AlarmsEvent59</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent59_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="60">AlarmsEvent60</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent60_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{4E30673F-BCE6-4290-A755-1C64635919CD}"/>
+				<Hide GUID="{7FBB72F0-1BFB-464E-ACF2-1731DCE53929}"/>
+				<Hide GUID="{1A46FB6F-7CD9-4E1B-B7C4-C9BEAEC8D7DB}"/>
+			</Hides>
+		</DataType>
+		<DataType>
+			<Name GUID="{90FADB63-34E7-4A36-BA1B-9C2E30733BA7}" PersistentType="true">Alarms</Name>
+			<DisplayName TxtId=""><![CDATA[NewEventClass_DisplayText]]></DisplayName>
+			<EventId>
+				<Name Id="1">AlarmsEvent1</Name>
+				<DisplayName TxtId=""><![CDATA[Fuse 240V AC failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[AC Fuse tripped]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[F11 fuse tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F11 fuse]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[F12 fuse tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F12 fuse]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="2">AlarmsEvent2</Name>
+				<DisplayName TxtId=""><![CDATA[Fuse 24 VDC failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[DC Fuse tripped]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[F2 fuse tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F2 fuse]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[F3 fuse tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F3 fuse]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="3">AlarmsEvent3</Name>
+				<DisplayName TxtId=""><![CDATA[Voltage monitoring failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[F8 detecting low voltage]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Power supply]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check main supply voltage]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[F8 failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F8 device for malfunctioning]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="4">AlarmsEvent4</Name>
+				<DisplayName TxtId=""><![CDATA[Temperature heating PC cabinet failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Temperature inside PC cabinet exceeded limite temperature set by S7.1]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[S7.1 thermostat tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check S7.1 for malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Device overheated]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some device is overheated]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="5">AlarmsEvent5</Name>
+				<DisplayName TxtId=""><![CDATA[Temperature heating PLC cabinet failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Temperature inside PLC cabinet exceeded limite temperature set by S5]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[S5 thermostat tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check S5 thermostat]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Device overheated]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some device is overheated]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="6">AlarmsEvent6</Name>
+				<DisplayName TxtId=""><![CDATA[Cooling fan failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Cabinet cooling fans failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Motor protection F4 trip]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor protection F4]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Motor protection F5 trip]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor protection F5]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="7">AlarmsEvent7</Name>
+				<DisplayName TxtId=""><![CDATA[Ex I modules failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Ex I modules failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[A1 module failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check A1 module]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[F40 module failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F40 module]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[F41 module failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F41 module]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="4">
+					<Cause TxtId=""><![CDATA[F42 module failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F42 module]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="5">
+					<Cause TxtId=""><![CDATA[F44 module failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F44 module]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="8">AlarmsEvent8</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop outlet]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Emergency stop button HZ-M7ELB at outlet is pressed]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[HZ-M7ELB button is pressed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Release button]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="9">AlarmsEvent9</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop cabinet]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Emergency stop button HZ-M7ELC at cabinet is pressed]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[HZ-M7ELB button is pressed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Release button]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="10">AlarmsEvent10</Name>
+				<DisplayName TxtId=""><![CDATA[Emergency stop operation]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Emergency stop button HZ-M7ELA at operation side is pressed]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[HZ-M7ELA button is pressed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Release button]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="11">AlarmsEvent11</Name>
+				<DisplayName TxtId=""><![CDATA[Compressed air low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Pressure switch PAL M882A detecting low pressure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[PAL M882A trip]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check PAL-M882A for malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Low compressed air supply pressure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check air supply]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="12">AlarmsEvent12</Name>
+				<DisplayName TxtId=""><![CDATA[Flow mixer shaft low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Flow sensor FAL M205A detecting low flow]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Pneumatic valve V-M807-4 is closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check functionality of V-M807-4]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Manual valves V-M205B and VM205C are closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some of the valves are closed]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Pressure regulator PIC-M205A wrong positioned]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if PIC-M205A pressure regulator is properly positioned]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="4">
+					<Cause TxtId=""><![CDATA[Malfunction of FAl M205A flow sensor]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if sensor sends a feedback]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="13">AlarmsEvent13</Name>
+				<DisplayName TxtId=""><![CDATA[Flow chopper shaft low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Flow sensor FAL M305A detecting low flow]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Pneumatic valve V-M807-6 is closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check functionality of V-M807-6]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Manual valves V-M305B and VM305C are closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some of the valves are closed]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Pressure regulator PIC-M205A wrong positioned]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if PIC-M205A pressure regulator is properly positioned]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="4">
+					<Cause TxtId=""><![CDATA[Malfunction of FAl M305A flow sensor]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if sensor sends a feedback]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="14">AlarmsEvent14</Name>
+				<DisplayName TxtId=""><![CDATA[Flow mixer shaft low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Flow sensor FAL M205C detecting low flow]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Pneumatic valve V-M807-4 is closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check functionality of V-M807-4]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Manual valves V-M205B and VM205C are closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some of the valves are closed]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Pressure regulator PIC-M205A wrong positioned]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if PIC-M205A pressure regulator is properly positioned]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="4">
+					<Cause TxtId=""><![CDATA[Malfunction of FAl M205C flow sensor]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if sensor sends a feedback]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="15">AlarmsEvent15</Name>
+				<DisplayName TxtId=""><![CDATA[Flow chopper shaft low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Flow sensor FAL M305C detecting low flow]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Pneumatic valve V-M807-6 is closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check functionality of V-M807-6]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Manual valves V-M305B and VM305C are closed]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if some of the valves are closed]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Pressure regulator PIC-M205A wrong positioned]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if PIC-M205A pressure regulator is properly positioned]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="4">
+					<Cause TxtId=""><![CDATA[Malfunction of FAl M305A flow sensor]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check if sensor sends a feedback]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="16">AlarmsEvent16</Name>
+				<DisplayName TxtId=""><![CDATA[Compressed air WIP low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Pressure switch PAL M807 detecting low pressure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[PAL M807 trip]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check PAL-M807 for malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Low compressed air supply pressure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check air supply]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="17">AlarmsEvent17</Name>
+				<DisplayName TxtId=""><![CDATA[Compressed air sealing low]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Pressure switch PAL M625 detecting low pressure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[PAL M625 trip]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check PAL-M625 for malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Low compressed air supply pressure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check air supply]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="18">AlarmsEvent18</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer motor thermal fault]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Mixer motor M M020 thermal fault]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Motor protection F020 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or motor protection malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Thermal detection F020.1 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or device malfunction]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="19">AlarmsEvent19</Name>
+				<DisplayName TxtId=""><![CDATA[Chopper motor thermal fault]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Chopper motor M M030 thermal fault]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Motor protection F030 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or motor protection malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Thermal detection F030.1 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or device malfunction]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="20">AlarmsEvent20</Name>
+				<DisplayName TxtId=""><![CDATA[Sieve motor thermal fault]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Sieve motor M M063 thermal fault]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Motor protection F063 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or motor protection malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Thermal detection F063.1 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or device malfunction]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="21">AlarmsEvent21</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor mixer motor failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Main contactor mixer motor K020 failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[K020 malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K020 contactor]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[K020.1 malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K020.1 relay]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Mixer thermal protection failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F020, F020.1, F244.A]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="22">AlarmsEvent22</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor chopper motor slow speed failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Main contactor chopper motor slow speed K030.1 failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[K030.1 contactor malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K030.1]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[K030.4 relay malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K030.4]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Chopper thermal protection failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F030, F030.1]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="23">AlarmsEvent23</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor chopper motor fast speed failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Main contactor chopper motor slow speed K030.3 failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[K030.3 contactor malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K030.3]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[K030.5 relay malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K030.5]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Chopper thermal protection failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F030, F030.1]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="24">AlarmsEvent24</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor sieve motor failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Main contactor sieve motor K063 failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[K063 contactor malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K063]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[K063.1 relay malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K063.1]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Sieve thermal protection failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F063, F063.1]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="25">AlarmsEvent25</Name>
+				<DisplayName TxtId=""><![CDATA[Vacuum pump thermal fault]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Vacuum pump motor M M866 thermal fault]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Motor protection F866 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or motor protection malfunction]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Thermal detection F866.1 tripped]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor or device malfunction]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="26">AlarmsEvent26</Name>
+				<DisplayName TxtId=""><![CDATA[Main contactor pump motor failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Main contactor pump motor K866 failure]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[K866 contactor malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K866]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[K866.1 relay malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check K866.1]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="3">
+					<Cause TxtId=""><![CDATA[Sieve thermal protection failure]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F866, F866.1]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="27">AlarmsEvent27</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer motor oil temperature gear box max]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Oil temperature gear box TAH M244A over 85 C]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[F244.A malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check F244.A and adjust on 85C]]></Remedy>
+				</CauseRemedy>
+				<CauseRemedy Idx="2">
+					<Cause TxtId=""><![CDATA[Mixer motor overheated]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check motor]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="28">AlarmsEvent28</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer motor frequency convertor not ready]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Mixer motor frequency converter SIC M020 not ready]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[SICM020 frequency converter malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check SICM020]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="29">AlarmsEvent29</Name>
+				<DisplayName TxtId=""><![CDATA[Sieve motor frequency convertor not ready]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Sieve motor frequency converter SIC M063 not ready]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[SICM063 frequency converter malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check SICM063]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="30">AlarmsEvent30</Name>
+				<DisplayName TxtId=""><![CDATA[Mixer monitoring failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Mixer motor out of setpoint]]></DescriptionText>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="31">AlarmsEvent31</Name>
+				<DisplayName TxtId=""><![CDATA[Chopper monitoring failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Chopper motor out of setpoint]]></DescriptionText>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="32">AlarmsEvent32</Name>
+				<DisplayName TxtId=""><![CDATA[Sieve motor monitoring failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Sieve motor out of setpoint]]></DescriptionText>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="33">AlarmsEvent33</Name>
+				<DisplayName TxtId=""><![CDATA[Outlet flap movement timeout]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="34">AlarmsEvent34</Name>
+				<DisplayName TxtId=""><![CDATA[Tool mixer cylinder movement timeout]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="35">AlarmsEvent35</Name>
+				<DisplayName TxtId=""><![CDATA[Locking lid timeout]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="36">AlarmsEvent36</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent36_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="37">AlarmsEvent37</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent37_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="38">AlarmsEvent38</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent38_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="39">AlarmsEvent39</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent39_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="40">AlarmsEvent40</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent40_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="41">AlarmsEvent41</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent41_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="42">AlarmsEvent42</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent42_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="43">AlarmsEvent43</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent43_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="44">AlarmsEvent44</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent44_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="45">AlarmsEvent45</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent45_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="46">AlarmsEvent46</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent46_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="47">AlarmsEvent47</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent47_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="48">AlarmsEvent48</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent48_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="49">AlarmsEvent49</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent49_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="50">AlarmsEvent50</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent50_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="51">AlarmsEvent51</Name>
+				<DisplayName TxtId=""><![CDATA[IO card failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Some of the IO cards lost EtherCAT communication, check System diagnostic screen]]></DescriptionText>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="52">AlarmsEvent52</Name>
+				<DisplayName TxtId=""><![CDATA[IPC overheated]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[IPC temperature exceeded 80 C, Check system screen]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[IPC malfunction]]></Cause>
+					<Remedy TxtId=""><![CDATA[Call supplier - MASAC]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="53">AlarmsEvent53</Name>
+				<DisplayName TxtId=""><![CDATA[Creating batch report failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Python script failed to create batch report]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[PLC logic issue]]></Cause>
+					<Remedy TxtId=""><![CDATA[Call supplier - MASAC]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="54">AlarmsEvent54</Name>
+				<DisplayName TxtId=""><![CDATA[Sending batch report failure]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[No connection with client's server]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Conection broken]]></Cause>
+					<Remedy TxtId=""><![CDATA[Check cable or server connection]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="55">AlarmsEvent55</Name>
+				<DisplayName TxtId=""><![CDATA[Low space on disk]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[Not enough free storage on disk to save data]]></DescriptionText>
+				<Severity>Critical</Severity>
+				<CauseRemedy Idx="1">
+					<Cause TxtId=""><![CDATA[Database full]]></Cause>
+					<Remedy TxtId=""><![CDATA[Manage database from Audit trail tab]]></Remedy>
+				</CauseRemedy>
+			</EventId>
+			<EventId>
+				<Name Id="56">AlarmsEvent56</Name>
+				<DisplayName TxtId=""><![CDATA[Machine power failure]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="57">AlarmsEvent57</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent57_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="58">AlarmsEvent58</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent58_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="59">AlarmsEvent59</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent59_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="60">AlarmsEvent60</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent60_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="61">AlarmsEvent61</Name>
+				<DisplayName TxtId=""><![CDATA[SP mixer monitoring fault]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="62">AlarmsEvent62</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent62_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="63">AlarmsEvent63</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent63_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="64">AlarmsEvent64</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent64_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="65">AlarmsEvent65</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent65_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="66">AlarmsEvent66</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent66_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="67">AlarmsEvent67</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent67_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="68">AlarmsEvent68</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent68_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="69">AlarmsEvent69</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent69_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="70">AlarmsEvent70</Name>
+				<DisplayName TxtId=""><![CDATA[AlarmsEvent70_DisplayText]]></DisplayName>
+				<Severity>Critical</Severity>
+			</EventId>
+			<Translations>
+				<Text TxtId="Fuse 240V AC failure">
+					<Text LcId="47"><![CDATA[Грешка во висок напон]]></Text>
+				</Text>
+				<Text TxtId="Fuse 24 VDC failure">
+					<Text LcId="47"><![CDATA[Грешка во контролен напон]]></Text>
+				</Text>
+				<Text TxtId="Ex I modules failure">
+					<Text LcId="47"><![CDATA[Модулите за заштита од електрицитет се во грешка]]></Text>
+				</Text>
+				<Text TxtId="Ex I modules failure">
+					<Text LcId="47"><![CDATA[Модулите за заштита од електрицитет се во грешка]]></Text>
+				</Text>
+				<Text TxtId="Flow mixer shaft low">
+					<Text LcId="47"><![CDATA[Низок проток на воздух до миксер]]></Text>
+				</Text>
+				<Text TxtId="Flow chopper shaft low">
+					<Text LcId="47"><![CDATA[Низок проток на воздух до секач]]></Text>
+				</Text>
+			</Translations>
+			<Hides>
+				<Hide GUID="{4E30673F-BCE6-4290-A755-1C64635919CD}"/>
+				<Hide GUID="{7FBB72F0-1BFB-464E-ACF2-1731DCE53929}"/>
+				<Hide GUID="{1A46FB6F-7CD9-4E1B-B7C4-C9BEAEC8D7DB}"/>
+				<Hide GUID="{C148894A-3256-49E3-AB43-A8C567C0DB72}"/>
+				<Hide GUID="{4422F766-9FA6-4545-ADB6-D8B54207FAA4}"/>
+				<Hide GUID="{3A1F429F-3B97-4DDA-9E9F-1475D326E025}"/>
+				<Hide GUID="{6656CB2D-75D3-4071-8F2E-7AE2229B7777}"/>
+				<Hide GUID="{B99DC62E-A631-4FD0-A1EC-D0CE6C4ED3E4}"/>
+				<Hide GUID="{63EF7C9A-EADD-451B-98F2-774E5F933F11}"/>
+				<Hide GUID="{48C4EAC5-9B67-42B1-A88F-8538ABB8D653}"/>
+				<Hide GUID="{66DDF215-23C7-4B80-A2B1-6EE74F214461}"/>
+				<Hide GUID="{CF12C56C-D4DA-4CA6-BAF8-73981B0A9FE7}"/>
+				<Hide GUID="{1F329C64-DBEA-4D84-AEF8-9258E01FEB81}"/>
+				<Hide GUID="{FF1B94EF-9238-4FF0-9DE1-04FB6935914D}"/>
+				<Hide GUID="{6FDB8A81-642E-4B1B-BA27-1854BB1AD152}"/>
+				<Hide GUID="{F23176BA-89E7-4FFD-961C-911966A993D0}"/>
+				<Hide GUID="{3744D7A3-CB5D-4063-94C9-3F8EB674AA3A}"/>
+				<Hide GUID="{6E0BC09B-E356-4BC9-8934-1D946CAC777D}"/>
+				<Hide GUID="{1F5079F5-D5FB-4F59-B584-D421A3C670F1}"/>
+				<Hide GUID="{41D67A17-BB84-4730-9878-0AB44278480A}"/>
+				<Hide GUID="{5BC1D3F6-97DD-4F9A-90F2-0C348B8F74CE}"/>
+				<Hide GUID="{4ACDAC8C-0F71-42C3-BEC9-D3AC39CDE5CA}"/>
+				<Hide GUID="{C3206DF0-B7BF-46A9-8D41-2DEBF0F3637B}"/>
+				<Hide GUID="{440D09EB-303B-4925-9825-9B9105098064}"/>
+				<Hide GUID="{444D4AFF-0110-465D-AB24-0BC86B57825D}"/>
+				<Hide GUID="{3C5377E3-15CF-4AA0-87FF-098D92EC10AD}"/>
+				<Hide GUID="{05ACAA96-6D72-4FA9-9224-44CE207754D8}"/>
+				<Hide GUID="{48F7AE42-C404-4F6D-8BE3-E93597446739}"/>
+				<Hide GUID="{3D4486B0-0950-4A36-99CC-11F09DD3312E}"/>
+				<Hide GUID="{A781E9E1-84ED-4624-BB39-6105DE283A16}"/>
+				<Hide GUID="{34980301-D902-4A98-A27F-2F5203B7417F}"/>
+				<Hide GUID="{CAE89079-2AEE-4AA0-8147-E0FF1226EB5C}"/>
+				<Hide GUID="{E112A8C4-2917-4BB0-B5A6-E5A5698AFDE8}"/>
+				<Hide GUID="{169770F2-B868-4664-9034-CBBA549E4480}"/>
+				<Hide GUID="{0A53CFDA-5E67-4037-8DE6-6BBB73B580CB}"/>
+				<Hide GUID="{6CAF16C3-0166-445A-A8AF-4279E03C0FE8}"/>
+				<Hide GUID="{8BE646E5-43BC-4ADF-AA0B-A56EA3D21579}"/>
+				<Hide GUID="{FAD29C39-0024-4941-B38D-79D2F30331FC}"/>
+				<Hide GUID="{8ADD12AC-5ADA-43BD-97D5-54ECA1E1B944}"/>
+				<Hide GUID="{48276C63-4C96-41FC-8938-C446AA130150}"/>
+				<Hide GUID="{CA3F40AB-18ED-4B4C-8C92-63EA70FD7E64}"/>
+				<Hide GUID="{BC8FC603-C70E-4FA1-BEE1-2281B53A4BC5}"/>
+				<Hide GUID="{95D7919D-5366-4B94-B790-28DF1E791C6C}"/>
+				<Hide GUID="{1C3FBD23-BE58-400B-8CBD-EB51EA60100B}"/>
+				<Hide GUID="{19C578D1-91C4-4F05-B6DC-42B551780540}"/>
+				<Hide GUID="{DCFB88B4-C15A-4408-BB1B-31C631A0385E}"/>
+				<Hide GUID="{37BF2847-6C5E-413A-B055-3C5782B89FDA}"/>
+				<Hide GUID="{F9552C43-FAA3-4AEE-A087-75936562C140}"/>
+				<Hide GUID="{B5F58946-0B1F-4874-A990-B5E495948F4B}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1001">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1002">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff0000ff0000ff0000ff0000ff0000ff0000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1003">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000120b0000120b00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1004">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{A16593E1-12D6-4053-BF1F-5402BD2529C3}" TargetNetId="10.0.0.104.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Settings>
+				<IoIdleTask Priority="4" Affinity="#x00000001"/>
+			</Settings>
+			<Licenses>
+				<Target>
+					<ManualSelect>{CB3D4492-5E9E-43BC-AB3B-27CF3896EEC2}</ManualSelect>
+					<ManualSelect>{92583661-35AE-45CE-BD4F-C35BFE16F07E}</ManualSelect>
+					<ManualSelect>{BDCC0070-42D5-49AE-ABF1-1D4434813D60}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="4" Priority="10" CycleTime="100000" AmsPort="350" Affinity="#x00000001" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{F67AB9EC-364A-4D5B-BD89-824A7E5E1378}" Name="243401 - DIOSNA PLC" PrjFilePath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.plcproj" TmcFilePath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{8135606A-3410-F560-A64D-F86432CCE23F}" TmcPath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.tmc">
+					<Name>243401 - DIOSNA PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>P0_01_Mapping.AO1.Ch1_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO1.Ch2_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO1.Ch3_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO1.Ch4_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO2.Ch1_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO2.Ch2_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO2.Ch3_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO2.Ch4_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch1_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch1_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch2_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch2_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch3_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch3_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch4_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.Ch4_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI1.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch1_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch1_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch2_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch2_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch3_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch3_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch4_Status</Name>
+							<Type GUID="{0A10ECA3-CFF4-C97F-78EC-A7BE69857303}">Status_7EBB4A47_Plc</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.Ch4_Value</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AI2.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI1.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI2.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI3.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch1_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch2_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch3_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch4_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch5_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch6_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch7_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch8_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch9_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch10_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch11_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch12_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch13_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch14_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch15_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.Ch16_Value</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DI4.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.PS.PowerOK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.PS.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO1.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.AO2.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO1.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO2.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO3.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>P0_01_Mapping.DO4.State</Name>
+							<Type>UINT</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>10</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="10" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<PlcAuxTask Affinity="#x00000001"/>
+		</Plc>
+		<Io>
+			<Device Id="5" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28677" AmsNetId="10.0.0.104.6.1" RemoteName="EtherCAT" InfoImageId="5">
+				<Name>EtherCAT</Name>
+				<AddressInfo>
+					<Pnp>
+						<DeviceDesc>Ethernet 2 (TwinCAT-Intel PCI Ethernet Adapter (Gig</DeviceDesc>
+						<DeviceName>\DEVICE\{C1BAB6FC-B086-4A0D-9AAC-53AB9DA184DF}</DeviceName>
+						<DeviceData>000105940baa</DeviceData>
+					</Pnp>
+				</AddressInfo>
+				<Image Id="4" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="1" BoxType="9099">
+					<Name>BUS1 (EK1100)</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100" PortABoxInfo="#x00ffffff"/>
+					<Box Id="2" BoxType="9099">
+						<Name>TI1 (EL3214)</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="15" FoeType="1" VendorId="#x00000002" ProductCode="#x0c8e3052" RevisionNo="#x00120000" InfoDataAddr="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3214 4K. Ana. Eingang PT100 (RTD)" Desc="EL3214" PortABoxInfo="#x01000001">
+							<SyncMan>001080002600010001000000000000008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000000000008000801022010000</SyncMan>
+							<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
+							<SyncMan>801110002000010004000000000000001000801120010000</SyncMan>
+							<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<Pdo Name="RTD Inputs Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT4</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT7</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6000" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RTD Inputs Channel 2" Index="#x1a01" Flags="#x0010" SyncMan="3">
+								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT4</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT7</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6010" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RTD Inputs Channel 3" Index="#x1a02" Flags="#x0010" SyncMan="3">
+								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT4</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT7</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6020" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="RTD Inputs Channel 4" Index="#x1a03" Flags="#x0010" SyncMan="3">
+								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT4</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type>BIT7</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6030" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="3" BoxType="9099" BoxFlags="#x00000020">
+						<Name>AI1 (EL3174)</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0c663052" RevisionNo="#x00110000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit" Desc="EL3174" PortABoxInfo="#x01000002">
+							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+							<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
+							<SyncMan>801110002000010004000000000000001000801120010000</SyncMan>
+							<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>4443494e00000000000000000000000044432d53796e6368726f6e2028696e7075742062617365642900000000000000000000006079feffa8610000000000070100000000000000000001000000000000000000000000000000000000000000</DcMode>
+							<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a01</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6000" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6000" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 1" Index="#x1a01" Flags="#x0010">
+								<ExcludePdo>#x1a00</ExcludePdo>
+								<Entry Name="Value" Index="#x6000" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a03</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6010" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6010" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6010" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6010" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 2" Index="#x1a03" Flags="#x0010">
+								<ExcludePdo>#x1a02</ExcludePdo>
+								<Entry Name="Value" Index="#x6010" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 3" Index="#x1a04" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a05</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6020" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6020" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6020" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6020" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 3" Index="#x1a05" Flags="#x0010">
+								<ExcludePdo>#x1a04</ExcludePdo>
+								<Entry Name="Value" Index="#x6020" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 4" Index="#x1a06" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a07</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6030" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6030" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6030" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6030" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 4" Index="#x1a07" Flags="#x0010">
+								<ExcludePdo>#x1a06</ExcludePdo>
+								<Entry Name="Value" Index="#x6030" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+						</EtherCAT>
+					</Box>
+					<Box Id="4" BoxType="9099" BoxFlags="#x00000020">
+						<Name>AI2 (EL3174)</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0c663052" RevisionNo="#x00110000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit" Desc="EL3174" PortABoxInfo="#x01000003">
+							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+							<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
+							<SyncMan>801110002000010004000000000000001000801120010000</SyncMan>
+							<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>4443494e00000000000000000000000044432d53796e6368726f6e2028696e7075742062617365642900000000000000000000006079feffa8610000000000070100000000000000000001000000000000000000000000000000000000000000</DcMode>
+							<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a01</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6000" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6000" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 1" Index="#x1a01" Flags="#x0010">
+								<ExcludePdo>#x1a00</ExcludePdo>
+								<Entry Name="Value" Index="#x6000" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a03</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6010" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6010" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6010" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6010" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 2" Index="#x1a03" Flags="#x0010">
+								<ExcludePdo>#x1a02</ExcludePdo>
+								<Entry Name="Value" Index="#x6010" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 3" Index="#x1a04" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a05</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6020" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6020" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6020" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6020" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 3" Index="#x1a05" Flags="#x0010">
+								<ExcludePdo>#x1a04</ExcludePdo>
+								<Entry Name="Value" Index="#x6020" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Standard Channel 4" Index="#x1a06" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a07</ExcludePdo>
+								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 1" Index="#x6030" Sub="#x03">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit1
+Bit1: Value smaller than Limit1]]></Comment>
+								</Entry>
+								<Entry Name="Status__Limit 2" Index="#x6030" Sub="#x05">
+									<Type>BIT2</Type>
+									<Comment><![CDATA[Bit0: Value greater than Limit2
+Bit1: Value smaller than Limit2]]></Comment>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
+									<Type>BIT</Type>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Sync error" Index="#x6030" Sub="#x0e">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Value" Index="#x6030" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AI Compact Channel 4" Index="#x1a07" Flags="#x0010">
+								<ExcludePdo>#x1a06</ExcludePdo>
+								<Entry Name="Value" Index="#x6030" Sub="#x11">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+							<CoeProfile ProfileNo="19665801"/>
+						</EtherCAT>
+					</Box>
+					<Box Id="5" BoxType="9099">
+						<Name>DI1 (EL1819)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x071b3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1819 16Ch. Dig. Input 24V, 10µs" Desc="EL1819" PortABoxInfo="#x01000004">
+							<SyncMan>001002000000010004000000000000000200001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="6" BoxType="9099">
+						<Name>DI2 (EL1819)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x071b3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1819 16Ch. Dig. Input 24V, 10µs" Desc="EL1819" PortABoxInfo="#x01000005">
+							<SyncMan>001002000000010004000000000000000200001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="7" BoxType="9099">
+						<Name>DI3 (EL1819)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x071b3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1819 16Ch. Dig. Input 24V, 10µs" Desc="EL1819" PortABoxInfo="#x01000006">
+							<SyncMan>001002000000010004000000000000000200001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="8" BoxType="9099">
+						<Name>DI4 (EL1819)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x071b3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1819 16Ch. Dig. Input 24V, 10µs" Desc="EL1819" PortABoxInfo="#x01000007">
+							<SyncMan>001002000000010004000000000000000200001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="9" BoxType="9099" BoxFlags="#x00000020">
+						<Name>AO1 (EL4124)</Name>
+						<ImageId>1002</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x101c3052" RevisionNo="#x03fc0000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL4124 4Ch. Ana. Output 4-20mA, 16bit" Desc="EL4124" PortABoxInfo="#x01000008">
+							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+							<SyncMan>001108002400010003000000000000000800001124010000</SyncMan>
+							<SyncMan>801100000000000004000000000000000000801100000000</SyncMan>
+							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>4443000000000000000000000000000044432d53796e6368726f6e0000000000000000000000000000000000000000000000000000000000a0860100000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<Pdo Name="AO Output Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7000" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7010" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7020" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7030" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+						</EtherCAT>
+					</Box>
+					<Box Id="10" BoxType="9099" BoxFlags="#x00000020">
+						<Name>AO2 (EL4124)</Name>
+						<ImageId>1002</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x101c3052" RevisionNo="#x03fc0000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL4124 4Ch. Ana. Output 4-20mA, 16bit" Desc="EL4124" PortABoxInfo="#x01000009">
+							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+							<SyncMan>001108002400010003000000000000000800001124010000</SyncMan>
+							<SyncMan>801100000000000004000000000000000000801100000000</SyncMan>
+							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>4443000000000000000000000000000044432d53796e6368726f6e0000000000000000000000000000000000000000000000000000000000a0860100000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<Pdo Name="AO Output Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7000" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7010" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7020" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="AO Output Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="2">
+								<Entry Name="Analog output" Index="#x7030" Sub="#x11" Flags="#x00040000">
+									<Type>INT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+							<CoeProfile ProfileNo="26219401"/>
+						</EtherCAT>
+					</Box>
+					<Box Id="11" BoxType="9099">
+						<Name>DO1 (EL2809)</Name>
+						<ImageId>1003</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0af93052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2809 16Ch. Dig. Output 24V, 0.5A" Desc="EL2809" PortABoxInfo="#x0100000a">
+							<SyncMan>000f01004400010003000000000000000100000f44090000</SyncMan>
+							<SyncMan>010f01004400010003000000000000000100010f44090000</SyncMan>
+							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1604" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1605" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1606" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1607" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1608" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1609" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x160a" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x160b" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x160c" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x160d" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x160e" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x160f" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="12" BoxType="9099">
+						<Name>DO2 (EL2809)</Name>
+						<ImageId>1003</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0af93052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2809 16Ch. Dig. Output 24V, 0.5A" Desc="EL2809" PortABoxInfo="#x0100000b">
+							<SyncMan>000f01004400010003000000000000000100000f44090000</SyncMan>
+							<SyncMan>010f01004400010003000000000000000100010f44090000</SyncMan>
+							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1604" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1605" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1606" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1607" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1608" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1609" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x160a" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x160b" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x160c" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x160d" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x160e" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x160f" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="13" BoxType="9099">
+						<Name>DO3 (EL2809)</Name>
+						<ImageId>1003</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0af93052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2809 16Ch. Dig. Output 24V, 0.5A" Desc="EL2809" PortABoxInfo="#x0100000c">
+							<SyncMan>000f01004400010003000000000000000100000f44090000</SyncMan>
+							<SyncMan>010f01004400010003000000000000000100010f44090000</SyncMan>
+							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1604" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1605" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1606" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1607" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1608" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1609" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x160a" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x160b" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x160c" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x160d" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x160e" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x160f" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="14" BoxType="9099">
+						<Name>Cover (EL9011)</Name>
+						<ImageId>1004</ImageId>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100000d"/>
+					</Box>
+				</Box>
+				<EtherCAT/>
+			</Device>
+		</Io>
+	</Project>
+	<Mappings>
+		<OwnerA Name="TIPC^243401 - DIOSNA PLC^243401 - DIOSNA PLC Instance">
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^AI1 (EL3174)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch1_Status" VarB="AI Standard Channel 1^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch1_Value" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch2_Status" VarB="AI Standard Channel 2^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch2_Value" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch3_Status" VarB="AI Standard Channel 3^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch3_Value" VarB="AI Standard Channel 3^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch4_Status" VarB="AI Standard Channel 4^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.Ch4_Value" VarB="AI Standard Channel 4^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI1.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^AI2 (EL3174)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch1_Status" VarB="AI Standard Channel 1^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch1_Value" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch2_Status" VarB="AI Standard Channel 2^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch2_Value" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch3_Status" VarB="AI Standard Channel 3^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch3_Value" VarB="AI Standard Channel 3^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch4_Status" VarB="AI Standard Channel 4^Status"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.Ch4_Value" VarB="AI Standard Channel 4^Value"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AI2.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^AO1 (EL4124)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AO1.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO1.Ch1_Value" VarB="AO Output Channel 1^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO1.Ch2_Value" VarB="AO Output Channel 2^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO1.Ch3_Value" VarB="AO Output Channel 3^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO1.Ch4_Value" VarB="AO Output Channel 4^Analog output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^AO2 (EL4124)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.AO2.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO2.Ch1_Value" VarB="AO Output Channel 1^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO2.Ch2_Value" VarB="AO Output Channel 2^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO2.Ch3_Value" VarB="AO Output Channel 3^Analog output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.AO2.Ch4_Value" VarB="AO Output Channel 4^Analog output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DI1 (EL1819)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch10_Value" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch11_Value" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch12_Value" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch13_Value" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch14_Value" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch15_Value" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch16_Value" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch1_Value" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch2_Value" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch3_Value" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch4_Value" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch5_Value" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch6_Value" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch7_Value" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch8_Value" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.Ch9_Value" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI1.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DI2 (EL1819)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch10_Value" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch11_Value" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch12_Value" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch13_Value" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch14_Value" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch15_Value" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch16_Value" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch1_Value" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch2_Value" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch3_Value" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch4_Value" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch5_Value" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch6_Value" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch7_Value" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch8_Value" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.Ch9_Value" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI2.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DI3 (EL1819)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch10_Value" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch11_Value" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch12_Value" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch13_Value" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch14_Value" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch15_Value" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch16_Value" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch1_Value" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch2_Value" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch3_Value" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch4_Value" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch5_Value" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch6_Value" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch7_Value" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch8_Value" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.Ch9_Value" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI3.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DI4 (EL1819)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch10_Value" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch11_Value" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch12_Value" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch13_Value" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch14_Value" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch15_Value" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch16_Value" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch1_Value" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch2_Value" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch3_Value" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch4_Value" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch5_Value" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch6_Value" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch7_Value" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch8_Value" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.Ch9_Value" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DI4.State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DO1 (EL2809)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DO1.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch10_Value" VarB="Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch11_Value" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch12_Value" VarB="Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch13_Value" VarB="Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch14_Value" VarB="Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch15_Value" VarB="Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch16_Value" VarB="Channel 16^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch1_Value" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch2_Value" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch3_Value" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch4_Value" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch5_Value" VarB="Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch6_Value" VarB="Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch7_Value" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch8_Value" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO1.Ch9_Value" VarB="Channel 9^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DO2 (EL2809)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DO2.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch10_Value" VarB="Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch11_Value" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch12_Value" VarB="Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch13_Value" VarB="Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch14_Value" VarB="Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch15_Value" VarB="Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch16_Value" VarB="Channel 16^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch1_Value" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch2_Value" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch3_Value" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch4_Value" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch5_Value" VarB="Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch6_Value" VarB="Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch7_Value" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch8_Value" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO2.Ch9_Value" VarB="Channel 9^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EtherCAT^BUS1 (EK1100)^DO3 (EL2809)">
+				<Link VarA="PlcTask Inputs^P0_01_Mapping.DO3.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch10_Value" VarB="Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch11_Value" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch12_Value" VarB="Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch13_Value" VarB="Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch14_Value" VarB="Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch15_Value" VarB="Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch16_Value" VarB="Channel 16^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch1_Value" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch2_Value" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch3_Value" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch4_Value" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch5_Value" VarB="Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch6_Value" VarB="Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch7_Value" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch8_Value" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^P0_01_Mapping.DO3.Ch9_Value" VarB="Channel 9^Output"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

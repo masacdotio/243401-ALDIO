@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
+  <GVL Name="Recipes" Id="{37c6d65e-86b6-4aa6-8e03-308344d62cdf}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Production						:ST_Recipe_Production;
+	Cleaning						:ST_Recipe_Cleaning;
+
+	Production_Empty				:ST_Recipe_Production;
+	Cleaning_Empty					:ST_Recipe_Cleaning;
+	
+	Production_Phase_Empty			:ST_Production_Phases;
+	Cleaning_Phase_Empty			:ST_Cleaning_Phases;
+	
+	Production_Phase_HMI			:ST_Production_Phases;
+	Cleaning_Phase_HMI				:ST_Cleaning_Phases;
+	Production_PhaseB_HMI			:ST_Production_Phases;
+	Cleaning_PhaseB_HMI				:ST_Cleaning_Phases;
+	
+END_VAR
+VAR_GLOBAL PERSISTENT
+	Production_Active				:ST_Recipe_Production;
+	Cleaning_Active					:ST_Recipe_Cleaning;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

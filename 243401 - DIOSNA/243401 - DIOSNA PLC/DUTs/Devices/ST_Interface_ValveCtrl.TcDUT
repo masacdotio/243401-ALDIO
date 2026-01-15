@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Interface_ValveCtrl" Id="{993b9e52-06c7-46f7-b522-2ccb15312862}">
+    <Declaration><![CDATA[TYPE ST_Interface_ValveCtrl :
+STRUCT
+	//IN
+	arrInterlocks		:ARRAY[1..8] OF BOOL;
+	arrAlarms			:ARRAY[1..8] OF BOOL;
+	bCmdHP				:BOOL;
+	bCmdWP				:BOOL;
+	bEnableHP			:BOOL;
+	bEnableWP			:BOOL;
+	iTravelTimeout		:INT;
+	bServiceMode		:BOOL;
+	iMaintLimit			:UDINT;
+	iPresetValue		:UDINT;
+	bWritePreset		:BOOL;
+	//OUT
+	bInterlocksOK		:BOOL;
+	bCmdOutHP			:BOOL;
+	bCmdOutWP			:BOOL;
+	bFault				:BOOL;
+	iTotalCycles		:UDINT;
+	iMaintCycles		:UDINT;
+	bMaintCall			:BOOL;
+	iState				:INT;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>
