@@ -45,6 +45,226 @@
                 "minItems": 21,
                 "type": "array"
             },
+            "ADS-PLC1.ARRAY_0..9_OF-ST_Batch": {
+                "items": {
+                    "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Batch"
+                },
+                "maxItems": 10,
+                "minItems": 10,
+                "type": "array"
+            },
+            "ADS-PLC1.FB_AlarmDiagnostic": {
+                "additionalProperties": false,
+                "properties": {
+                    "TON": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:server#/definitions/ADS-PLC1.Tc2_Standard.TON"
+                            },
+                            {
+                                "propertyOrder": 11
+                            }
+                        ]
+                    },
+                    "i_bActive": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 7
+                            }
+                        ]
+                    },
+                    "i_bEnable": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 1
+                            }
+                        ]
+                    },
+                    "i_bInput": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 3
+                            }
+                        ]
+                    },
+                    "i_bReset": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 5
+                            }
+                        ]
+                    },
+                    "i_bTest": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 6
+                            }
+                        ]
+                    },
+                    "i_iID": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT"
+                            },
+                            {
+                                "propertyOrder": 2
+                            }
+                        ]
+                    },
+                    "i_iOnDelay": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/DINT"
+                            },
+                            {
+                                "propertyOrder": 4
+                            }
+                        ]
+                    },
+                    "i_sDisplayText": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 8
+                            }
+                        ]
+                    },
+                    "q_bActive": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 9
+                            }
+                        ]
+                    },
+                    "q_iDetections": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT"
+                            },
+                            {
+                                "propertyOrder": 10
+                            }
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "ADS-PLC1.ST_Batch": {
+                "additionalProperties": false,
+                "properties": {
+                    "sBatchName": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 2
+                            }
+                        ]
+                    },
+                    "sBatchNumber": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 1
+                            }
+                        ]
+                    },
+                    "sComment": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 6
+                            }
+                        ]
+                    },
+                    "sFinished": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 9
+                            }
+                        ]
+                    },
+                    "sProductName": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 5
+                            }
+                        ]
+                    },
+                    "sRecipeName": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 3
+                            }
+                        ]
+                    },
+                    "sRecipeType": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 4
+                            }
+                        ]
+                    },
+                    "sStarted": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 8
+                            }
+                        ]
+                    },
+                    "sUser": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                            },
+                            {
+                                "propertyOrder": 7
+                            }
+                        ]
+                    }
+                },
+                "type": "object"
+            },
             "ADS-PLC1.ST_Cleaning_Phases": {
                 "additionalProperties": false,
                 "properties": {
@@ -619,6 +839,76 @@
                             },
                             {
                                 "propertyOrder": 3
+                            }
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "ADS-PLC1.Tc2_Standard.TON": {
+                "additionalProperties": false,
+                "properties": {
+                    "ET": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/TIME"
+                            },
+                            {
+                                "comment": "elapsed time",
+                                "propertyOrder": 4
+                            }
+                        ]
+                    },
+                    "IN": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "comment": "starts timer with rising edge, resets timer with falling edge",
+                                "propertyOrder": 1
+                            }
+                        ]
+                    },
+                    "M": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "propertyOrder": 5
+                            }
+                        ]
+                    },
+                    "PT": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/TIME"
+                            },
+                            {
+                                "comment": "time to pass, before Q is set",
+                                "propertyOrder": 2
+                            }
+                        ]
+                    },
+                    "Q": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "comment": "gets TRUE, delay time (PT) after a rising edge at IN",
+                                "propertyOrder": 3
+                            }
+                        ]
+                    },
+                    "StartTime": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/TIME"
+                            },
+                            {
+                                "propertyOrder": 6
                             }
                         ]
                     }
@@ -7588,7 +7878,7 @@
             "STARTUPTYPE": 1
         },
         "TcHmiLdap": {
-            "ENABLED": true,
+            "ENABLED": false,
             "METADATA": {
                 "migrationVersion": "1.14",
                 "previousVersions": [
@@ -7831,7 +8121,7 @@
     "MAXSESSIONS": 128,
     "PERMESSAGEDEFLATEENABLED": true,
     "PROJECTNAME": "243401 - DIOSNA HMI",
-    "PROJECTVERSION": "1.0.0.0",
+    "PROJECTVERSION": "1.0",
     "RECORDING_MESSAGE_MAX_LENGTH": 5120,
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
@@ -8384,6 +8674,60 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.GV.bCritical": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::bCritical",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GV.stBatch.sBatchNumber": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::stBatch::sBatchNumber",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GV.stBatches": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::stBatches",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ARRAY_0..9_OF-ST_Batch"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GV.stHMI.stBatch_Ctrl.iSubNumber": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::stHMI::stBatch_Ctrl::iSubNumber",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 10
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.GV.stTime.sDateTime": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -8398,6 +8742,696 @@
                         "propertyOrder": 4
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.10": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[10]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.11": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[11]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.12": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[12]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.13": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[13]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.14": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[14]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.15": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[15]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.16": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[16]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.17": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[17]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.18": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[18]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.19": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[19]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.20": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[20]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.21": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[21]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.22": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[22]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.23": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[23]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.24": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[24]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.25": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[25]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.26": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[26]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.27": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[27]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.28": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[28]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.29": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[29]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.30": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[30]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.31": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[31]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.32": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[32]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.33": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[33]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.34": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[34]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.35": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[35]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.36": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[36]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.37": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[37]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.38": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[38]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.39": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[39]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.40": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[40]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.41": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[41]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.42": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[42]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.43": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[43]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.44": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[44]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.45": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[45]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.46": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[46]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.47": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[47]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.48": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[48]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.49": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[49]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.50": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[50]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.51": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[51]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.52": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[52]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.53": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[53]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.54": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[54]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.55": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[55]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.56": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[56]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.57": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[57]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.58": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[58]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.59": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[59]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.60": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[60]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.61": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[61]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.62": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[62]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.63": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[63]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.64": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[64]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.65": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[65]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.66": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[66]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.67": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[67]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.68": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[68]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.69": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[69]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[7]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.8": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[8]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.P1_03_Alarms.fbAlarm.9": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::P1_03_Alarms::fbAlarm[9]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.FB_AlarmDiagnostic"
             },
             "USEMAPPING": true
         },
@@ -28929,7 +29963,79 @@
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 3,
                 "ADS.PLC1": 3,
+                "ADS.PLC1.GV.bCritical": 3,
+                "ADS.PLC1.GV.stBatch.sBatchNumber": 3,
+                "ADS.PLC1.GV.stBatches": 3,
+                "ADS.PLC1.GV.stHMI.stBatch_Ctrl.iSubNumber": 3,
                 "ADS.PLC1.GV.stTime.sDateTime": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.10": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.11": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.12": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.13": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.14": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.15": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.16": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.17": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.18": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.19": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.2": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.20": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.21": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.22": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.23": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.24": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.25": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.26": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.27": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.28": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.29": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.3": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.30": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.31": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.32": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.33": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.34": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.35": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.36": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.37": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.38": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.39": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.4": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.40": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.41": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.42": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.43": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.44": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.45": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.46": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.47": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.48": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.49": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.5": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.50": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.51": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.52": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.53": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.54": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.55": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.56": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.57": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.58": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.59": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.6": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.60": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.61": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.62": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.63": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.64": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.65": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.66": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.67": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.68": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.69": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.7": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.8": 3,
+                "ADS.PLC1.P1_03_Alarms.fbAlarm.9": 3,
                 "ADS.PLC1.Recipes.Cleaning.iActivePhase": 3,
                 "ADS.PLC1.Recipes.Cleaning.iType": 3,
                 "ADS.PLC1.Recipes.Cleaning.sName": 3,

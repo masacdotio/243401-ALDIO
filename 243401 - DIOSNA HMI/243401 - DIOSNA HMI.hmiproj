@@ -132,6 +132,9 @@
     <Content Include="Content\ALARMSETTING.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Content\BATCH.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\BATCH\BATCH_CLEAN_BLOW.content">
       <SubType>Content</SubType>
     </Content>
@@ -349,6 +352,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Icon\Icon_sp.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Icon\Icon_verified_gn.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Icon\Icon_verified_rd.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Icon\Icon_view.png">
@@ -661,9 +670,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Content\AUDIT.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\BATCH.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Content\HOME.content">

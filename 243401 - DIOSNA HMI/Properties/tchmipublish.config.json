@@ -14,15 +14,19 @@
         "name": "TcHmiEventLogger"
       },
       {
-        "publishServerExtension": true,
+        "publishServerExtension": false,
         "name": "TcHmiLdap"
       },
       {
-        "publishServerExtension": true,
+        "publishServerExtension": false,
         "name": "TcHmiLua"
       },
       {
-        "publishServerExtension": true,
+        "publishServerExtension": false,
+        "name": "TcHmiRecipeManagement"
+      },
+      {
+        "publishServerExtension": false,
         "name": "TcHmiSqliteHistorize"
       },
       {
@@ -47,8 +51,8 @@
     "temporaryPublishWithoutServerConfiguration": false,
     "abortOnErrors": true,
     "createPublishLog": true,
-    "salt": "edfe27c589d04241ab0bd471ff65667b",
-    "encryptedTcHmiServerPassword": "XPdq5LV1tRzJZ/yRwgaGZQ==",
+    "salt": "271299a35d4148bdb17676bec966bdf5",
+    "encryptedTcHmiServerPassword": "zzf2VgcNd7mZmBM7n8YXMg==",
     "tcHmiServerHost": "10.0.0.98",
     "tcHmiServerPort": "1020",
     "uploadTimeout": "60",

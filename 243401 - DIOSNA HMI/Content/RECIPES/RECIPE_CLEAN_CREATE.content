@@ -168,8 +168,7 @@
 
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
     "actions": [
@@ -186,8 +185,7 @@
       }
     ]
   }
-]
-</script>
+]</script>
 </div>
 <div id="RecipeClean_btnSave_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="1750" data-tchmi-left-unit="px" data-tchmi-text="%l%Save%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-zindex="7" data-tchmi-text-font-family="Arial" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-icon="Images/Icon/Icon_save.png" data-tchmi-icon-width="25" data-tchmi-icon-height="25" data-tchmi-icon-vertical-alignment="Top" data-tchmi-icon-horizontal-alignment="Left">
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">

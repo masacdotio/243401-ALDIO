@@ -1769,119 +1769,6 @@
       "type": "object",
       "id": "tchmi:project#/definitions/Dev_Valve_-_Copy"
     },
-    "AlarmDiagnostic": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\AlarmDiagnostic.usercontrol.json",
-      "id": "tchmi:project#/definitions/AlarmDiagnostic",
-      "type": "object"
-    },
-    "PLC1.FB_AlarmDiagnostic": {
-      "properties": {
-        "TON": {
-          "allOf": [
-            {
-              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
-            },
-            {
-              "propertyOrder": 10
-            }
-          ]
-        },
-        "i_bActive": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 7
-            }
-          ]
-        },
-        "i_bEnable": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 1
-            }
-          ]
-        },
-        "i_bInput": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 3
-            }
-          ]
-        },
-        "i_bReset": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 5
-            }
-          ]
-        },
-        "i_bTest": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 6
-            }
-          ]
-        },
-        "i_iID": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/INT"
-            },
-            {
-              "propertyOrder": 2
-            }
-          ]
-        },
-        "i_iOnDelay": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/INT"
-            },
-            {
-              "propertyOrder": 4
-            }
-          ]
-        },
-        "q_bActive": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            {
-              "propertyOrder": 8
-            }
-          ]
-        },
-        "q_iDetections": {
-          "allOf": [
-            {
-              "$ref": "tchmi:general#/definitions/INT"
-            },
-            {
-              "propertyOrder": 9
-            }
-          ]
-        }
-      },
-      "type": "object"
-    },
     "TON": {
       "properties": {
         "ET": {
@@ -2396,6 +2283,130 @@
         "$ref": "tchmi:general#/definitions/String"
       },
       "type": "array"
+    },
+    "PLC1.FB_AlarmDiagnostic": {
+      "additionalProperties": {},
+      "properties": {
+        "TON": {
+          "allOf": [
+            {
+              "$ref": "tchmi:project#/definitions/PLC1.Tc2_Standard.TON"
+            },
+            {
+              "propertyOrder": 11
+            }
+          ]
+        },
+        "i_bActive": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 7
+            }
+          ]
+        },
+        "i_bEnable": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 1
+            }
+          ]
+        },
+        "i_bInput": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 3
+            }
+          ]
+        },
+        "i_bReset": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 5
+            }
+          ]
+        },
+        "i_bTest": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 6
+            }
+          ]
+        },
+        "i_iID": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 2
+            }
+          ]
+        },
+        "i_iOnDelay": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/DINT"
+            },
+            {
+              "propertyOrder": 4
+            }
+          ]
+        },
+        "i_sDisplayText": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/STRING%2880%29"
+            },
+            {
+              "propertyOrder": 8
+            }
+          ]
+        },
+        "q_bActive": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            {
+              "propertyOrder": 9
+            }
+          ]
+        },
+        "q_iDetections": {
+          "allOf": [
+            {
+              "$ref": "tchmi:general#/definitions/INT"
+            },
+            {
+              "propertyOrder": 10
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "AlarmDiagnostic": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AlarmDiagnostic.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AlarmDiagnostic"
     }
   }
 }

@@ -1,21 +1,21 @@
 {
   "parameters": [
     {
-      "name": "data-tchmi-fbalarmdiagnostic",
-      "displayName": "fbAlarmDiagnostic",
       "allowSymbolExpressionsInObject": false,
-      "visible": true,
-      "type": "tchmi:server#/definitions/PLC1.FB_AlarmDiagnostic",
-      "category": "",
-      "description": "",
       "requiredOnCompile": false,
-      "readOnly": false,
       "bindable": true,
-      "heritable": true,
-      "propertyName": "fbAlarmDiagnostic",
       "propertySetterName": "setFbAlarmDiagnostic",
       "propertyGetterName": "getFbAlarmDiagnostic",
-      "refTo": ""
+      "refTo": "",
+      "name": "data-tchmi-fbalarmdiagnostic",
+      "displayName": "fbAlarmDiagnostic",
+      "visible": true,
+      "type": "tchmi:project#/definitions/PLC1.FB_AlarmDiagnostic",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "fbAlarmDiagnostic"
     }
   ],
   "virtualRights": [],

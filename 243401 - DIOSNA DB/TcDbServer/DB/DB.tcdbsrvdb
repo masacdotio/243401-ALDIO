@@ -6,11 +6,11 @@
   <DatabaseName>diosna</DatabaseName>
   <TableName />
   <Authentication>True</Authentication>
-  <UserID>root</UserID>
+  <UserID>postgres</UserID>
   <Password>tu58eG+lawMuQPP/kPzb8Q==</Password>
   <Driver />
   <Provider />
-  <Port>3306</Port>
+  <Port>5432</Port>
   <Protocol />
   <Scheme />
   <Sequence />
@@ -19,7 +19,7 @@
   <OLDASCIIFormat>False</OLDASCIIFormat>
   <ASCIISeparator />
   <DBValueType>NONE</DBValueType>
-  <DBType>NET_MySQL</DBType>
+  <DBType>NpgSql_Postgres</DBType>
   <OdbcSubType>Unknown</OdbcSubType>
   <DriverType>Unknown</DriverType>
   <Temporary>False</Temporary>
@@ -27,7 +27,7 @@
   <Description />
   <FailOverDBID>0</FailOverDBID>
   <AdditionalParameter />
-  <AuthenticationMechanism>None</AuthenticationMechanism>
+  <AuthenticationMechanism>UserNamePassword</AuthenticationMechanism>
   <SslCa />
   <SslCertificateFilePath />
   <SslCertificatePassword />

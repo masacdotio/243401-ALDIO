@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
-  <POU Name="P1_03_MachineControl" Id="{28291006-7217-4dfd-bae8-40d23c5c0960}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM P1_03_MachineControl
+  <POU Name="P1_04_MachineControl" Id="{28291006-7217-4dfd-bae8-40d23c5c0960}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P1_04_MachineControl
 VAR
 	tonStarting		:TON;
 	tonStopping		:TON;

@@ -8,7 +8,7 @@
 </script>
 <div id="TcHmiTextblock_360" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%l%AreYouSure%/l%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="20">
 </div>
-<div id="TcHmiButton_19" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="100" data-tchmi-left-unit="px" data-tchmi-text="%l%Yes%/l%" data-tchmi-top="125" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-icon-width="35" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-text-font-size="17" data-tchmi-icon="Images/Icons/Icon_check.png" data-tchmi-text-font-weight="Bold">
+<div id="TcHmiButton_19" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="100" data-tchmi-left-unit="px" data-tchmi-text="%l%Yes%/l%" data-tchmi-top="125" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-icon-width="35" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-text-font-size="17" data-tchmi-icon="Images/Icon/Icon_check.png" data-tchmi-text-font-weight="Bold">
 <script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
 {
   "topLeft": 15.0,
@@ -75,11 +75,11 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%ADS.PLC1.GV.stHMI.stMachine_Ctrl.bStop%/s%",
+        "symbolExpression": "%s%PLC1.GV.stHMI.stMachine_Ctrl.bStop%/s%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/String",
-          "value": "True"
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
         },
         "asyncWait": true
       },

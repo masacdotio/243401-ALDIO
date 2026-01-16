@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_AlarmDiagnostic" Id="{f625d1c9-d47b-44f8-89f7-02fb4e944319}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_AlarmDiagnostic
 VAR_INPUT
 	i_bEnable				:BOOL:=TRUE;
 	i_iID					:INT;
 	i_bInput				:BOOL;
-	i_iOnDelay				:INT;
+	i_iOnDelay				:DINT:=0;
 	i_bReset				:BOOL;
 	i_bTest					:BOOL;
 	i_bActive				:BOOL;
+	i_sDisplayText			:STRING:='';
 END_VAR
 VAR_OUTPUT
 	q_bActive				:BOOL;

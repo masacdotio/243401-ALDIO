@@ -1,104 +1,273 @@
-<div id="BATCH" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="935">
+<div id="BATCHES_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="950" data-tchmi-creator-locked="True">
+
+<div id="Batches_Footer_4" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="875" data-tchmi-top-unit="px" data-tchmi-width="1920" data-tchmi-width-unit="px" data-tchmi-zindex="20" data-tchmi-creator-locked="False">
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(79, 100, 129, 1)"
+}
+</script>
+<div id="Batches_btn_Create_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="885" data-tchmi-left-unit="px" data-tchmi-text="%l%Create%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-zindex="7" data-tchmi-text-font-family="Arial" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-icon="Images/Icon/Icon_create.png" data-tchmi-icon-width="25" data-tchmi-icon-height="25" data-tchmi-icon-vertical-alignment="Top" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-is-enabled="%s%ADS.PLC1.GV.stToHMI.stControlsEN.bBatchCreate_Button%/s%">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "angle": 0.0,
+  "stopPoints": [
+    {
+      "color": "rgba(126, 143, 170, 1)",
+      "stop": "33.42%"
+    },
+    {
+      "color": "rgba(165, 183, 216, 1)",
+      "stop": "88.32%"
+    }
+  ]
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 10.0,
+  "topRight": 10.0,
+  "bottomLeft": 10.0,
+  "bottomRight": 10.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "None",
+  "right": "None",
+  "top": "None",
+  "bottom": "None"
+}
+</script>
+
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "PHARMACIST",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "SERVICE",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "OPERATOR",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "lodige1_administrators",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "lodige_default",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "lodige1_operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "lodige1_service",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "lodige1_supervisor",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Default",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Service",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Supervisor",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
+{
+  "left": 10,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-icon-padding" type="application/json">
+{
+  "left": 10,
+  "right": 0,
+  "top": 5,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
 
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%TcHmiButton_Batch::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%TcHmiRegion_MAIN::TargetContent%/ctrl%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/Color",
-          "value": {
-            "angle": 0.0,
-            "stopPoints": [
-              {
-                "color": "rgba(70, 135, 180, 1)",
-                "stop": "30%"
-              },
-              {
-                "color": "rgba(83, 203, 249, 1)",
-                "stop": "90.67%"
-              }
-            ]
-          }
-        },
-        "asyncWait": true
-      }
-    ]
-  },
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onDetached",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%ctrl%TcHmiButton_Batch::BackgroundColor%/ctrl%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/Color",
-          "value": {
-            "angle": 0.0,
-            "stopPoints": [
-              {
-                "color": "rgba(126, 143, 170, 1)",
-                "stop": "30%"
-              },
-              {
-                "color": "rgba(165, 183, 216, 1)",
-                "stop": "90%"
-              }
-            ]
-          }
+          "valueType": "tchmi:framework#/definitions/ContentPath",
+          "value": "Content/BATCH_VIEW.content"
         },
         "asyncWait": true
       }
     ]
   }
 ]</script>
-<div id="Batches_datagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="550" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="1890" data-tchmi-width-unit="px" data-tchmi-header-height="50" data-tchmi-header-font-size="25" data-tchmi-row-height="50" data-tchmi-grid-font-size="25" data-tchmi-row-numbers-font-size="30" data-tchmi-row-numbers-width="50" data-tchmi-zindex="0" data-tchmi-row-numbers-font-family="Recipe_recipenameoboto" data-tchmi-row-numbers-font-weight="Bold" data-tchmi-header-font-weight="Normal" data-tchmi-header-font-family="Roboto" data-tchmi-grid-font-family="Roboto" data-tchmi-src-data="%s%PLC1.GV.stBatchList%/s%" data-tchmi-creator-locked="True">
+</div>
+</div>
+<div id="Recipe_datagrid_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="450" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="1920" data-tchmi-width-unit="px" data-tchmi-header-height="40" data-tchmi-header-font-size="25" data-tchmi-row-height="40" data-tchmi-grid-font-size="23" data-tchmi-row-numbers-font-size="20" data-tchmi-row-numbers-width="40" data-tchmi-zindex="2" data-tchmi-creator-locked="False" data-tchmi-row-numbers-font-family="Arial" data-tchmi-row-numbers-font-weight="Bold" data-tchmi-header-font-weight="Normal" data-tchmi-header-font-family="Arial" data-tchmi-grid-font-family="Arial" data-tchmi-table-border-width="1" data-tchmi-src-data="%s%ADS.PLC1.GV.stBatches%/s%">
 <script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
 [
   {
-    "name": "sName",
+    "name": "sBatchNumber",
     "label": "%l%BatchName%/l%",
     "control": "TextBlock",
-    "width": 25,
+    "width": 27,
     "widthUnit": "%",
-    "resize": false,
-    "sortable": false,
-    "minWidth": 25,
+    "resize": true,
+    "minWidth": 27,
     "minWidthUnit": "%",
     "editable": false,
     "horizontalAlignment": "Center",
     "verticalAlignment": "Center",
+    "cellBackground": {
+      "color": "rgba(0, 0, 0, 0)"
+    },
     "headerHorizontalAlignment": "Center",
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "dataDefinitions": [
+      {
+        "value": true,
+        "source": "Images/Icons/Icon_add1.png",
+        "width": 10.0,
+        "height": 10.0
+      },
+      {
+        "value": false,
+        "source": "Images/Icons/Icon_Manual.png",
+        "width": 10.0,
+        "height": 10.0
+      }
+    ],
+    "sortable": false
   },
   {
-    "name": "sRecipe",
+    "name": "sRecipeName",
     "label": "%l%RecipeName%/l%",
     "control": "TextBlock",
-    "width": 20,
+    "width": 27,
     "widthUnit": "%",
     "resize": false,
-    "sortable": false,
-    "minWidth": 20,
+    "minWidth": 17,
     "minWidthUnit": "%",
     "editable": false,
     "horizontalAlignment": "Center",
     "verticalAlignment": "Center",
+    "cellBackground": {
+      "color": "rgba(0, 0, 0, 0)"
+    },
     "headerHorizontalAlignment": "Center",
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "dataDefinitions": [
+      {
+        "value": 1.0,
+        "source": "Images/Icons/Icon_alarmsett.png",
+        "width": 10.0,
+        "height": 10.0
+      },
+      {
+        "value": 2.0,
+        "source": "Images/Icons/Icon_audit.png",
+        "width": 10.0,
+        "height": 10.0
+      },
+      {
+        "value": 3.0,
+        "source": "Images/Icons/Icon_export.png",
+        "width": 10.0,
+        "height": 10.0
+      }
+    ],
+    "sortable": false
   },
   {
     "name": "sUser",
@@ -106,9 +275,8 @@
     "control": "TextBlock",
     "width": 15,
     "widthUnit": "%",
-    "resize": true,
-    "sortable": false,
-    "minWidth": 10,
+    "resize": false,
+    "minWidth": 15,
     "minWidthUnit": "%",
     "editable": false,
     "horizontalAlignment": "Center",
@@ -117,37 +285,18 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "sortable": false
   },
   {
     "name": "sStarted",
     "label": "%l%Started%/l%",
     "control": "TextBlock",
-    "width": 20,
+    "width": 15,
     "widthUnit": "%",
-    "resize": true,
-    "sortable": false,
-    "minWidth": 19,
+    "resize": false,
+    "minWidth": 15,
     "minWidthUnit": "%",
-    "editable": true,
-    "horizontalAlignment": "Center",
-    "verticalAlignment": "Center",
-    "headerHorizontalAlignment": "Center",
-    "headerVerticalAlignment": "Center",
-    "ignoreEscapeSequences": false,
-    "autoFocusOut": true,
-    "autoSelectText": false
-  },
-  {
-    "name": "sFinished",
-    "label": "%l%Finished%/l%",
-    "control": "TextBlock",
-    "width": 19,
-    "widthUnit": "%",
-    "resize": true,
-    "sortable": false,
-    "minWidth": 100,
-    "minWidthUnit": "px",
     "editable": false,
     "horizontalAlignment": "Center",
     "verticalAlignment": "Center",
@@ -155,21 +304,41 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "sortable": false
+  },
+  {
+    "name": "sFinished",
+    "label": "%l%Finished%/l%",
+    "control": "TextBlock",
+    "width": 15,
+    "widthUnit": "%",
+    "resize": false,
+    "minWidth": 15,
+    "minWidthUnit": "%",
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false,
+    "sortable": false
   }
 ]
 </script>
 
 <script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
 {
-  "left": 3,
-  "leftSensor_unit": "px",
-  "right": 3,
-  "rightSensor_unit": "px",
+  "left": 0,
+  "right": 0,
   "top": 0,
-  "topSensor_unit": "px",
   "bottom": 0,
-  "bottomSensor_unit": "px"
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
 }
 </script>
 
@@ -188,8 +357,8 @@
 
 <script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
 {
-  "topLeft": 20.0,
-  "topRight": 20.0,
+  "topLeft": 0.0,
+  "topRight": 0.0,
   "bottomLeft": 0.0,
   "bottomRight": 0.0,
   "topLeftUnit": "px",
@@ -219,7 +388,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-row-numbers-text-color" type="application/json">
 {
-  "color": "rgba(79, 100, 129, 1)"
+  "color": "rgba(110, 123, 143, 1)"
 }
 </script>
 
@@ -237,6 +406,10 @@
 
 
 
+
+
+
+
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
@@ -248,7 +421,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stReport_Ctrl.iIndex%/s%",
+        "symbolExpression": "%s%ADS.PLC1.GV.stHMI.stReport_Ctrl.iIndex%/s%",
         "value": {
           "objectType": "Symbol",
           "valueType": "tchmi:general#/definitions/String",
@@ -263,7 +436,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%TcHmiRegion_MAIN::TargetContent%/ctrl%",
+        "symbolExpression": "%ctrl%MAIN_region::TargetContent%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/ContentPath",
@@ -275,7 +448,7 @@
   }
 ]</script>
 </div>
-<div id="TcHmiTextblock_177" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="24" data-tchmi-left-unit="px" data-tchmi-text="%l%BatchMsg%/l%" data-tchmi-top="604" data-tchmi-top-unit="px" data-tchmi-width="1892" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="25" data-tchmi-text-font-family="Roboto" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-style="Italic">
+<div id="Info_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="47" data-tchmi-left-unit="px" data-tchmi-text="%l%BatchMsg%/l%" data-tchmi-top="830" data-tchmi-top-unit="px" data-tchmi-width="1853" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="20" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False" data-tchmi-zindex="1" data-tchmi-text-font-style="Italic">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(79, 100, 129, 1)"
@@ -295,257 +468,65 @@
 }
 </script>
 </div>
-<div id="Batches_footer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="875" data-tchmi-top-unit="px" data-tchmi-width="1920" data-tchmi-width-unit="px" data-tchmi-zindex="17" data-tchmi-creator-locked="True">
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
-{
-  "color": "rgba(79, 100, 129, 1)"
-}
-</script>
-<div id="BATCH_CRecipe_recipenameEATE_button" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="850" data-tchmi-left-unit="px" data-tchmi-text="%l%Create%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-zindex="4" data-tchmi-text-font-family="Roboto" data-tchmi-creator-locked="False" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-is-enabled="%s%PLC1.GV.stToHMI.stControlsEN.bBatchCreate_Button%/s%" data-tchmi-icon="Images/Icon/Icon_create.png" data-tchmi-icon-width="35" data-tchmi-icon-horizontal-alignment="Left">
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
-{
-  "angle": 0.0,
-  "stopPoints": [
-    {
-      "color": "rgba(126, 143, 170, 1)",
-      "stop": "33.42%"
-    },
-    {
-      "color": "rgba(165, 183, 216, 1)",
-      "stop": "88.32%"
-    }
-  ]
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(255, 255, 255, 1)"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
-{
-  "topLeft": 15.0,
-  "topRight": 15.0,
-  "bottomLeft": 15.0,
-  "bottomRight": 15.0,
-  "topLeftUnit": "px",
-  "topRightUnit": "px",
-  "bottomLeftUnit": "px",
-  "bottomRightUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "None",
-  "right": "None",
-  "top": "None",
-  "bottom": "None"
-}
-</script>
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
-[
-  {
-    "accessright": "operate",
-    "group": "PHARecipe_recipenameMACIST",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "SERecipe_recipenameVICE",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "OPERecipe_recipenameATORecipe_recipename",
-    "permission": "Deny"
-  },
-  {
-    "accessright": "operate",
-    "group": "Administrator",
-    "permission": "Deny"
-  },
-  {
-    "accessright": "operate",
-    "group": "Maintenance",
-    "permission": "Deny"
-  },
-  {
-    "accessright": "operate",
-    "group": "Operator",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "Supervisor",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "DefaultGroup",
-    "permission": "Deny"
-  },
-  {
-    "accessright": "operate",
-    "group": "GEA Administrator",
-    "permission": "Deny"
-  },
-  {
-    "accessright": "operate",
-    "group": "GEA Maintenance",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "GEA Process Engineer",
-    "permission": "Allow"
-  },
-  {
-    "accessright": "operate",
-    "group": "GEA Supervisor",
-    "permission": "Allow"
-  }
-]
-</script>
+<div id="TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="22" data-tchmi-left-unit="px" data-tchmi-top="830" data-tchmi-top-unit="px" data-tchmi-width="25" data-tchmi-width-unit="px" data-tchmi-src="Images/Icon/Icon_info.png">
+</div>
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
-        "objectType": "Comment",
-        "comment": "Signal to PLC"
-      },
-      {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.bCreate%/s%",
+        "symbolExpression": "%ctrl%BATCH_button::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
+          "valueType": "tchmi:framework#/definitions/Color",
+          "value": {
+            "angle": 0.0,
+            "stopPoints": [
+              {
+                "color": "rgba(70, 135, 180, 1)",
+                "stop": "33%"
+              },
+              {
+                "color": "rgba(83, 203, 249, 1)",
+                "stop": "88%"
+              }
+            ]
+          }
         },
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Change screen"
-      },
+      }
+    ]
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onDetached",
+    "actions": [
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%TcHmiRegion_MAIN::TargetContent%/ctrl%",
+        "symbolExpression": "%ctrl%BATCH_button::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/ContentPath",
-          "value": "Content/BATCH_VIEW.content"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.iNumber%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/UDINT",
-          "value": 0
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.iRecipeType%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
-          "value": 0
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.sComment%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%s%PLC1.GV.sEmptyString%/s%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.sName%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%s%PLC1.GV.sEmptyString%/s%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.sProduct%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%s%PLC1.GV.sEmptyString%/s%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stBatch_Ctrl.sRecipe%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%s%PLC1.GV.sEmptyString%/s%"
+          "valueType": "tchmi:framework#/definitions/Color",
+          "value": {
+            "angle": 0.0,
+            "stopPoints": [
+              {
+                "color": "rgba(126, 143, 170, 1)",
+                "stop": "33%"
+              },
+              {
+                "color": "rgba(165, 183, 216, 1)",
+                "stop": "88%"
+              }
+            ]
+          }
         },
         "asyncWait": true
       }
     ]
   }
 ]</script>
-
-<script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
-{
-  "left": 50,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-icon-padding" type="application/json">
-{
-  "left": 10,
-  "right": 0,
-  "top": 0,
-  "bottom": 5,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-</div>
-</div>
 </div>

@@ -4,6 +4,9 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	
+	bWarning						:BOOL;
+	bCritical						:BOOL;
+	bDelete_DBs						:BOOL;
 	stSeqControl					:ST_SeqControl;
 
 	bUPSdetect						:BOOL;	

@@ -269,7 +269,7 @@
                 "value": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stBatch.sBatchName%/s%"
+                  "symbolExpression": "%s%ADS.PLC1.GV.stBatch.sBatchNumber%/s%"
                 },
                 "asyncWait": true
               }
@@ -1237,6 +1237,8 @@
   }
 ]
 </script>
+
+
 </div>
 <div id="TcHmiButton_Batch" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-text="%l%Batch%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-icon="Images/Icon/Icon_batch.png" data-tchmi-icon-width="30" data-tchmi-icon-horizontal-alignment="Left">
 <script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
@@ -3797,7 +3799,7 @@
   }
 ]</script>
 </div>
-<div id="TcHmiEventLine" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEventLine" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-server-interval="1000" data-tchmi-top="1500" data-tchmi-top-unit="px" data-tchmi-width="1920" data-tchmi-width-unit="px" data-tchmi-zindex="26" data-tchmi-text-font-size="22">
+<div id="TcHmiEventLine" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEventLine" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-server-interval="1000" data-tchmi-top="990" data-tchmi-top-unit="px" data-tchmi-width="1920" data-tchmi-width-unit="px" data-tchmi-zindex="26" data-tchmi-text-font-size="22" data-tchmi-visibility="Visible">
 <script data-tchmi-target-attribute="data-tchmi-filter" type="application/json">
 [
   {
@@ -3839,13 +3841,13 @@
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
-  "color": "rgba(255, 255, 255, 1)"
+  "color": "rgba(255, 150, 150, 1)"
 }
 </script>
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%s%PLC1.GV.bAlarmOK%/s%",
+    "event": "%s%ADS.PLC1.GV.bCritical%/s%",
     "actions": [
       {
         "objectType": "Condition",
@@ -3856,8 +3858,8 @@
               {
                 "compare1": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.bAlarmOK%/s%"
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%ADS.PLC1.GV.bCritical%/s%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
@@ -3908,11 +3910,11 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%TcHmiRegion_MAIN::TargetContent%/ctrl%",
+        "symbolExpression": "%s%PLC1.GV.stHMI.stAlarm_Ctrl.bAckAll%/s%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/ContentPath",
-          "value": "Content/ALARMS.content"
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
         },
         "asyncWait": true
       }
