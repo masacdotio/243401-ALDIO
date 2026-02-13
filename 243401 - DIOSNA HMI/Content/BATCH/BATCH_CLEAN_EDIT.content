@@ -188,12 +188,12 @@
                 "compare1": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.iActivePhase%/s%"
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.iActivePhase%/s%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:general#/definitions/String",
-                  "value": "10"
+                  "value": null
                 },
                 "compareOperator": ">",
                 "logic": null
@@ -266,11 +266,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.1%/s%"
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.1%/s%"
                 },
                 "asyncWait": true
               }
@@ -286,11 +286,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.2%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.2%/s%"
                 },
                 "asyncWait": true
               }
@@ -306,11 +306,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.3%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.3%/s%"
                 },
                 "asyncWait": true
               }
@@ -326,11 +326,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.4%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.4%/s%"
                 },
                 "asyncWait": true
               }
@@ -346,11 +346,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.5%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.5%/s%"
                 },
                 "asyncWait": true
               }
@@ -366,11 +366,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.6%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.6%/s%"
                 },
                 "asyncWait": true
               }
@@ -386,11 +386,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.7%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.7%/s%"
                 },
                 "asyncWait": true
               }
@@ -406,11 +406,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.8%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.8%/s%"
                 },
                 "asyncWait": true
               }
@@ -426,11 +426,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.9%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.9%/s%"
                 },
                 "asyncWait": true
               }
@@ -446,11 +446,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.10%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.10%/s%"
                 },
                 "asyncWait": true
               }
@@ -466,11 +466,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.11%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.11%/s%"
                 },
                 "asyncWait": true
               }
@@ -486,11 +486,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.12%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.12%/s%"
                 },
                 "asyncWait": true
               }
@@ -506,11 +506,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.13%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.13%/s%"
                 },
                 "asyncWait": true
               }
@@ -526,11 +526,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.14%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.14%/s%"
                 },
                 "asyncWait": true
               }
@@ -546,11 +546,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.15%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.15%/s%"
                 },
                 "asyncWait": true
               }
@@ -566,11 +566,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.16%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.16%/s%"
                 },
                 "asyncWait": true
               }
@@ -586,11 +586,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.17%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.17%/s%"
                 },
                 "asyncWait": true
               }
@@ -606,11 +606,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.18%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.18%/s%"
                 },
                 "asyncWait": true
               }
@@ -626,11 +626,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.19%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.19%/s%"
                 },
                 "asyncWait": true
               }
@@ -646,11 +646,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_PhaseB_HMI%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
-                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.20%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Cleaning_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Cleaning_Active.stPhase.20%/s%"
                 },
                 "asyncWait": true
               }
@@ -1966,14 +1966,14 @@
 }
 </script>
 </div>
-<div id="Recipeview_recipecreated_var_28" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.sTimeCreated%/s%" data-tchmi-top="185" data-tchmi-top-unit="px" data-tchmi-width="222" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipecreated_var_28" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.sTimeCreated%/s%" data-tchmi-top="185" data-tchmi-top-unit="px" data-tchmi-width="222" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
 }
 </script>
 </div>
-<div id="Recipeview_recipeedited_var_22" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.sTimeEdited%/s%" data-tchmi-top="290" data-tchmi-top-unit="px" data-tchmi-width="222" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipeedited_var_22" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.sTimeEdited%/s%" data-tchmi-top="290" data-tchmi-top-unit="px" data-tchmi-width="222" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
@@ -2022,7 +2022,7 @@
 }
 </script>
 </div>
-<div id="Recipeview_recipeedited_var_21" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-top="395" data-tchmi-top-unit="px" data-tchmi-width="415" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.iVersion%/s%" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipeedited_var_21" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-top="395" data-tchmi-top-unit="px" data-tchmi-width="415" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.iVersion%/s%" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
@@ -2068,7 +2068,7 @@
   }
 ]</script>
 </div>
-<div id="TcHmiCheckbox_75" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="508" data-tchmi-top-unit="px" data-tchmi-width="35" data-tchmi-width-unit="px" data-tchmi-state-symbol="%s%ADS.PLC1.Recipes.Production_Active.stInfo.bVerification%/s%" data-tchmi-text-font-size="22" data-tchmi-text-position="Left" data-tchmi-is-enabled="False">
+<div id="TcHmiCheckbox_75" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-top="508" data-tchmi-top-unit="px" data-tchmi-width="35" data-tchmi-width-unit="px" data-tchmi-state-symbol="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.bVerification%/s%" data-tchmi-text-font-size="22" data-tchmi-text-position="Left" data-tchmi-is-enabled="False">
 
 <script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
 {
@@ -2260,7 +2260,7 @@
   }
 ]</script>
 </div>
-<div id="Recipeview_recipeedited_var_20" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="262" data-tchmi-left-unit="px" data-tchmi-top="508" data-tchmi-top-unit="px" data-tchmi-width="193" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.sUserVerified%/s%" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipeedited_var_20" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="262" data-tchmi-left-unit="px" data-tchmi-top="508" data-tchmi-top-unit="px" data-tchmi-width="193" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.sUserVerified%/s%" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
@@ -2301,7 +2301,7 @@
 }
 </script>
 </div>
-<div id="Recipeview_recipecreated_var_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="263" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.sUserCreated%/s%" data-tchmi-top="185" data-tchmi-top-unit="px" data-tchmi-width="192" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipecreated_var_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="263" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.sUserCreated%/s%" data-tchmi-top="185" data-tchmi-top-unit="px" data-tchmi-width="192" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
@@ -2340,14 +2340,14 @@
 }
 </script>
 </div>
-<div id="Recipeview_recipecreated_var_26" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="263" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.stInfo.sUserEdited%/s%" data-tchmi-top="290" data-tchmi-top-unit="px" data-tchmi-width="192" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipecreated_var_26" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="263" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.stInfo.sUserEdited%/s%" data-tchmi-top="290" data-tchmi-top-unit="px" data-tchmi-width="192" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
 }
 </script>
 </div>
-<div id="Recipeview_recipecreated_var_25" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Production_Active.sName%/s%" data-tchmi-top="80" data-tchmi-top-unit="px" data-tchmi-width="415" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
+<div id="Recipeview_recipecreated_var_25" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.Recipes.Cleaning_Active.sName%/s%" data-tchmi-top="80" data-tchmi-top-unit="px" data-tchmi-width="415" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="21" data-tchmi-creator-locked="False" data-tchmi-text-font-weight="Bold" data-tchmi-zindex="1" data-tchmi-is-enabled="true" data-tchmi-text-font-family="Arial">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
 {
   "color": "rgba(46, 75, 140, 1)"
