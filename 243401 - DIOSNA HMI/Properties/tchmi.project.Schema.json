@@ -1233,14 +1233,6 @@
       "id": "tchmi:project#/definitions/PID_Control_Temperature",
       "type": "object"
     },
-    "Faceplate_PID_Control": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Faceplate_PID_Control.usercontrol.json",
-      "id": "tchmi:project#/definitions/Faceplate_PID_Control",
-      "type": "object"
-    },
     "ValveTypeSelectionDropDown": {
       "type": "string",
       "enum": [
@@ -1743,14 +1735,6 @@
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
       "frameworkUserControlConfig": "UserControls\\AnalogOutput.usercontrol.json",
       "id": "tchmi:project#/definitions/AnalogOutput",
-      "type": "object"
-    },
-    "Faceplate_AnalogOutput": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Faceplate_AnalogOutput.usercontrol.json",
-      "id": "tchmi:project#/definitions/Faceplate_AnalogOutput",
       "type": "object"
     },
     "Faceplate_TemperatureInput": {
@@ -2407,6 +2391,22 @@
       "frameworkUserControlConfig": "UserControls\\AlarmDiagnostic.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/AlarmDiagnostic"
+    },
+    "Faceplate_PID_Control": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_PID_Control.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_PID_Control",
+      "type": "object"
+    },
+    "Faceplate_AnalogOutput": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Faceplate_AnalogOutput.usercontrol.json",
+      "id": "tchmi:project#/definitions/Faceplate_AnalogOutput",
+      "type": "object"
     }
   }
 }

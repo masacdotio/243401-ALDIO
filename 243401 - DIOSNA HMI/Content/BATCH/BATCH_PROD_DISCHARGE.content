@@ -52,7 +52,7 @@
 }
 </script>
 </div>
-<div id="Recipe_inp_81" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="False" data-tchmi-auto-select-text="true" data-tchmi-zindex="3" data-tchmi-value-font-family="Arial" data-tchmi-value-font-weight="Bold" data-tchmi-ignore-invalid-values="false" data-tchmi-min-value="0" data-tchmi-max-value="155" data-tchmi-value="%s%PLC1.GV.stHMI.stRecipeProd.rMixerSpeed|BindingMode=TwoWay%/s%">
+<div id="Recipe_inp_81" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="False" data-tchmi-auto-select-text="true" data-tchmi-zindex="3" data-tchmi-value-font-family="Arial" data-tchmi-value-font-weight="Bold" data-tchmi-ignore-invalid-values="false" data-tchmi-min-value="0" data-tchmi-max-value="155" data-tchmi-value="%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.rMixerSpeed|BindingMode=TwoWay%/s%" data-tchmi-unit="rpm">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -108,7 +108,10 @@
 
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onUserInteractionFinished",
     "actions": [
@@ -131,11 +134,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.1%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -151,11 +154,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.2%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -171,11 +174,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.3%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -191,11 +194,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.4%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -211,11 +214,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.5%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -231,11 +234,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.6%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -251,11 +254,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.7%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -271,11 +274,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.8%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -291,11 +294,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.9%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -311,11 +314,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.10%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -331,11 +334,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.11%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -351,11 +354,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.12%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -371,11 +374,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.13%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -391,11 +394,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.14%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -411,11 +414,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.15%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -431,11 +434,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.16%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -451,11 +454,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.17%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -471,11 +474,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.18%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -491,11 +494,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.19%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -511,11 +514,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.20%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -523,88 +526,10 @@
           }
         ],
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
       }
     ]
   }
-]</script>
-</div>
-<div id="Recipe_txt_548" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="750" data-tchmi-left-unit="px" data-tchmi-text="rpm" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 20,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-</div>
-<div id="Recipe_txt_550" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="430" data-tchmi-left-unit="px" data-tchmi-text="0-155" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-vertical-alignment="Bottom" data-tchmi-text-horizontal-alignment="Right" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 5,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
+]
 </script>
 </div>
 <div id="Recipe_txt_551" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%l%SieveSpeed%/l%" data-tchmi-top="75" data-tchmi-top-unit="px" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
@@ -639,39 +564,7 @@
 }
 </script>
 </div>
-<div id="Recipe_txt_552" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="430" data-tchmi-left-unit="px" data-tchmi-text="0-2500" data-tchmi-top="75" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-vertical-alignment="Bottom" data-tchmi-text-horizontal-alignment="Right" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 5,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-</div>
-<div id="Recipe_inp_82" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="75" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="False" data-tchmi-auto-select-text="true" data-tchmi-zindex="3" data-tchmi-value-font-family="Arial" data-tchmi-value-font-weight="Bold" data-tchmi-ignore-invalid-values="false" data-tchmi-min-value="0" data-tchmi-max-value="2500" data-tchmi-value="%s%PLC1.GV.stHMI.stRecipeProd::rSieveSpeed|BindingMode=TwoWay%/s%">
+<div id="Recipe_inp_82" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="75" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="False" data-tchmi-auto-select-text="true" data-tchmi-zindex="3" data-tchmi-value-font-family="Arial" data-tchmi-value-font-weight="Bold" data-tchmi-ignore-invalid-values="false" data-tchmi-min-value="0" data-tchmi-max-value="2500" data-tchmi-value="%s%ADS.PLC1.Recipes.Production_PhaseB_HMI::rSieveSpeed|BindingMode=TwoWay%/s%" data-tchmi-unit="rpm">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -727,7 +620,10 @@
 
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onUserInteractionFinished",
     "actions": [
@@ -750,11 +646,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.1%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -770,11 +666,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.2%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -790,11 +686,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.3%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -810,11 +706,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.4%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -830,11 +726,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.5%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -850,11 +746,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.6%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -870,11 +766,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.7%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -890,11 +786,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.8%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -910,11 +806,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.9%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -930,11 +826,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.10%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -950,11 +846,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.11%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -970,11 +866,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.12%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -990,11 +886,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.13%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1010,11 +906,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.14%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1030,11 +926,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.15%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1050,11 +946,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.16%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1070,11 +966,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.17%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1090,11 +986,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.18%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1110,11 +1006,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.19%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1130,11 +1026,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.20%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1142,56 +1038,10 @@
           }
         ],
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
       }
     ]
   }
-]</script>
-</div>
-<div id="Recipe_txt_553" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="750" data-tchmi-left-unit="px" data-tchmi-text="rpm" data-tchmi-top="75" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 20,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
+]
 </script>
 </div>
 <div id="Recipe_txt_554" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%l%Endpoint%/l%" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
@@ -1226,516 +1076,6 @@
 }
 </script>
 </div>
-<div id="recipe_drdw_71" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-text-font-size="22" data-tchmi-drop-down-horizontal-alignment="Center" data-tchmi-drop-down-category-horizontal-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-drop-down-category-font-size="20" data-tchmi-drop-down-font-size="25" data-tchmi-data-height="40" data-tchmi-max-list-height="215" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-text-font-weight="Bold" data-tchmi-ignore-escape-sequences="false" data-tchmi-auto-select-text="false" data-tchmi-selected-id="%s%PLC1.GV.stHMI.stRecipeProd.iEndPoint|BindingMode=TwoWay%/s%">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-
-<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
-[
-  {
-    "id": 0.0,
-    "text": "%l%Auto%/l%",
-    "value": 0.0
-  },
-  {
-    "id": 1.0,
-    "text": "%f%%l%Manual%/l%%/f%",
-    "value": 1.0
-  }
-]
-</script>
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(46, 75, 140, 1)"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-drop-down-text-color" type="application/json">
-{
-  "color": "rgba(46, 75, 140, 1)"
-}
-</script>
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
-{
-  "topLeft": 10.0,
-  "topRight": 10.0,
-  "bottomLeft": 10.0,
-  "bottomRight": 10.0,
-  "topLeftUnit": "px",
-  "topRightUnit": "px",
-  "bottomLeftUnit": "px",
-  "bottomRightUnit": "px"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
-  {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onUserInteractionFinished",
-    "actions": [
-      {
-        "objectType": "SwitchCase",
-        "active": true,
-        "compare": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/INT",
-          "symbolExpression": "%i%Batch_SelectedPhase%/i%"
-        },
-        "cases": [
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 1
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 2
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 3
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 4
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 5
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 6
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 7
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 8
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 9
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 10
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 11
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 12
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 13
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 14
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 15
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 16
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 17
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 18
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 19
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 20
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          }
-        ],
-        "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]</script>
-</div>
 <div id="Recipe_txt_555" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%l%StepRuntime%/l%" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False" data-tchmi-opacity="1">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
@@ -1768,7 +1108,7 @@
 }
 </script>
 </div>
-<div id="Recipe_spinp_84" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-max-value="999" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GV.stHMI.stRecipeProd::iPhaseTime::mins|BindingMode=TwoWay%/s%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-button-position="MinusLeftAndPlusRight" data-tchmi-auto-select-text="true">
+<div id="Recipe_spinp_84" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-max-value="999" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.mins|BindingMode=TwoWay%/s%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-button-position="MinusLeftAndPlusRight" data-tchmi-auto-select-text="true" data-tchmi-unit="m" data-tchmi-is-enabled="%f%%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.iEndPoint%/s%==0%/f%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1792,65 +1132,14 @@
 }
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
-  {
-    "event": "%s%PLC1.GV.stHMI.stRecipeProd.iEndPoint%/s%",
-    "actions": [
-      {
-        "objectType": "Condition",
-        "active": true,
-        "parts": [
-          {
-            "if": [
-              {
-                "compare1": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd.iEndPoint%/s%"
-                },
-                "compare2": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 0
-                },
-                "compareOperator": "==",
-                "logic": null
-              }
-            ],
-            "then": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctx%owner::IsEnabled%/ctx%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/Boolean",
-                  "value": true
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "else": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctx%owner::IsEnabled%/ctx%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/Boolean",
-                  "value": false
-                },
-                "asyncWait": true
-              }
-            ]
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  },
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onUserInteractionFinished",
     "actions": [
@@ -1873,11 +1162,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.1%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1893,11 +1182,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.2%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1913,11 +1202,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.3%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1933,11 +1222,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.4%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1953,11 +1242,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.5%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1973,11 +1262,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.6%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -1993,11 +1282,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.7%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2013,11 +1302,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.8%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2033,11 +1322,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.9%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2053,11 +1342,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.10%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2073,11 +1362,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.11%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2093,11 +1382,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.12%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2113,11 +1402,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.13%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2133,11 +1422,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.14%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2153,11 +1442,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.15%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2173,11 +1462,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.16%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2193,11 +1482,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.17%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2213,11 +1502,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.18%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2233,11 +1522,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.19%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2253,11 +1542,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.20%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2265,29 +1554,11 @@
           }
         ],
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
       }
     ]
   }
-]</script>
-
-
-
-
+]
+</script>
 </div>
 <div id="Recipe_txt_556" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="600" data-tchmi-left-unit="px" data-tchmi-text=":" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="30" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
@@ -2321,7 +1592,7 @@
 }
 </script>
 </div>
-<div id="Recipe_spinp_85" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="650" data-tchmi-left-unit="px" data-tchmi-max-value="59" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GV.stHMI.stRecipeProd::iPhaseTime::sec|BindingMode=TwoWay%/s%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-button-position="MinusLeftAndPlusRight" data-tchmi-auto-select-text="true">
+<div id="Recipe_spinp_85" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="650" data-tchmi-left-unit="px" data-tchmi-max-value="59" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.sec|BindingMode=TwoWay%/s%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-value-font-size="22" data-tchmi-button-position="MinusLeftAndPlusRight" data-tchmi-auto-select-text="true" data-tchmi-unit="s" data-tchmi-is-enabled="%f%%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.iEndPoint%/s%==0%/f%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2347,65 +1618,10 @@
 
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
-  {
-    "event": "%s%PLC1.GV.stHMI.stRecipeProd.iEndPoint%/s%",
-    "actions": [
-      {
-        "objectType": "Condition",
-        "active": true,
-        "parts": [
-          {
-            "if": [
-              {
-                "compare1": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd.iEndPoint%/s%"
-                },
-                "compare2": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 0
-                },
-                "compareOperator": "==",
-                "logic": null
-              }
-            ],
-            "then": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctx%owner::IsEnabled%/ctx%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/Boolean",
-                  "value": true
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "else": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctx%owner::IsEnabled%/ctx%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/Boolean",
-                  "value": false
-                },
-                "asyncWait": true
-              }
-            ]
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  },
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onUserInteractionFinished",
     "actions": [
@@ -2428,11 +1644,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.1%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2448,11 +1664,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.2%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2468,11 +1684,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.3%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2488,11 +1704,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.4%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2508,11 +1724,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.5%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2528,11 +1744,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.6%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2548,11 +1764,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.7%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2568,11 +1784,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.8%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2588,11 +1804,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.9%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2608,11 +1824,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.10%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2628,11 +1844,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.11%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2648,11 +1864,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.12%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2668,11 +1884,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.13%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2688,11 +1904,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.14%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2708,11 +1924,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.15%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2728,11 +1944,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.16%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2748,11 +1964,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.17%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2768,11 +1984,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.18%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2788,11 +2004,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.19%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2808,11 +2024,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
+                "symbolExpression": "%s%ADS.PLC1.Recipes.Production_Active.stPhase.20%/s%",
                 "value": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "valueType": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases",
+                  "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI%/s%"
                 },
                 "asyncWait": true
               }
@@ -2820,27 +2036,13 @@
           }
         ],
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
       }
     ]
   }
-]</script>
+]
+</script>
 </div>
-<div id="Recipe_txt_557" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="750" data-tchmi-left-unit="px" data-tchmi-text="min : s" data-tchmi-top="195" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
+<div id="Recipe_txt_733" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="500" data-tchmi-left-unit="px" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="250" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "left": 20,
@@ -2871,47 +2073,11 @@
   "color": "rgba(0, 0, 0, 1)"
 }
 </script>
-</div>
-<div id="Recipe_txt_558" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-text="%l%PauseProcess%/l%" data-tchmi-top="745" data-tchmi-top-unit="px" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="21" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-zindex="3" data-tchmi-text-font-family="Arial" data-tchmi-creator-locked="False">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-</div>
-<div id="TcHmiCheckbox_45" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="710" data-tchmi-left-unit="px" data-tchmi-text="Checkbox" data-tchmi-top="745" data-tchmi-top-unit="px" data-tchmi-width="35" data-tchmi-width-unit="px" data-tchmi-state-symbol="%s%PLC1.GV.stHMI.stRecipeProd.bPause%/s%">
-
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onStateChanged",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
         "objectType": "SwitchCase",
@@ -2919,9 +2085,29 @@
         "compare": {
           "objectType": "Symbol",
           "valueType": "tchmi:general#/definitions/INT",
-          "symbolExpression": "%i%Batch_SelectedPhase%/i%"
+          "symbolExpression": "%s%ADS.PLC1.Recipes.Production_PhaseB_HMI.iEndPoint%/s%"
         },
         "cases": [
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/INT",
+              "value": 0
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::Text%/ctx%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%l%Auto%/l%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
           {
             "caseValue": {
               "objectType": "StaticValue",
@@ -2932,11 +2118,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.1%/s%",
+                "symbolExpression": "%ctx%owner::Text%/ctx%",
                 "value": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "symbolExpression": "%l%Manual%/l%"
                 },
                 "asyncWait": true
               }
@@ -2952,371 +2138,11 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.2%/s%",
+                "symbolExpression": "%ctx%owner::Text%/ctx%",
                 "value": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 3
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.3%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 4
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.4%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 5
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.5%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 6
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.6%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 7
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.7%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 8
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.8%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 9
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.9%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 10
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.10%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 11
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.11%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 12
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.12%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 13
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.13%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 14
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.14%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 15
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.15%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 16
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.16%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 17
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.17%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 18
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.18%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 19
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.19%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/INT",
-              "value": 20
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%s%PLC1.GV.stActiveRecipe.stProduction.20%/s%",
-                "value": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GV.stHMI.stRecipeProd%/s%"
+                  "symbolExpression": "%l%MixerCurrent%/l%"
                 },
                 "asyncWait": true
               }
@@ -3324,24 +2150,10 @@
           }
         ],
         "asyncWait": true
-      },
-      {
-        "objectType": "Comment",
-        "comment": "Audit trail"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GV.stHMI.stAudit_Ctrl.bWriteBatchParamChange%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
       }
     ]
   }
-]</script>
+]
+</script>
 </div>
 </div>

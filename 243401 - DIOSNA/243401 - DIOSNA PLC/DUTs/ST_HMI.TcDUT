@@ -7,22 +7,16 @@ STRUCT
 	stMachine_Ctrl						:ST_MachineControl;
 	stSP_Machine_Ctrl					:ST_MachineControl;
 	stBatch_Ctrl						:ST_BatchControl;
-	stRecipeProd_Ctrl					:ST_RecipeControl;
-	stRecipeClean_Ctrl					:ST_RecipeControl;
 
-	stRecipeProd						:ST_Production_Phases;
-	stRecipeProdCopy					:ST_Production_Phases;
-	stRecipeClean						:ST_Cleaning_Phases;
-	stRecipeCleanCopy					:ST_Cleaning_Phases;
-	
 	stReport_Ctrl						:ST_ReportControl;
-	stAudit_Ctrl						:ST_AuditControl;
 	stProcess_Ctrl						:ST_ProcessControl;
 	stAlarm_Ctrl						:ST_AlarmControl;
 	
 	iSelectedPhase						:INT;
 	bCloseHMI							:BOOL;
 	bScreenshot							:BOOL;
+	bScanBatchParams					:BOOL;
+	bReadCapacity						:BOOL;
 		
 END_STRUCT
 END_TYPE

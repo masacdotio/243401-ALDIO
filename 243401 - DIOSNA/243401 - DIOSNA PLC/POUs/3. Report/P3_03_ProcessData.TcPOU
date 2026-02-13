@@ -182,7 +182,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.arrPhasesProd[Recipes.Production_Active.stPhase[GV.iCP].iType]"</v>
+                              <v n="Operand">"GV.sProdPhases[Recipes.Production_Active.stPhase[GV.iCP].iType]"</v>
                               <v n="Type">"STRING"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -201,7 +201,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.arrPhasesClean[Recipes.Cleaning_Active.stPhase[GV.iCP].iType]"</v>
+                              <v n="Operand">"GV.sCleanPhases[Recipes.Cleaning_Active.stPhase[GV.iCP].iType]"</v>
                               <v n="Type">"STRING"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>

@@ -1,6 +1,6 @@
-<div id="Faceplate_PID_Control" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="420" data-tchmi-width-unit="%" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="1920" data-tchmi-creator-viewport-height="480">
+<div id="Faceplate_PID_Control_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="420" data-tchmi-width-unit="%" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="1920" data-tchmi-creator-viewport-height="480" data-tchmi-creator-locked="True">
 
-<div id="PID_ControlBtn" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Control" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-creator-locked="True">
+<div id="PID_ControlBtn_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Control" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-creator-locked="True">
 <script data-tchmi-target-attribute="data-tchmi-box-shadow" type="application/json">
 [
   {
@@ -31,7 +31,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "event": "PID_ControlBtn_1.onPressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -69,7 +69,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::BackgroundColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -82,7 +82,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::TextColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -95,7 +95,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AutotuneBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -108,7 +108,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AutotuneBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -121,7 +121,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AlarmsBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -134,7 +134,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AlarmsBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -148,7 +148,7 @@
   }
 ]</script>
 </div>
-<div id="PID_AutotuneBtn" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="200" data-tchmi-left-unit="px" data-tchmi-text="Autotune" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-is-enabled="true" data-tchmi-creator-locked="True">
+<div id="PID_AutotuneBtn_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="200" data-tchmi-left-unit="px" data-tchmi-text="Autotune" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-is-enabled="False" data-tchmi-creator-locked="True">
 <script data-tchmi-target-attribute="data-tchmi-box-shadow" type="application/json">
 [
   {
@@ -179,7 +179,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "event": "PID_AutotuneBtn_1.onPressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -217,7 +217,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::BackgroundColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -230,7 +230,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::TextColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -243,7 +243,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_ControlBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -256,7 +256,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_ControlBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -269,7 +269,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AlarmsBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -282,7 +282,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AlarmsBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -324,7 +324,7 @@
 }
 </script>
 </div>
-<div id="PID_AlarmsBtn" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="400" data-tchmi-left-unit="px" data-tchmi-text="Alarms" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-is-enabled="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-creator-locked="True">
+<div id="PID_AlarmsBtn_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="400" data-tchmi-left-unit="px" data-tchmi-text="Alarms" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-is-enabled="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-creator-locked="True">
 <script data-tchmi-target-attribute="data-tchmi-box-shadow" type="application/json">
 [
   {
@@ -355,7 +355,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "event": "PID_AlarmsBtn_1.onPressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -393,7 +393,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::BackgroundColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -406,7 +406,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctx%owner::TextColor%/ctx%",
+        "symbolExpression": "%ctrl%PID_AlarmsBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -419,7 +419,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_ControlBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -432,7 +432,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_ControlBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_ControlBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -445,7 +445,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AutotuneBtn::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -458,7 +458,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%PID_AutotuneBtn::TextColor%/ctrl%",
+        "symbolExpression": "%ctrl%PID_AutotuneBtn_1::TextColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -529,7 +529,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKp|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
+<div id="PID_Input_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKp|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -551,9 +551,39 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
-<div id="PID_Input_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="52" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKi|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
+<div id="PID_Input_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="52" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKi|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -575,9 +605,39 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
-<div id="PID_Input_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKd|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
+<div id="PID_Input_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rKd|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -599,9 +659,39 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
-<div id="PID_Input_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="84" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rTdamp|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
+<div id="PID_Input_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="84" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_rTdamp|BindingMode=TwoWay%/pp%" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -623,6 +713,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="155" data-tchmi-left-unit="px" data-tchmi-text="KP" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="29" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
@@ -777,8 +897,38 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
-<div id="PID_Trend_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height="188" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-start="PT10M" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="584" data-tchmi-width-unit="px" data-tchmi-y-sub-tick-steps="4" data-tchmi-x-show-labels="false" data-tchmi-show-x-axis="false" data-tchmi-show-y-sub-ticks="false" data-tchmi-show-x-sub-ticks="true" data-tchmi-show-legend="false" data-tchmi-server-domain="TcHmiSqliteHistorize" data-tchmi-x-sub-tick-steps="4" data-tchmi-show-x-axis-name="false" data-tchmi-show-tooltip="false" data-tchmi-show-grid="true" data-tchmi-grid-show-horizontal-lines="true" data-tchmi-grid-show-vertical-lines="true" data-tchmi-subgrid-show-horizontal-lines="false" data-tchmi-subgrid-show-vertical-lines="true" data-tchmi-show-menu-bar="false" data-tchmi-y-label-font-size="10" data-tchmi-legend-font-size="10" data-tchmi-legend-font-style="Normal" data-tchmi-legend-font-weight="Normal" data-tchmi-y-label-font-weight="Normal" data-tchmi-y-axis-width="1" data-tchmi-x-label-font-size="11" data-tchmi-x-axis-name-font-weight="Normal" data-tchmi-x-axis-name-font-size="15" data-tchmi-y-main-tick-steps="8" data-tchmi-line-graph-descriptions="%pp%TrendData%/pp%">
+<div id="PID_Trend_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height="188" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-start="PT10M" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="584" data-tchmi-width-unit="px" data-tchmi-y-sub-tick-steps="4" data-tchmi-x-show-labels="false" data-tchmi-show-x-axis="false" data-tchmi-show-y-sub-ticks="false" data-tchmi-show-x-sub-ticks="true" data-tchmi-show-legend="false" data-tchmi-server-domain="TcHmiSqliteHistorize" data-tchmi-line-graph-descriptions="%pp%TrendData%/pp%" data-tchmi-x-sub-tick-steps="4" data-tchmi-show-x-axis-name="false" data-tchmi-show-tooltip="false" data-tchmi-show-grid="true" data-tchmi-grid-show-horizontal-lines="true" data-tchmi-grid-show-vertical-lines="true" data-tchmi-subgrid-show-horizontal-lines="false" data-tchmi-subgrid-show-vertical-lines="true" data-tchmi-show-menu-bar="false" data-tchmi-y-label-font-size="10" data-tchmi-legend-font-size="10" data-tchmi-legend-font-style="Normal" data-tchmi-legend-font-weight="Normal" data-tchmi-y-label-font-weight="Normal" data-tchmi-y-axis-width="1" data-tchmi-x-label-font-size="11" data-tchmi-x-axis-name-font-weight="Normal" data-tchmi-x-axis-name-font-size="15" data-tchmi-y-main-tick-steps="8">
 
 
 
@@ -800,7 +950,7 @@
     "axisNameFontWeight": "Normal",
     "decimalPlaces": 1,
     "unit": "",
-    "autoScaling": false,
+    "autoScaling": true,
     "logarithmicScale": false,
     "axisLabeling": "Number",
     "labelFontColor": {
@@ -974,6 +1124,36 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_13" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="154" data-tchmi-left-unit="px" data-tchmi-text="Enable PWM" data-tchmi-top="354" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -1252,7 +1432,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="485" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rOutMin|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="485" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rOutMin|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1274,6 +1454,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_23" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="555" data-tchmi-left-unit="px" data-tchmi-text="%" data-tchmi-top="18" data-tchmi-top-unit="px" data-tchmi-width="37" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
@@ -1303,7 +1513,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="485" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="51" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rOutMax|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="485" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="51" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rOutMax|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1325,6 +1535,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_25" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="555" data-tchmi-left-unit="px" data-tchmi-text="%" data-tchmi-top="51" data-tchmi-top-unit="px" data-tchmi-width="37" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
@@ -1507,7 +1747,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="285" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rManualOutput|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="285" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rManualOutput|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1530,6 +1770,36 @@
   "bottomRightUnit": "px"
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_57" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="155" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="29" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-is-enabled="%pp%Obj::i_bEnablePID%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -1538,9 +1808,9 @@
 }
 </script>
 </div>
-<div id="TcHmiTextblock_180" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="69" data-tchmi-left-unit="px" data-tchmi-text="0min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
+<div id="TcHmiTextblock_143" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="69" data-tchmi-left-unit="px" data-tchmi-text="0min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
 </div>
-<div id="TcHmiTextblock_181" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="562" data-tchmi-left-unit="px" data-tchmi-text="10min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
+<div id="TcHmiTextblock_144" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="562" data-tchmi-left-unit="px" data-tchmi-text="10min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
 </div>
 <div id="PID_Txt_62" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="257" data-tchmi-left-unit="px" data-tchmi-text="PWM Period" data-tchmi-top="354" data-tchmi-top-unit="px" data-tchmi-width="91" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -1587,6 +1857,36 @@
 </script>
 
 
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_63" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="418" data-tchmi-left-unit="px" data-tchmi-text="ms" data-tchmi-top="354" data-tchmi-top-unit="px" data-tchmi-width="47" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -1634,7 +1934,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "event": "PID_Btn_2.onPressed",
     "actions": [
       {
         "objectType": "Condition",
@@ -1719,7 +2019,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Text%/ctx%",
+                "symbolExpression": "%ctrl%PID_Btn_2::Text%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:general#/definitions/String",
@@ -1734,7 +2034,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Text%/ctx%",
+                "symbolExpression": "%ctrl%PID_Btn_2::Text%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:general#/definitions/String",
@@ -1754,6 +2054,36 @@
 
 
 
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_35" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="9" data-tchmi-left-unit="px" data-tchmi-text="Autotune inactive" data-tchmi-top="355" data-tchmi-top-unit="px" data-tchmi-width="183" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -1804,7 +2134,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::TextColor%/ctx%",
+                "symbolExpression": "%ctrl%PID_Txt_35::TextColor%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -1817,7 +2147,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Text%/ctx%",
+                "symbolExpression": "%ctrl%PID_Txt_35::Text%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:general#/definitions/String",
@@ -1832,7 +2162,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::TextColor%/ctx%",
+                "symbolExpression": "%ctrl%PID_Txt_35::TextColor%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/SolidColor",
@@ -1845,7 +2175,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Text%/ctx%",
+                "symbolExpression": "%ctrl%PID_Txt_35::Text%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:general#/definitions/String",
@@ -1913,7 +2243,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Visibility%/ctx%",
+                "symbolExpression": "%ctrl%PID_Btn_3::Visibility%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Visibility",
@@ -1928,7 +2258,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctx%owner::Visibility%/ctx%",
+                "symbolExpression": "%ctrl%PID_Btn_3::Visibility%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Visibility",
@@ -1944,7 +2274,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onStatePressed",
+    "event": "PID_Btn_3.onStatePressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -1960,7 +2290,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onStateReleased",
+    "event": "PID_Btn_3.onStateReleased",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -1980,6 +2310,36 @@
 
 
 
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="210" data-tchmi-left-unit="px" data-tchmi-text="Gain" data-tchmi-top="28" data-tchmi-top-unit="px" data-tchmi-width="75" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -2147,7 +2507,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_14" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="28" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="100" data-tchmi-value="%pp%Obj::i_rAutotuneSetpoint|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_14" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="28" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-min-value="0" data-tchmi-max-value="10000" data-tchmi-value="%pp%Obj::i_rAutotuneSetpoint|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2169,6 +2529,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_59" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="155" data-tchmi-left-unit="px" data-tchmi-text="%pp%Unit%/pp%" data-tchmi-top="28" data-tchmi-top-unit="px" data-tchmi-width="37" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
@@ -2209,7 +2599,7 @@
     "axisNameFontWeight": "Normal",
     "decimalPlaces": 1,
     "unit": "",
-    "autoScaling": false,
+    "autoScaling": true,
     "logarithmicScale": false,
     "axisLabeling": "Number",
     "labelFontColor": {
@@ -2243,9 +2633,9 @@
 
 
 </div>
-<div id="TcHmiTextblock_182" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="69" data-tchmi-left-unit="px" data-tchmi-text="0min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
+<div id="TcHmiTextblock_145" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="69" data-tchmi-left-unit="px" data-tchmi-text="0min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
 </div>
-<div id="TcHmiTextblock_183" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="562" data-tchmi-left-unit="px" data-tchmi-text="10min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
+<div id="TcHmiTextblock_1311" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="562" data-tchmi-left-unit="px" data-tchmi-text="10min" data-tchmi-top="327" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="2" data-tchmi-text-font-size="10">
 </div>
 </div>
 <div id="PID_Cont_3" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="380" data-tchmi-height-unit="px" data-tchmi-left="1200" data-tchmi-left-unit="px" data-tchmi-top="40" data-tchmi-top-unit="px" data-tchmi-width="600" data-tchmi-width-unit="px">
@@ -2261,6 +2651,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_44" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="85" data-tchmi-left-unit="px" data-tchmi-text="Enable difference monitoring" data-tchmi-top="32" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
@@ -2283,7 +2703,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="95" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iHighAlarm|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="95" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iHighAlarm|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2368,7 +2788,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
+    "event": "PID_Input_8.onValueChanged",
     "actions": [
       {
         "objectType": "Condition",
@@ -2414,6 +2834,36 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_45" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="86" data-tchmi-left-unit="px" data-tchmi-text="High difference alarm" data-tchmi-top="95" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -2422,7 +2872,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="129" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iHighWarning|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="129" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iHighWarning|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2507,7 +2957,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
+    "event": "PID_Input_9.onValueChanged",
     "actions": [
       {
         "objectType": "Condition",
@@ -2553,6 +3003,36 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_46" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="86" data-tchmi-left-unit="px" data-tchmi-text="High difference warning" data-tchmi-top="129" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -2561,7 +3041,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="163" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iLowWarning|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="163" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iLowWarning|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2646,7 +3126,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
+    "event": "PID_Input_10.onValueChanged",
     "actions": [
       {
         "objectType": "Condition",
@@ -2692,6 +3172,36 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_47" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="86" data-tchmi-left-unit="px" data-tchmi-text="Low difference warning" data-tchmi-top="163" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -2700,7 +3210,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_11" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="197" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iLowAlarm|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_11" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="197" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iLowAlarm|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2785,7 +3295,7 @@
     ]
   },
   {
-    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
+    "event": "PID_Input_11.onValueChanged",
     "actions": [
       {
         "objectType": "Condition",
@@ -2831,6 +3341,36 @@
     ]
   }
 ]</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_48" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="86" data-tchmi-left-unit="px" data-tchmi-text="Low difference alarm" data-tchmi-top="197" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -2926,7 +3466,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_12" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iWarningDelay|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_12" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iWarningDelay|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -2948,6 +3488,36 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
 </script>
 </div>
 <div id="PID_Txt_54" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="336" data-tchmi-left-unit="px" data-tchmi-text="s" data-tchmi-top="261" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
@@ -2977,7 +3547,7 @@
 }
 </script>
 </div>
-<div id="PID_Input_13" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="295" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iAlarmDelay|BindingMode=TwoWay%/pp%">
+<div id="PID_Input_13" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="1" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="266" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="295" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-value-horizontal-alignment="Center" data-tchmi-value-font-size="15" data-tchmi-value="%pp%Obj::i_iAlarmDelay|BindingMode=TwoWay%/pp%" data-tchmi-auto-select-text="True">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -3000,6 +3570,36 @@
   "bottomRightUnit": "px"
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "DefaultGroup",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Administrator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Process Engineer",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "GEA Supervisor",
+    "permission": "Deny"
+  }
+]
+</script>
 </div>
 <div id="PID_Txt_56" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="336" data-tchmi-left-unit="px" data-tchmi-text="s" data-tchmi-top="295" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="15" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
@@ -3021,7 +3621,7 @@
 }
 </script>
 </div>
-<div id="PID_Gauge" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-height="288" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="451" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-start-from-zero="false" data-tchmi-top="66" data-tchmi-top-unit="px" data-tchmi-width="119" data-tchmi-width-unit="px" data-tchmi-orientation="Vertical" data-tchmi-unit="%pp%Unit%/pp%" data-tchmi-unit-font-weight="Normal" data-tchmi-label-font-weight="Normal" data-tchmi-value-font-weight="Normal" data-tchmi-tick-definition="%pp%GaugeTicksRange%/pp%" data-tchmi-step="%pp%GaugeStepRange%/pp%" data-tchmi-min-value="%pp%Gauge_Min%/pp%" data-tchmi-max-value="%pp%Gauge_Max%/pp%" data-tchmi-value="%pp%Obj::i_rActual%/pp%">
+<div id="PID_Gauge_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-height="288" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="451" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-start-from-zero="false" data-tchmi-top="66" data-tchmi-top-unit="px" data-tchmi-width="119" data-tchmi-width-unit="px" data-tchmi-orientation="Vertical" data-tchmi-unit="%pp%Unit%/pp%" data-tchmi-unit-font-weight="Normal" data-tchmi-label-font-weight="Normal" data-tchmi-value-font-weight="Normal" data-tchmi-tick-definition="%pp%GaugeTicksRange%/pp%" data-tchmi-step="%pp%GaugeStepRange%/pp%" data-tchmi-min-value="%pp%Gauge_Min%/pp%" data-tchmi-max-value="%pp%Gauge_Max%/pp%" data-tchmi-value="%pp%Obj::i_rActual%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
 [
   {

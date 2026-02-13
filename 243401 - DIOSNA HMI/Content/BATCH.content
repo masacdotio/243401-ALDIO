@@ -11,7 +11,7 @@
   "color": "rgba(79, 100, 129, 1)"
 }
 </script>
-<div id="Batches_btn_Create_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="885" data-tchmi-left-unit="px" data-tchmi-text="%l%Create%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-zindex="7" data-tchmi-text-font-family="Arial" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-icon="Images/Icon/Icon_create.png" data-tchmi-icon-width="25" data-tchmi-icon-height="25" data-tchmi-icon-vertical-alignment="Top" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-is-enabled="%s%ADS.PLC1.GV.stToHMI.stControlsEN.bBatchCreate_Button%/s%">
+<div id="Batches_btn_Create_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="885" data-tchmi-left-unit="px" data-tchmi-text="%l%Create%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="20" data-tchmi-zindex="7" data-tchmi-text-font-family="Arial" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-icon="Images/Icon/Icon_create.png" data-tchmi-icon-width="25" data-tchmi-icon-height="25" data-tchmi-icon-vertical-alignment="Top" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-is-enabled="%s%PLC1.GV.stToHMI.stControlsEN.bBatchCreate_Button%/s%">
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
   "angle": 0.0,
@@ -471,14 +471,17 @@
 <div id="TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="22" data-tchmi-left-unit="px" data-tchmi-top="830" data-tchmi-top-unit="px" data-tchmi-width="25" data-tchmi-width-unit="px" data-tchmi-src="Images/Icon/Icon_info.png">
 </div>
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%BATCH_button::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%TcHmiButton_Batch::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -487,11 +490,11 @@
             "stopPoints": [
               {
                 "color": "rgba(70, 135, 180, 1)",
-                "stop": "33%"
+                "stop": "30%"
               },
               {
                 "color": "rgba(83, 203, 249, 1)",
-                "stop": "88%"
+                "stop": "90.67%"
               }
             ]
           }
@@ -506,7 +509,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%ctrl%BATCH_button::BackgroundColor%/ctrl%",
+        "symbolExpression": "%ctrl%TcHmiButton_Batch::BackgroundColor%/ctrl%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/Color",
@@ -515,11 +518,11 @@
             "stopPoints": [
               {
                 "color": "rgba(126, 143, 170, 1)",
-                "stop": "33%"
+                "stop": "30%"
               },
               {
                 "color": "rgba(165, 183, 216, 1)",
-                "stop": "88%"
+                "stop": "90%"
               }
             ]
           }
@@ -528,5 +531,6 @@
       }
     ]
   }
-]</script>
+]
+</script>
 </div>

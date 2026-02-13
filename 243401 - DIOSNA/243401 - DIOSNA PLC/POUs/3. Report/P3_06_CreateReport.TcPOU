@@ -12,7 +12,6 @@ VAR
 	
 	
 	fbReport				:FB_PythonScript;
-	fbProcessReport			:FB_PythonScript;
 	fbSettingDelete			:FB_FileDelete;
 	fbRecipeDelete			:FB_FileDelete;
 	fbDeleteOldestBatch		:FB_DeleteOldestFile;
@@ -32,7 +31,7 @@ END_IF
 
 trigStart(CLK:=GV.bBatchClose);
 
-tonDelayStart(IN:=(iStep=10),PT:=T#3S);
+tonDelayStart(IN:=(iStep=10),PT:=T#1S);
 CASE iStep OF
 	
 	0:
@@ -53,7 +52,7 @@ CASE iStep OF
 		IF NOT GV.stReport.bExport_Alarms THEN
 			iStep:=200;
 		END_IF
-	
+		
 	200:
 		GV.stReport.bCreate_Report:=TRUE;
 		IF fbReport.q_bBusy THEN
@@ -61,23 +60,12 @@ CASE iStep OF
 		END_IF
 	210:
 		IF NOT fbReport.q_bBusy AND fbReport.q_bDone THEN
-			iStep:=300;
+			iStep:=400;
 		ELSIF fbReport.q_bError THEN
 			iError:=iStep;
 			iStep:=999;
 		END_IF
-	300:
-		GV.stReport.bCreate_ProcessReport:=TRUE;
-		IF fbProcessReport.q_bBusy THEN
-			iStep:=310;
-		END_IF
-	310:
-		IF NOT fbProcessReport.q_bBusy AND fbProcessReport.q_bDone THEN
-			iStep:=400;
-		ELSIF fbProcessReport.q_bError THEN
-			iError:=iStep;
-			iStep:=999;
-		END_IF
+		
 	400:
 		IF GV.stBatches[9].sBatchNumber <> GV.sEmptyString THEN
 			GV.stReport.bDelete_Data:=TRUE;
@@ -86,8 +74,7 @@ CASE iStep OF
 	410:
 		IF NOT GV.stReport.bDelete_Data THEN
 			iStep:=500;
-		END_IF
-		
+		END_IF;
 	500:
 		GV.stReport.bDelete_OldestReport:=TRUE;
 		IF fbDeleteOldestBatch.q_bBusy THEN
@@ -103,7 +90,7 @@ CASE iStep OF
 		
 	900:
 		iReportsCreated:=iReportsCreated+1;
-		GV.stReport.bStartSend_Sequence:=TRUE;
+		GV.stReport.bSend_Report:=TRUE;
 		iStep:=0;
 	999:
 		iStep:=0;
@@ -430,295 +417,6 @@ END_CASE
                     <v n="Title">""</v>
                     <v n="Label">""</v>
                     <v n="OutCommented">false</v>
-                    <l2 n="NetworkItems" cet="BoxTreeBox">
-                      <o>
-                        <v n="BoxType">"FB_PythonScript"</v>
-                        <o n="Instance" t="Operand">
-                          <v n="Operand">"fbProcessReport"</v>
-                          <v n="Type">"FB_PythonScript"</v>
-                          <v n="Comment">""</v>
-                          <v n="SymbolComment">""</v>
-                          <v n="Address">""</v>
-                          <o n="Flags" t="Flags">
-                            <v n="Flags">0</v>
-                            <v n="Fixed">false</v>
-                            <v n="Extensible">false</v>
-                          </o>
-                          <v n="LValue">false</v>
-                          <v n="Boolean">false</v>
-                          <v n="IsInstance">true</v>
-                          <v n="Id">335L</v>
-                        </o>
-                        <o n="OutputItems" t="OutputItemList">
-                          <l2 n="OutputItems" cet="Operand">
-                            <n />
-                            <o>
-                              <v n="Operand">""</v>
-                              <n n="Type" />
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">true</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">337L</v>
-                            </o>
-                            <o>
-                              <v n="Operand">""</v>
-                              <n n="Type" />
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">true</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">338L</v>
-                            </o>
-                            <o>
-                              <v n="Operand">""</v>
-                              <n n="Type" />
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">true</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">339L</v>
-                            </o>
-                          </l2>
-                        </o>
-                        <o n="Flags" t="Flags">
-                          <v n="Flags">0</v>
-                          <v n="Fixed">true</v>
-                          <v n="Extensible">false</v>
-                        </o>
-                        <n n="InputFlags" />
-                        <l2 n="InputItems" cet="BoxTreeOperand">
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"'main.exe'"</v>
-                              <v n="Type">"STRING(INT#8)"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">341L</v>
-                            </o>
-                            <v n="Id">340L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"CONCAT(CONST.PROJECT_DIR,'Scripts\2. Process report\main.exe')"</v>
-                              <v n="Type">"STRING(255)"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">343L</v>
-                            </o>
-                            <v n="Id">342L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"CONCAT(CONST.PROJECT_DIR,'Scripts\2. Process report\')"</v>
-                              <v n="Type">"STRING(255)"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">345L</v>
-                            </o>
-                            <v n="Id">344L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.stReport.bCreate_ProcessReport"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">347L</v>
-                            </o>
-                            <v n="Id">346L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.stRX_Python.stBatchReport.bBusy"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">349L</v>
-                            </o>
-                            <v n="Id">348L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.stRX_Python.stBatchReport.bDone"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">351L</v>
-                            </o>
-                            <v n="Id">350L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.stRX_Python.stBatchReport.bError"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">353L</v>
-                            </o>
-                            <v n="Id">352L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"GV.stRX_Python.stBatchReport.sError"</v>
-                              <v n="Type">"STRING(255)"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">false</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">355L</v>
-                            </o>
-                            <v n="Id">354L</v>
-                          </o>
-                        </l2>
-                        <o n="InputParam" t="ParamList">
-                          <l2 n="Names" cet="String">
-                            <v>i_sScriptName</v>
-                            <v>i_sScriptPath</v>
-                            <v>i_sScriptDir</v>
-                            <v>i_bStart</v>
-                            <v>iq_bScriptBusy</v>
-                            <v>iq_bScriptDone</v>
-                            <v>iq_bScriptError</v>
-                            <v>iq_sScriptError</v>
-                          </l2>
-                          <l2 n="Types" cet="String">
-                            <v>STRING</v>
-                            <v>STRING</v>
-                            <v>STRING</v>
-                            <v>BOOL</v>
-                            <v>BOOL[REF]</v>
-                            <v>BOOL[REF]</v>
-                            <v>BOOL[REF]</v>
-                            <v>STRING[REF]</v>
-                          </l2>
-                        </o>
-                        <o n="OutputParam" t="ParamList">
-                          <l2 n="Names" cet="String">
-                            <v>q_bBusy</v>
-                            <v>q_bError</v>
-                            <v>q_bDone</v>
-                            <v>q_sStatus</v>
-                          </l2>
-                          <l2 n="Types" cet="String">
-                            <v>BOOL</v>
-                            <v>BOOL</v>
-                            <v>BOOL</v>
-                            <v>STRING</v>
-                          </l2>
-                        </o>
-                        <v n="CallType" t="Operator">FunctionBlock</v>
-                        <v n="EN">false</v>
-                        <v n="ENO">false</v>
-                        <n n="STSnippet" />
-                        <v n="ContainsExtensibleInputs">false</v>
-                        <v n="ProvidesSTSnippet">false</v>
-                        <v n="Id">336L</v>
-                      </o>
-                    </l2>
-                    <l2 n="Connectors" />
-                    <v n="Id">334L</v>
-                  </o>
-                  <o>
-                    <v n="ILActive">false</v>
-                    <v n="FBDValid">false</v>
-                    <v n="ILValid">false</v>
-                    <l2 n="ILLines" />
-                    <v n="Comment">""</v>
-                    <v n="Title">""</v>
-                    <v n="Label">""</v>
-                    <v n="OutCommented">false</v>
                     <l2 n="NetworkItems" cet="BoxTreeAssign">
                       <o>
                         <o n="OutputItems" t="OutputItemList">
@@ -737,23 +435,7 @@ END_CASE
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
                               <v n="IsInstance">false</v>
-                              <v n="Id">370L</v>
-                            </o>
-                            <o>
-                              <v n="Operand">"GV.stReport.bCreate_ProcessReport"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">3</v>
-                                <v n="Fixed">true</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">true</v>
-                              <v n="Boolean">false</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">371L</v>
+                              <v n="Id">312L</v>
                             </o>
                           </l2>
                         </o>
@@ -777,15 +459,15 @@ END_CASE
                             <v n="LValue">false</v>
                             <v n="Boolean">false</v>
                             <v n="IsInstance">false</v>
-                            <v n="Id">369L</v>
+                            <v n="Id">68L</v>
                           </o>
-                          <v n="Id">368L</v>
+                          <v n="Id">67L</v>
                         </o>
-                        <v n="Id">372L</v>
+                        <v n="Id">70L</v>
                       </o>
                     </l2>
                     <l2 n="Connectors" />
-                    <v n="Id">367L</v>
+                    <v n="Id">66L</v>
                   </o>
                   <o>
                     <v n="ILActive">false</v>
@@ -912,7 +594,7 @@ END_CASE
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"CONCAT(CONST.PROJECT_DIR,'Reports\4. Sent Report\')"</v>
+                              <v n="Operand">"CONCAT(CONST.PROJECT_DIR,'Reports\3. Sent\')"</v>
                               <v n="Type">"STRING(255)"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -931,7 +613,7 @@ END_CASE
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"'Diosna*'"</v>
+                              <v n="Operand">"'DIOSNA*'"</v>
                               <v n="Type">"STRING(INT#7)"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -950,7 +632,7 @@ END_CASE
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"10"</v>
+                              <v n="Operand">"100"</v>
                               <v n="Type">"INT"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1079,7 +761,7 @@ END_CASE
                     <v n="Comment">""</v>
                     <v n="Title">""</v>
                     <v n="Label">""</v>
-                    <v n="OutCommented">true</v>
+                    <v n="OutCommented">false</v>
                     <l2 n="NetworkItems" cet="BoxTreeBox">
                       <o>
                         <v n="BoxType">"FB_FileSaveAs"</v>
@@ -1305,7 +987,7 @@ END_CASE
                     <v n="Comment">""</v>
                     <v n="Title">""</v>
                     <v n="Label">""</v>
-                    <v n="OutCommented">true</v>
+                    <v n="OutCommented">false</v>
                     <l2 n="NetworkItems" cet="BoxTreeAssign">
                       <o>
                         <o n="OutputItems" t="OutputItemList">

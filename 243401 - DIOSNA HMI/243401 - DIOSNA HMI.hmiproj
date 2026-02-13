@@ -159,6 +159,12 @@
     <Content Include="Content\BATCH\BATCH_CLEAN_RINSE.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Content\BATCH\BATCH_CLEAN_EDIT.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\BATCH\BATCH_PROD_EDIT.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\BATCH\BATCH_PROD_DISCHARGE.content">
       <SubType>Content</SubType>
     </Content>
@@ -172,9 +178,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Content\BATCH\BATCH_PROD_PHASES.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\BATCH_EDIT.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Content\BATCH_VIEW.content">
@@ -456,6 +459,15 @@
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\TcHmiAuditTrail\TcHmiAuditTrail.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiAuditTrail\TcHmiAuditTrail.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiAuditTrail\TcHmiAuditTrail.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\TcHmiEcDiagnostics\TcHmiEcDiagnostics.Config.default.json">
       <SubType>Content</SubType>
     </Content>
@@ -650,6 +662,7 @@
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
     <Folder Include="Content" />
+    <Folder Include="Server\TcHmiAuditTrail" />
     <Folder Include="Server\TcHmiEcDiagnostics" />
     <Folder Include="Server\TcHmiEventLogger" />
     <Folder Include="Server\TcHmiLdap" />

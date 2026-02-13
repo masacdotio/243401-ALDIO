@@ -1,0 +1,254 @@
+{
+  "$schema": "../TcHmiSrv/ExtensionSettings.Schema.json",
+  "version": "14.3.200.0",
+  "configVersion": "1.0.1.11",
+  "guid": "E55A5C25-F124-4F7F-9C41-0F64DB6BE4E8",
+  "symbolCategories": [
+    {
+      "name": "database",
+      "localization": "databaseSettingsCategory"
+    },
+    {
+      "name": "__CUSTOM_CONFIG__",
+      "localization": "databaseCategory"
+    }
+  ],
+  "symbols": {
+    "ErrorLogExists": {
+      "readValue": {
+        "function": true,
+        "type": "boolean"
+      }
+    },
+    "VerifySignature": {
+      "writeValue": {
+        "allOf": [
+          {
+            "type": "object"
+          },
+          {
+            "oneOf": [
+              {
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "base64"
+                  },
+                  "signature": {
+                    "type": "string",
+                    "format": "base64"
+                  },
+                  "publicKey": {
+                    "type": "string",
+                    "format": "base64"
+                  }
+                },
+                "required": [
+                  "data",
+                  "signature",
+                  "publicKey"
+                ]
+              },
+              {
+                "properties": {
+                  "zipFile": {
+                    "type": "string",
+                    "format": "base64"
+                  }
+                },
+                "required": [
+                  "zipFile"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "readValue": {
+        "function": true,
+        "type": "boolean"
+      }
+    },
+    "AuditTrailSymbols": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "allof": [
+          {
+            "function": true
+          },
+          {
+            "$ref": "#/definitions/auditTrailSymbols"
+          }
+        ]
+      }
+    },
+    "Diagnostics": {
+      "readValue": {
+        "function": true,
+        "type": "object",
+        "properties": {
+          "connectionState": {
+            "propertyOrder": 1,
+            "type": "string",
+            "enum": [
+              "Connected",
+              "Not Connected",
+              "Pending"
+            ]
+          },
+          "domainState": {
+            "propertyOrder": 2,
+            "type": "string",
+            "enum": [
+              "Good",
+              "Bad"
+            ]
+          },
+          "domainError": {
+            "propertyOrder": 3,
+            "type": "string",
+            "format": "multiline"
+          },
+          "numEntries": {
+            "propertyOrder": 3,
+            "type": "integer"
+          },
+          "databaseSize": {
+            "allOf": [
+              {
+                "$ref": "tchmi:general#/definitions/INT64"
+              },
+              {
+                "propertyOrder": 4,
+                "unit": "byte"
+              }
+            ]
+          },
+          "activeConnections": {
+            "type": "integer",
+            "propertyOrder": 5
+          },
+          "license": {
+            "propertyOrder": 6,
+            "type": "object",
+            "properties": {
+              "availableSymbols": {
+                "type": "integer"
+              },
+              "usedSymbols": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "availableSymbols",
+              "usedSymbols"
+            ]
+          }
+        },
+        "required": [
+          "domainState",
+          "connectionState",
+          "license"
+        ]
+      }
+    },
+    "ResetDatabase": {
+      "readValue": {
+        "function": true
+      }
+    },
+    "GetAuditTrail": {
+      "readValue": {
+        "function": true,
+        "type": "array",
+        "items": {
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "timestamp": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "Symbol",
+                    "Function",
+                    "Event"
+                  ]
+                },
+                "sessionId": {
+                  "type": "string"
+                },
+                "userName": {
+                  "type": "string"
+                },
+                "contextDomain": {
+                  "type": "string"
+                },
+                "comment": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "timestamp",
+                "type",
+                "sessionId",
+                "userName",
+                "contextDomain"
+              ],
+              "additionalProperties": true
+            },
+            {
+              "oneOf": [
+                {
+                  "$ref": "tchmi:server#/definitions/event"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "processedStart": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "processedEnd": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "oldValue": {},
+                    "newValue": {},
+                    "readValue": {},
+                    "error": {},
+                    "symbolVersion": {
+                      "type": "number"
+                    },
+                    "reauthentication": {}
+                  },
+                  "required": [
+                    "processedStart",
+                    "name",
+                    "newValue",
+                    "symbolVersion"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "packageVersion": "22.0.6874",
+  "productVersion": "14.3.200.0",
+  "signature": "DKdBNh12YvvCGmv/tP/n7zdu6JBKuDneNYS7evAKZORjOD9a5Q0RCMEwiWou6X4dxECo2W6SXLz4gNjOkVJgvOhD8ap03YfwFbp02dMl+30V86rWT8p5Ue+vdtQ5O+qoAjGUMWOx/WRA3Lb4kLbWygGxv9yMF2RYcd3eu7GxSC5IRdpv1YAfAtkWo74ZxTMFONC8z9IFjlsRhVH2xaXTb5FpJYR3qvfEjaeQnAiXyZ3i1IMbPbY+8jGotQUCtgPPSITSe8hmiquhFxxGySPS7btwMNtlSdy7qGE7Kk+egkVXS8acGh9XKXdlJ01tcUWTKxvXpH2qZjrkGsYNq4qlHQ=="
+}

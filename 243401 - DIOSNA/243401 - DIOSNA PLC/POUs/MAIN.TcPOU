@@ -35,12 +35,13 @@ IF tonFirstCycleDelay.Q THEN
 END_IF
 
 P02_GlobalSystemTime();
+P03_DiskSize();
+P04_Screenshot();
 
 P0_00_MAIN();
 P1_00_MAIN();
 P2_00_MAIN();
 P3_00_MAIN();
-P4_00_MAIN();
 P5_00_MAIN();
 
 SIMULATION();

@@ -1373,9 +1373,7 @@
 			</Settings>
 			<Licenses>
 				<Target>
-					<ManualSelect>{92583661-35AE-45CE-BD4F-C35BFE16F07E}</ManualSelect>
-					<ManualSelect>{CB3D4492-5E9E-43BC-AB3B-27CF3896EEC2}</ManualSelect>
-					<ManualSelect>{BDCC0070-42D5-49AE-ABF1-1D4434813D60}</ManualSelect>
+					<ManualSelect>{BB5DAC4A-972B-490D-9495-8132C0A46A72}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -1386,7 +1384,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{F67AB9EC-364A-4D5B-BD89-824A7E5E1378}" Name="243401 - DIOSNA PLC" PrjFilePath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.plcproj" TmcFilePath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{6706C130-8A93-A9A4-08AA-975FE72D86F4}" TmcPath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{B1FF542B-7DA3-8DC3-7D6C-DEA56FA454E9}" TmcPath="243401 - DIOSNA PLC\243401 - DIOSNA PLC.tmc">
 					<Name>243401 - DIOSNA PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">

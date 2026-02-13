@@ -47,8 +47,8 @@ VAR_GLOBAL
 	iPrevCP							:INT; //Previous cleaning process
 	
 		
-	arrPhasesProd					:ARRAY[0..4] OF STRING:=['Feeding', 'Mixing', 'Granulation', 'Discharging'];
-	arrPhasesClean					:ARRAY[0..6] OF STRING:=['Pre-Cleaning', 'Main Cleaning', 'Rinsing', 'PW Cleaning',
+	sProdPhases						:ARRAY[0..4] OF STRING:=['Feeding', 'Mixing', 'Granulation', 'Discharging'];
+	sCleanPhases					:ARRAY[0..6] OF STRING:=['Pre-Cleaning', 'Main Cleaning', 'Rinsing', 'PW Cleaning',
 														 'Draining', 'Blowing-out', 'Control'];
 	arrPhaseEndpoint				:ARRAY[0..2] OF STRING:=['Auto', 'Manual', 'Mixer current'];
 	arrChopper						:ARRAY[0..2] OF STRING:=['Off', 'Slow', 'Fast'];

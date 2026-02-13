@@ -19,13 +19,7 @@
     <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DUTs\DataBase\EN_AuditEvent.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\DataBase\ST_AuditTrail.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\DataBase\ST_BatchData.TcDUT">
+    <Compile Include="DUTs\DataBase\ST_BatchTrail.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\DataBase\ST_ProcessData.TcDUT">
@@ -85,9 +79,6 @@
     <Compile Include="DUTs\ST_HMI\ST_AlarmControl.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\ST_HMI\ST_AuditControl.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="DUTs\ST_HMI\ST_BatchControl.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -95,9 +86,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\ST_HMI\ST_ProcessControl.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\ST_HMI\ST_RecipeControl.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\ST_HMI\ST_ReportControl.TcDUT">
@@ -229,6 +217,9 @@
     <Compile Include="FBs\FB_AlarmDiagnostic.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FBs\FB_AuditTrail_Write.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FBs\FB_AVG200.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -260,9 +251,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FBs\FB_TONP.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FBs\FB_AuditTrail_Write.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Functions\F_Interlocks.TcPOU">
@@ -433,6 +421,9 @@
     <Compile Include="POUs\3. Report\P3_04_Alarms.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\3. Report\P3_05_BatchTrail.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\3. Report\P3_06_CreateReport.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -443,27 +434,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\3. Report\P3_08_OpenReport.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_06_DiskSize.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_00_MAIN.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_01_Write.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_02_Read.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_03_Export.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_04_Delete.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\4. Audit Trail\P4_05_Send.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\5. HMI\P5_00_MAIN.TcPOU">
@@ -481,13 +451,16 @@
     <Compile Include="POUs\5. HMI\P5_04_Trends.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\5. HMI\P5_05_Screenshot.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\P02_GlobalSystemTime.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\P03_DiskSize.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\P04_Screenshot.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\SIMULATION.TcPOU">
@@ -510,7 +483,6 @@
     <Folder Include="POUs\1. Main Control" />
     <Folder Include="POUs\2. Process\Cleaning" />
     <Folder Include="POUs\2. Process\Production" />
-    <Folder Include="POUs\4. Audit Trail" />
     <Folder Include="POUs\2. Process" />
     <Folder Include="POUs\3. Report" />
     <Folder Include="POUs\5. HMI" />
@@ -563,8 +535,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -625,14 +597,14 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Boolean">System.Boolean</Type>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

@@ -8296,7 +8296,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"P4_06_DiskSize.bLowSpace"</v>
+                          <v n="Operand">"TRUE"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -8821,7 +8821,7 @@ END_VAR]]></Declaration>
                               <o>
                                 <o n="Operand" t="Operand">
                                   <v n="Operand">"GV.bCritical"</v>
-                                  <n n="Type" />
+                                  <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>
@@ -8840,7 +8840,7 @@ END_VAR]]></Declaration>
                               <o>
                                 <o n="Operand" t="Operand">
                                   <v n="Operand">"GV.bWarning"</v>
-                                  <n n="Type" />
+                                  <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>

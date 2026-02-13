@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.13">
   <GVL Name="CONST" Id="{ff7a8fec-59bf-4de1-8605-e586781620f3}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	AMS_NETID					:STRING:='10.0.0.104.1.1';
-	PROJECT_DIR					:STRING:='C:\TwinCAT\243401-DIOSNA\';
-	DB_ID						:UDINT:=1;	
+	PROJECT_DIR					:STRING:='C:\TwinCAT\243401-ALDIO\';
+	DB_ID						:UDINT:=1;
+	ALARM_LOG_PATH				:STRING:='C:\TwinCAT\243401-ALDIO\Reports\1. Raw Data\AlarmLog.txt';
+	STORE_REPORT_PATH			:STRING:='C:/TwinCAT/243401-ALDIO/Reports/2. Created/';
+	DISK_CAPACITY				:STRING:='C:\\';
 END_VAR
 ]]></Declaration>
   </GVL>

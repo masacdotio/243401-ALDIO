@@ -7851,6 +7851,16 @@
             "REQUIRED": true,
             "STARTUPTYPE": 1
         },
+        "TcHmiAuditTrail": {
+            "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14"
+            },
+            "NAME": "TcHmiAuditTrail",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.AuditTrail.22.0.6874\\runtimes\\win-x64\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiEcDiagnostics": {
             "ENABLED": true,
             "METADATA": {
@@ -7878,7 +7888,7 @@
             "STARTUPTYPE": 1
         },
         "TcHmiLdap": {
-            "ENABLED": false,
+            "ENABLED": true,
             "METADATA": {
                 "migrationVersion": "1.14",
                 "previousVersions": [
@@ -8684,6 +8694,16 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.GV.iRecipeType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::iRecipeType",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.GV.stBatch.sBatchNumber": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -8708,6 +8728,23 @@
             "MAPPING": "PLC1::GV::stBatches",
             "SCHEMA": {
                 "$ref": "tchmi:server#/definitions/ADS-PLC1.ARRAY_0..9_OF-ST_Batch"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GV.stHMI.bScanBatchParams": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GV::stHMI::bScanBatchParams",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 10
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -12017,6 +12054,1059 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.Recipes.Production_Active.iActivePhase": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::iActivePhase",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 5
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.sName": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::sName",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.bVerification": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::bVerification",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 7
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.iVersion": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::iVersion",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 8
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.sTimeCreated": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::sTimeCreated",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 4
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.sTimeEdited": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::sTimeEdited",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 5
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.sUserCreated": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::sUserCreated",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.sUserEdited": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::sUserEdited",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stInfo.sUserVerified": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stInfo::sUserVerified",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                    },
+                    {
+                        "propertyOrder": 3
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.1.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[1]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.1.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[1]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.10": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[10]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.10.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[10]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.10.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[10]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.11": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[11]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.11.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[11]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.11.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[11]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.12": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[12]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.12.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[12]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.12.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[12]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.13": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[13]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.13.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[13]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.13.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[13]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.14": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[14]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.14.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[14]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.14.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[14]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.15": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[15]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.15.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[15]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.15.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[15]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.16": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[16]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.16.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[16]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.16.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[16]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.17": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[17]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.17.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[17]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.17.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[17]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.18": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[18]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.18.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[18]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.18.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[18]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.19": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[19]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.19.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[19]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.19.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[19]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.2.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[2]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.2.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[2]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.20": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[20]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.20.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[20]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.20.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[20]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.3.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[3]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.3.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[3]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.4.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[4]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.4.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[4]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.5.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[5]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.5.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[5]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.6.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[6]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.6.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[6]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[7]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.7.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[7]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.7.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[7]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.8": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[8]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.8.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[8]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.8.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[8]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.9": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[9]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.9.bEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[9]::bEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_Active.stPhase.9.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_Active::stPhase[9]::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.Recipes.Production_Empty": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -12034,6 +13124,185 @@
             "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI",
             "SCHEMA": {
                 "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Production_Phases"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iChopper": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iChopper",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-OFF,1-Slow,2-Fast",
+                        "propertyOrder": 11
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iEndPoint": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iEndPoint",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Manual,1-Auto,2-Mixer current",
+                        "propertyOrder": 4
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iFilterClean": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iFilterClean",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/DINT"
+                    },
+                    {
+                        "comment": "sec",
+                        "propertyOrder": 6
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iFilterPause": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iFilterPause",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/DINT"
+                    },
+                    {
+                        "comment": "sec",
+                        "propertyOrder": 7
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.mins": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iPhaseTime::mins",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/DINT"
+                    },
+                    {
+                        "comment": "Minutes",
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.sec": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iPhaseTime::sec",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/DINT"
+                    },
+                    {
+                        "comment": "Seconds",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.iType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::iType",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "0-Feeding,1-Mixing,2-Granulation,3-Discharge",
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.rMixerCurrent": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::rMixerCurrent",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "comment": "A",
+                        "propertyOrder": 10
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.rMixerSpeed": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::rMixerSpeed",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "comment": "rpm",
+                        "propertyOrder": 9
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.Recipes.Production_PhaseB_HMI.rSP_Pressure": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::Recipes::Production_PhaseB_HMI::rSP_Pressure",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 16
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -27154,6 +28423,288 @@
             },
             "USEMAPPING": true
         },
+        "TcHmiAuditTrail.AuditTrailSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "AuditTrailSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "allof": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "$ref": "#/definitions/auditTrailSymbols"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.Diagnostics": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Diagnostics",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "activeConnections": {
+                        "propertyOrder": 5,
+                        "type": "integer"
+                    },
+                    "connectionState": {
+                        "enum": [
+                            "Connected",
+                            "Not Connected",
+                            "Pending"
+                        ],
+                        "propertyOrder": 1,
+                        "type": "string"
+                    },
+                    "databaseSize": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT64"
+                            },
+                            {
+                                "propertyOrder": 4,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "domainError": {
+                        "format": "multiline",
+                        "propertyOrder": 3,
+                        "type": "string"
+                    },
+                    "domainState": {
+                        "enum": [
+                            "Good",
+                            "Bad"
+                        ],
+                        "propertyOrder": 2,
+                        "type": "string"
+                    },
+                    "license": {
+                        "properties": {
+                            "availableSymbols": {
+                                "type": "integer"
+                            },
+                            "usedSymbols": {
+                                "type": "integer"
+                            }
+                        },
+                        "propertyOrder": 6,
+                        "required": [
+                            "availableSymbols",
+                            "usedSymbols"
+                        ],
+                        "type": "object"
+                    },
+                    "numEntries": {
+                        "propertyOrder": 3,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "domainState",
+                    "connectionState",
+                    "license"
+                ],
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.ErrorLogExists": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ErrorLogExists",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "boolean"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.GetAuditTrail": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetAuditTrail",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "allOf": [
+                        {
+                            "additionalProperties": true,
+                            "properties": {
+                                "comment": {
+                                    "type": "string"
+                                },
+                                "contextDomain": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "sessionId": {
+                                    "type": "string"
+                                },
+                                "timestamp": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "Symbol",
+                                        "Function",
+                                        "Event"
+                                    ],
+                                    "type": "string"
+                                },
+                                "userName": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "timestamp",
+                                "type",
+                                "sessionId",
+                                "userName",
+                                "contextDomain"
+                            ],
+                            "type": "object"
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "$ref": "tchmi:server#/definitions/event"
+                                },
+                                {
+                                    "properties": {
+                                        "error": {},
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "newValue": {},
+                                        "oldValue": {},
+                                        "processedEnd": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "processedStart": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "readValue": {},
+                                        "reauthentication": {},
+                                        "symbolVersion": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "required": [
+                                        "processedStart",
+                                        "name",
+                                        "newValue",
+                                        "symbolVersion"
+                                    ],
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "type": "array"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.ResetDatabase": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ResetDatabase",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAuditTrail.VerifySignature": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAuditTrail",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "VerifySignature",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "boolean",
+                "writeValue": {
+                    "allOf": [
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        "data": {
+                                            "format": "base64",
+                                            "type": "string"
+                                        },
+                                        "publicKey": {
+                                            "format": "base64",
+                                            "type": "string"
+                                        },
+                                        "signature": {
+                                            "format": "base64",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "data",
+                                        "signature",
+                                        "publicKey"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "zipFile": {
+                                            "format": "base64",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "zipFile"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "USEMAPPING": true
+        },
         "TcHmiEcDiagnostics.ClearCrc": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiEcDiagnostics",
@@ -29964,8 +31515,10 @@
                 "ADS.Diagnostics": 3,
                 "ADS.PLC1": 3,
                 "ADS.PLC1.GV.bCritical": 3,
+                "ADS.PLC1.GV.iRecipeType": 3,
                 "ADS.PLC1.GV.stBatch.sBatchNumber": 3,
                 "ADS.PLC1.GV.stBatches": 3,
+                "ADS.PLC1.GV.stHMI.bScanBatchParams": 3,
                 "ADS.PLC1.GV.stHMI.stBatch_Ctrl.iSubNumber": 3,
                 "ADS.PLC1.GV.stTime.sDateTime": 3,
                 "ADS.PLC1.P1_03_Alarms.fbAlarm.10": 3,
@@ -30201,8 +31754,87 @@
                 "ADS.PLC1.Recipes.Production.stPhase.9": 3,
                 "ADS.PLC1.Recipes.Production.stPhase.9.bEnable": 3,
                 "ADS.PLC1.Recipes.Production.stPhase.9.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.iActivePhase": 3,
+                "ADS.PLC1.Recipes.Production_Active.sName": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.bVerification": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.iVersion": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.sTimeCreated": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.sTimeEdited": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.sUserCreated": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.sUserEdited": 3,
+                "ADS.PLC1.Recipes.Production_Active.stInfo.sUserVerified": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.1": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.1.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.1.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.10": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.10.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.10.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.11": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.11.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.11.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.12": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.12.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.12.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.13": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.13.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.13.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.14": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.14.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.14.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.15": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.15.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.15.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.16": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.16.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.16.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.17": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.17.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.17.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.18": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.18.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.18.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.19": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.19.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.19.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.2": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.2.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.2.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.20": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.20.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.20.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.3": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.3.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.3.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.4": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.4.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.4.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.5": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.5.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.5.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.6": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.6.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.6.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.7": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.7.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.7.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.8": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.8.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.8.iType": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.9": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.9.bEnable": 3,
+                "ADS.PLC1.Recipes.Production_Active.stPhase.9.iType": 3,
                 "ADS.PLC1.Recipes.Production_Empty": 3,
                 "ADS.PLC1.Recipes.Production_PhaseB_HMI": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iChopper": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iEndPoint": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iFilterClean": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iFilterPause": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.mins": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iPhaseTime.sec": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.iType": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.rMixerCurrent": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.rMixerSpeed": 3,
+                "ADS.PLC1.Recipes.Production_PhaseB_HMI.rSP_Pressure": 3,
                 "ADS.PLC1.Recipes.Production_Phase_Empty": 3,
                 "ADS.PLC1.Recipes.Production_Phase_HMI": 3,
                 "ADS.PLC1.Recipes.Production_Phase_HMI.bPause": 3,
@@ -31135,6 +32767,7 @@
                 "PLC1._Control.q_bPromptReq": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
+                "TcHmiAuditTrail.AuditTrailSymbols": 3,
                 "TcHmiEcDiagnostics.Diagnostics": 3,
                 "TcHmiEcDiagnostics.GetMaster": 3,
                 "TcHmiEcDiagnostics.GetMasterOnlineInfo": 3,
@@ -31346,6 +32979,7 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\243401 - DIOSNA HMI\\",
+        "/Beckhoff.TwinCAT.HMI.AuditTrailUtils": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.AuditTrailUtils.14.3.130\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.4.1\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.EcDiagnosticsControl.14.3.340\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.3.360\\runtimes\\native1.12-tchmi",
